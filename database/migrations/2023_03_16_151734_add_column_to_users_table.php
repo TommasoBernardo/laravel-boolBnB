@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('name')->nullable()->change();
             $table->dropColumn('email_verified_at');
-            $table->string('surname', 150);
-            $table->date('date_of_birth', 150);
+            $table->string('surname', 150)->nullable();
+            $table->date('date_of_birth', 150)->nullable();
         });
     }
 
@@ -28,6 +29,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('name')->change();
             $table->timestamp('email_verified_at')->nullable();
             $table->dropColumn('surname');
             $table->dropColumn('date_of_birth');
