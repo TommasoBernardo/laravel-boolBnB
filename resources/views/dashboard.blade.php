@@ -30,7 +30,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary">Create item</a>
+                <a href="{{route('apartment.create')}}" class="btn btn-primary">Create item</a>
             </div>
             <table class="table">
                 <thead>
