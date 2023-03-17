@@ -18,6 +18,15 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <div class="card w-50 mt-3">
+                        <div class="card-body">
+                          <h5 class="card-title"> Welcome  {{Auth::user()->name }}  {{Auth::user()->surname }} </h5>
+                          <p class="card-text"> Your email:  {{Auth::user()->email }}</p>
+                          <p class="card-text"> Your date of birth:  {{Auth::user()->date_of_birth }}</p>
+                        </div>
+                      </div>
+
                 </div>
             </div>
         </div>
