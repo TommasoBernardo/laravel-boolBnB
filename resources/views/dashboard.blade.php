@@ -25,10 +25,41 @@
                           <p class="card-text"> Your email:  {{Auth::user()->email }}</p>
                           <p class="card-text"> Your date of birth:  {{Auth::user()->date_of_birth }}</p>
                         </div>
-                      </div>
-
-                </div>
+                    </div>
+                </div>    
             </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Create item</a>
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($apartments as $apartment )
+                  <tr>
+                    <th scope="row">{{ $apartment->title }}</th>
+                    <td>{{ $apartment->address }}</td>
+                    <td>
+                        <a href="{{route('apartment.show', $apartment->slug)}}" class="btn btn-primary">Show</a>
+                        <a href="#" class="btn btn-success">Edit</a>
+                        <form action="" method="post" class="d-inline-block">
+                         @csrf
+                         @method('delete')   
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </form>
+                    </td>
+                  </tr>
+                  @endforeach  
+  
+                </tbody>
+              </table>
+
         </div>
     </div>
 </div>
