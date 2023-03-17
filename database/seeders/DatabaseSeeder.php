@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Sponsor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,8 @@ class DatabaseSeeder extends Seeder
             ApartmentSeeder::class,
             ServiceSeeder::class,
             ApartmentServiceSeeder::class,
+            SponsorSeeder::class,
+            ApartmentSponsorSeeder::class,
 
         ]);
         // \App\Models\User::factory(10)->create();
