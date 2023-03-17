@@ -28,7 +28,10 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        
+        $apartment = new Apartment();
+
+        return view('ur.apartment.create', compact('apartment'));
     }
 
     /**
