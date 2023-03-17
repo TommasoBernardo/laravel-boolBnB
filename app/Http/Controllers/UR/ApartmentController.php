@@ -5,6 +5,7 @@ namespace App\Http\Controllers\UR;
 use App\Models\Apartment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ApartmentController extends Controller
 {
@@ -15,9 +16,9 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments = Apartment::all(); 
+        $apartments = Apartment::where('user_id', Auth::user()->id)->get(); 
 
-        return view('ur.apartment.index', compact('apartments'));
+        return view('dashboard', compact('apartments'));
     }
 
     /**
@@ -44,12 +45,12 @@ class ApartmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Apartment $apartment
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Apartment $apartment)
     {
-        //
+        return view('ur.apartment.show', compact('apartment'));
     }
 
     /**
