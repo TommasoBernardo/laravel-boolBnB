@@ -73,8 +73,8 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8 background-image"></div>
-        <div class="col-4">
+        <div class="col-lg-8 d-none d-lg-block background-image"></div>
+        <div class="col-lg-4">
             <div class="login-form">
                 <div class=" rounded-3 text-black">
                     <div class="row g-0">
