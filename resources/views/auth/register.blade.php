@@ -17,7 +17,7 @@
                                 <div class="col-md-6">
                                     <input id="name" type="text"
                                         class="form-control  @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}">
+                                        value="{{ old('name') }}" minlength="3" maxlength="255"  >
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                                 <div class="col-md-6">
                                     <input id="surname" type="text"
                                         class="form-control @error('surname') is-invalid @enderror" name="surname"
-                                        value="{{ old('surname') }}">
+                                        value="{{ old('surname') }}"  minlength="3" maxlength="150" >
 
                                     @error('surname')
                                         <span class="invalid-feedback" role="alert">
@@ -50,7 +50,7 @@
                                 <div class="col-md-6">
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}">
+                                        value="{{ old('email') }}" required minlength="8" maxlength="255">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -66,7 +66,7 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password">
+                                        class="form-control @error('password') is-invalid @enderror" name="password" required minlength="8" >
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation">
+                                        name="password_confirmation" required minlength="8" >
                                 </div>
                             </div>
                             <div class="mb-4 row">
