@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="{{ route($route, $apartment->id) }}" method="POST" class="mt-3" enctype="multipart/form-data">
+    <form action="{{ route($route, $apartment->slug) }}" method="POST" class="mt-3" enctype="multipart/form-data">
 
         @csrf
         @method($methodRoute)
@@ -78,9 +78,9 @@
 
             <label class="form-label" for="visible">Inserisci se già disponibile: </label>
             <label class="form-label" for="visible">si</label>
-            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="1" name="visible" id="visible">
+            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="1" name="visible" id="visible" @if(isset($apartment->visible) || (old('visible') != null)) @if(old('visible',$apartment->visible) == 1) checked @endif @endif>
             <label class="form-label" for="visible">no</label>
-            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="0" name="visible" id="visible">
+            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="0" name="visible" id="visible" @if(isset($apartment->visible) || (old('visible') != null)) @if(old('visible',$apartment->visible) == 0) checked @endif @endif>
             @if($errors->has('visible'))
             <div class="alert alert-danger mt-3">
                 @foreach ($errors->get('visible') as $error)
@@ -92,15 +92,29 @@
         </div>
 
 
-        <div class="mb-3" id="searchBox">
+        <div class="mb-3">
 
             <label class="form-label" for="address">Inserisci l'indirizzo: </label>
+            <div id="searchBox">
 
+            </div>
+            @if($errors->has('address'))
+            <div class="alert alert-danger mt-3">
+                @foreach ($errors->get('address') as $error)
+                {{$error}}
+                @endforeach
+            </div>
+            @endif
+            <div class="d-none mt-3">
 
-            <input class="d-none" id="latitude" type="text" name="latitude">
-            <input class="d-none" id="longitude" type="text" name="longitude">
-            <input class="d-none" id="address" type="text" name="address">
-
+                <label class="form-label" for="latitude">latitudine: </label>
+                <input class="" id="latitude" type="text" name="latitude" value="{{old('latitude',$apartment->latitude)}}">
+                <label class="form-label" for="longitude">longitudine: </label>
+                <input class="" id="longitude" type="text" name="longitude" value="{{old('longitude',$apartment->longitude)}}">
+                <label class="form-label" for="address">indirizzo: </label>
+                <input class="" id="address" type="text" name="address" value="{{old('address',$apartment->address)}}">
+                
+            </div>
 
 
 
