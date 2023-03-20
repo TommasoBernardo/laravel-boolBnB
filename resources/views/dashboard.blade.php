@@ -48,7 +48,7 @@
             <td>
               <a href="{{route('apartment.show', $apartment->slug)}}" class="btn btn-primary">Show</a>
               <a href="{{route('apartment.edit', $apartment->slug)}}" class="btn btn-success">Edit</a>
-              <form action="{{route('apartment.destroy',$apartment->slug)}}" method="post" class="d-inline-block">
+              <form action="{{route('apartment.destroy',$apartment->slug)}}" method="post" class="d-inline-block double-confirm">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger">Delete</button>
@@ -63,4 +63,11 @@
     </div>
   </div>
 </div>
+@endsection
+
+
+@section('script')
+
+@vite(['resources/js/popupDelete.js'])
+
 @endsection
