@@ -19,7 +19,7 @@ class ApartmentController extends Controller
         'beds' => 'required|numeric',
         'bathrooms' => 'required|numeric',
         'square_meters' => 'required|numeric',
-        'cover_image' => 'max:300|image',
+        'cover_image' => 'required|max:300|image',
         'visible' => 'required|boolean',
         'address' => 'required|string',
         'latitude' => 'required|numeric',
@@ -37,6 +37,7 @@ class ApartmentController extends Controller
         'bathrooms.numeric' => 'il compo deve essere un numero',
         'square_meters.required' => 'il campo è obbligatorio.',
         'square_meters.numeric' => 'il compo deve essere un numero',
+        'cover_image.required' => 'il campo è obbligatorio.',
         'cover_image.image' => 'inserire un immagine valida.',
         'cover_image.max' => "l'immagine inserita e troppo grande, deve pesare massimo 300kb.",
         'visible.required' => 'il campo è obbligatorio.',
@@ -118,24 +119,46 @@ class ApartmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Apartment $apartment
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Apartment $apartment)
     {
-        //
+        $services = Service::all();
+
+        return view('ur.apartment.edit', compact('apartment', 'services'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Apartment $apartment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, Apartment $apartment)
+    {   
+
+        
+        $regoleDaAggiornare = $this->regoleValidazione;
+
+        $regoleDaAggiornare['cover_image'] = ['max:300','image'];
+
+        $data = $request->validate($regoleDaAggiornare, $this->messaggiValidazione);
+
+
+        if (isset($data['cover_image'])) {
+            if (isset($apartment->cover_image)) {
+                Storage::delete('img/cover_image', $apartment->cover_image);
+            }
+            $data['cover_image'] = Storage::put('img/cover_image', $data['cover_image']);
+        }
+
+
+        $apartment->update($data);
+        $apartment->services()->sync($data['services'] ?? []);
+
+        return redirect()->route('apartment.show', $apartment->slug)->with('message', "l'elemento è stato modificato correttamente");
     }
 
     /**
