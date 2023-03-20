@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Ui\HomepageController;
 use App\Http\Controllers\UR\ApartmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomepageController::class , 'index'] );
 
 Route::middleware(['auth','userApartment'])->prefix('dashboard')->group( function () {
     Route::resource('/apartment', ApartmentController::class );
