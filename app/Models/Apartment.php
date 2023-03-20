@@ -9,6 +9,10 @@ class Apartment extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['user_id', 'slug', 'title', 'rooms', 'beds', 'bathrooms', 'square_meters', 'visible', 'address', 'cover_image', 'longitude', 'latitude'];
+
+
+
     public function services()
     {
         return $this->belongsToMany(Service::class);
