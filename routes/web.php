@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')->prefix('dashboard')->group( function () {
+Route::middleware(['auth','userApartment'])->prefix('dashboard')->group( function () {
     Route::resource('/apartment', ApartmentController::class );
 })->name('dashboard');
 
