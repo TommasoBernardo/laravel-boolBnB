@@ -78,9 +78,9 @@
 
             <label class="form-label" for="visible">Inserisci se già disponibile: </label>
             <label class="form-label" for="visible">si</label>
-            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="{{old('visible',$apartment->visible)}}" name="visible" id="visible">
+            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="1" name="visible" id="visible">
             <label class="form-label" for="visible">no</label>
-            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="{{old('visible',$apartment->visible)}}" name="visible" id="visible">
+            <input class="form-check-input {{$errors->has('visible') ? 'is-invalid' : '' }}" type="radio" value="0" name="visible" id="visible">
             @if($errors->has('visible'))
             <div class="alert alert-danger mt-3">
                 @foreach ($errors->get('visible') as $error)
@@ -95,7 +95,15 @@
         <div class="mb-3" id="searchBox">
 
             <label class="form-label" for="address">Inserisci l'indirizzo: </label>
-            
+
+
+            <input class="d-none" id="latitude" type="text" name="latitude">
+            <input class="d-none" id="longitude" type="text" name="longitude">
+            <input class="d-none" id="address" type="text" name="address">
+
+
+
+
         </div>
 
 
@@ -113,7 +121,26 @@
 
         </div>
 
+        <div class="mb-3">
+            @foreach($services as $service)
+            <input type="checkbox" class="form-check-input {{$errors->has('services') ? 'is-invalid' : '' }} " name="services[]" value="{{$service->id}}" @if($errors->any())
+            @checked(in_array($service->id,old('services',[])))
+            @else
+            @checked($apartment->services->contains($service->id))
+            @endif
+            >
 
+            <label class="form-check-label"> {{$service->type}} </label>
+            @endforeach
+            @if($errors->has('services'))
+            <div class="alert alert-danger mt-3">
+                @foreach ($errors->get('services') as $error)
+                {{$error}}
+                @endforeach
+            </div>
+            @endif
+
+        </div>
 
         <div class="mb-3">
             <button type="submit" class="btn btn-success">{{$bottone}}</button>
