@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-
+                        {{-- single-card --}}
                         @foreach ($apartments as $apartment)
                             <div class=" swiper-slide">
                                 <div class="flex-column" id="myCarousel">
@@ -97,11 +97,66 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    
-
                 </div>
             </div>
 
+        </div>
+    </div>
+    <div class="bg-color p-4">
+        <div class="container">
+            <div class="row justify-center">
+               @for ($i = 0; $i < 4; $i++)
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+                   <div class="card border-0  " style="width: 18rem;">
+                       <div class="card-body text-center">
+                        <div class="icon mb-4">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                         <h5 class="card-subtitle mb-2">Our properties</h5>
+                         <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
+                         <a href="#" class="link-about-us ">About Us</a>
+                       </div>
+                     </div>
+               </div>
+                   
+               @endfor
+                {{-- <div class="col-lg-3 col-md-6 mt-3  col-sm-1 ">
+                    <div class="card border-0" style="width: 18rem;">
+                        <div class="card-body text-center">
+                         <div class="img">
+                            <img src="" alt="" srcset="">
+                         </div>
+                          <h6 class="card-subtitle mb-2">Our properties</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="text-decoration-none ">Another link</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3  col-sm-1">
+                    <div class="card border-0" style="width: 18rem;">
+                        <div class="card-body text-center">
+                         <div class="img">
+                            <img src="" alt="" srcset="">
+                         </div>
+                          <h6 class="card-subtitle mb-2">Our properties</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="text-decoration-none ">Another link</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3  col-sm-1">
+                    <div class="card border-0" style="width: 18rem;">
+                        <div class="card-body text-center">
+                         <div class="img">
+                            <img src="" alt="" srcset="">
+                         </div>
+                          <h6 class="card-subtitle mb-2">Our properties</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="text-decoration-none ">Another link</a>
+                        </div>
+                      </div>
+                </div> --}}
+            </div>
         </div>
     </div>
 @endsection
