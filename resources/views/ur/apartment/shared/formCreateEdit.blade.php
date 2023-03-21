@@ -142,7 +142,7 @@
             @else
             @checked($apartment->services->contains($service->id))
             @endif
-            required >
+            >
 
             <label class="form-check-label"> {{$service->type}} </label>
             @endforeach

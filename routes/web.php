@@ -21,6 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('/apartments', [UiApartmentsController::class, 'index'])->name('apartments.index');
+Route::get('/apartments/{slug}', [UiApartmentsController::class, 'show'])->name('apartments.show');
+
 
 Route::middleware(['auth', 'userApartment'])->prefix('dashboard')->group(function () {
     Route::resource('/apartment', ApartmentController::class);
