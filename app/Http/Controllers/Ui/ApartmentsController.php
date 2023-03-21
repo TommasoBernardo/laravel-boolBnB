@@ -64,7 +64,7 @@ class ApartmentsController extends Controller
 
 
 
-        $apartmentsIndex = $apartments->paginate(16);
+        $apartmentsIndex = $apartments->simplePaginate(16);
         $services = Service::all();
         
         return view('apartments', compact('apartmentsIndex','services'));
