@@ -67,7 +67,8 @@
                             <p class="card-text">{{ $apartment->rooms }} : stanze
                             </p>
                             <p class="card-text"> {{ $apartment->beds }} : letti</p>
-                            <a href="#" class="btn placeholder-glow  btn-green" id="border">Show more </a>
+                            <a href="{{ route('apartments.show', $apartment->slug) }}"
+                                class="btn placeholder-glow  btn-green" id="border">Show more </a>
 
 
                             </p>
