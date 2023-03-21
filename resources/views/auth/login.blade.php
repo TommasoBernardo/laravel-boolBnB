@@ -71,7 +71,7 @@
     </div>
 </div> --}}
 
-<div class="container-fluid">
+<div class="container-fluid" id="wrapper">
     <div class="row">
         <div class="col-lg-8 d-none d-lg-block background-image"></div>
         <div class="col-lg-4">

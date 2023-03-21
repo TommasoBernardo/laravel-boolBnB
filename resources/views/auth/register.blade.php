@@ -116,7 +116,7 @@
         </div>
     </div> --}}
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="wrapper">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6 p-5">
                 <h4 class="text-center mb-5">Benvenuto!</h4>
