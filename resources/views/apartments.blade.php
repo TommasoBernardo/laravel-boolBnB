@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('scss')
-    @vite(['resources/js/apartments.js'])
+@vite(['resources/js/apartments.js'])
 @endsection
 @section('content')
 <div class="container">
@@ -62,22 +62,21 @@
                     <p class="card-text"> {{ $apartment->address }}</p>
                     <p class="card-text my-title fw-bold"> {{ $apartment->title }}</p>
 
-                            <p class="card-text">{{ $apartment->rooms }} : stanze
-                            </p>
+                    <p class="card-text">{{ $apartment->rooms }} : stanze
+                    </p>
                     <p class="card-text"> {{ $apartment->beds }} : letti</p>
-                    <a href="#"
-                                class="btn placeholder-glow  btn-green" id="border">Show more </a>
+                    <a href="#" class="btn placeholder-glow  btn-green" id="border">Show more </a>
 
 
-                            </p>
-                        </div>
-                    </div>
+                    </p>
                 </div>
-            @endforeach
+            </div>
         </div>
+        @endforeach
     </div>
-    {{ $apartments->links() }}
-    </div>
+</div>
+{{ $apartmentsIndex->links() }}
+</div>
 @endsection
 
 @section('script')
