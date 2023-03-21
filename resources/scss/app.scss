@@ -1,3 +1,21 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-@import '../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css'
+@import "../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css";
+
+#wrapper {
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url("https://s25562.pcdn.co/wp-content/uploads/2021/06/1100-Knollwood-entrance-house-residential-Quita-Cutrer.jpg.webp");
+    background-size: cover;
+    // width: 100vw;
+    height: 100vh;
+}
+
+.background-image-2 {
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/ogdvvp4oiysfofn1lpyg/61-1289padrelanetwilightback-copy-2");
+    background-size: cover;
+    // width: 100vw;
+    height: 100vh;
+}
