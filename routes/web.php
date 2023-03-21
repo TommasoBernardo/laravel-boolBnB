@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UR\ApartmentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Ui\ApartmentsController as UiApartmentsController;
+use App\Http\Controllers\UR\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,10 @@ Route::get('/apartments', [UiApartmentsController::class, 'index'])->name('apart
 
 Route::middleware(['auth', 'userApartment'])->prefix('dashboard')->group(function () {
     Route::resource('/apartment', ApartmentController::class);
+})->name('dashboard');
+
+Route::middleware('auth')->prefix('dashboard')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 })->name('dashboard');
 
 Route::middleware('auth')->prefix('ur')->name('ur.')->group(function () {
