@@ -1,8 +1,26 @@
-h1 {
-    color: #005555;
+#border {
+    border-color: #005555;
+}
+
+#my-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 }
 
 .btn-green {
     background-color: #005555;
     color: white;
+    border-radius: 30px;
+}
+
+.my-title {
+    font-size: 1.4rem;
+}
+
+h1 {
+    color: #005555;
+}
+
+p {
+    color: #005555;
 }
