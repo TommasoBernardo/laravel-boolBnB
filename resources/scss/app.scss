@@ -19,3 +19,17 @@
     // width: 100vw;
     height: 100vh;
 }
+
+.nav-pills span:hover,
+span:active,
+i:hover {
+    background-color: aliceblue;
+    padding: .5rem;
+    border-radius: 10px;
+    color: #000;
+    transition: .1s ease-in;
+}
+
+#my-height {
+    min-height: 90.4vh;
+}
