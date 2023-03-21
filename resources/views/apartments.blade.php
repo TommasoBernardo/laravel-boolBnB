@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('scss')
+    @vite(['resources/js/apartments.js'])
+@endsection
 @section('content')
     <div class="container">
         <div class="mt-3">
