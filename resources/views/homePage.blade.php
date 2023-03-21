@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('scss')
+@vite(['resources/js/home.js'])
+@endsection
 @section('content')
     {{-- Slider-carousel --}}
     <div class="container-carousel mb-5">
@@ -66,32 +69,24 @@
                     <div class="swiper-wrapper">
 
                         @foreach ($apartments as $apartment)
-                            <div class=" swiper-slide  ">
-                                <div class="card-custom" id="myCarousel">
+                            <div class=" swiper-slide">
+                                <div class="flex-column" id="myCarousel">
                                     <div href="property-single.html" class="img">
                                         <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top"
                                             style=" height:250px ; border-radius:2rem; " alt="{{ $apartment->title }}">
                                     </div>
-                                    <div class="property-content">
-                                        <div class="price mb-1">
-                                            <p>
-                                            </p>
-                                        </div>
+                                    <div class="flex-column mt-3">
                                         <div class="mb-3">
-                                            <h6 class="d-block mb-2 fw-bold">{{ $apartment->title }}</h6>
-                                            <p class="city d-block mb-1">{{ $apartment->address }}</p>
-                                            <span class="caption">  Stanze: {{ $apartment->rooms }}</span>
-                                            <div class="specs d-flex mb-2">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="caption">{{ $apartment->rooms }}</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="caption">Numeri letti {{ $apartment->beds }}</span>
-                                                </span>
+                                            <div class="mt-2" style="height: 70px " >
+                                                <h6 class="d-block mb-2 fw-bold">{{ $apartment->title }}</h6>
+                                                <p class="city d-block fw-light mb-1"> {{ $apartment->address }}</p>
                                             </div>
-                                            <div class="">
-                                                <a href="property-single.html"
-                                                    class="btn btn-outline-success rounded-5 ">See details</a>
+                                            <div class="d-flex mt-2" >
+                                                <p class="me-3" style="" ><i class="fa-solid fa-house"></i>   {{ $apartment->rooms }}</span>
+                                                <p class=""><i class="fa-solid fa-bed"></i> {{ $apartment->beds }} </span>
+                                            </div>
+                                            <div class="mt-2" >
+                                                <a href="" class="btn btn-outline-success rounded-5 "> See details </a>
                                             </div>
                                         </div>
                                     </div>

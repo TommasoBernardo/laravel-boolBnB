@@ -2,13 +2,3 @@
 
 @import '../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css';
 
-div.hero-parent{
-    position: relative;
-
-    .search-box-hero{
-        position: absolute;
-        left:36% ;
-        top: 35%;
-        z-index: 3;
-    }
-}
