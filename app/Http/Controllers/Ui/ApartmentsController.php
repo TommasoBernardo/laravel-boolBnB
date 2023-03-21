@@ -13,7 +13,7 @@ class ApartmentsController extends Controller
     public function index(Request $request)
     {
 
-        
+
         $address = $request->input('address');
         $latitude = $request->input('latitude');
         $longitude = $request->input('longitude');
@@ -23,7 +23,7 @@ class ApartmentsController extends Controller
         $services = $request->input('services');
 
         $earthRadius = 6371;
-        $maxDistance = $request->input('distanceKm'); 
+        $maxDistance = $request->input('distanceKm');
 
         $latPerKm = 0.00904371733; // (1 km = 0.00904371733 latitudine)
         $lngPerKm = 0.0109664041; // (1 km = 0.0109664041 longitudine)
@@ -36,9 +36,9 @@ class ApartmentsController extends Controller
 
 
 
-        $apartments = Apartment::orderBy('id','DESC');
+        $apartments = Apartment::orderBy('id', 'DESC');
 
-        
+
 
 
         if ($request->address) {
@@ -55,26 +55,23 @@ class ApartmentsController extends Controller
             if ($request->beds) {
                 $apartments->where('beds', '>=', $beds);
             }
-            if($request->services){
+            if ($request->services) {
                 $apartments->whereHas('services', function ($query) use ($services) {
                     $query->whereIn('service_id', $services);
                 }, '=', count($services));
             }
-        } 
+        }
 
 
 
-        $apartmentsIndex = $apartments->simplePaginate(16);
+        $apartmentsIndex = $apartments->simplePaginate(12);
         $services = Service::all();
-        
-        return view('apartments', compact('apartmentsIndex','services'));
+
+        return view('apartments', compact('apartmentsIndex', 'services'));
     }
 
     public function show(Apartment $apartment)
     {
         return view('apartmentShow', compact('apartment'));
     }
-
-
-
 }
