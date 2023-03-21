@@ -55,16 +55,16 @@
     </div>
     <div class="row ">
         @foreach ($apartmentsIndex as $apartment)
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center ">
-            <div id="my-card" class="card mt-5" style=" height: 34rem;">
-                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid " style="height: 18rem;" alt="{{ $apartment->title }}">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center flex-fill">
+            <div id="my-card" class="card mt-5">
+                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid fix-img" style="height: 18rem;" alt="{{ $apartment->title }}">
                 <div class="card-body">
-                    <p class="card-text"> {{ $apartment->address }}</p>
-                    <p class="card-text my-title fw-bold"> {{ $apartment->title }}</p>
+                    <p class="card-text lead"> {{ $apartment->address }}</p>
+                    <p class="card-text my-title fw-bold mb-3"> {{ $apartment->title }}</p>
 
-                    <p class="card-text">{{ $apartment->rooms }} : stanze
-                    </p>
-                    <p class="card-text"> {{ $apartment->beds }} : letti</p>
+                    <p class="card-text"> <strong>Stanze: </strong><span>{{ $apartment->rooms }} </span></p>
+                    
+                    <p class="card-text"><strong>Letti: </strong><span>{{ $apartment->beds }}</span></p>
                     <a href="#" class="btn placeholder-glow  btn-green" id="border">Show more </a>
 
 

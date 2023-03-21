@@ -24,3 +24,8 @@ h1 {
 p {
     color: #005555;
 }
+
+.fix-img {
+    object-fit: cover;
+    object-position: center;
+}
