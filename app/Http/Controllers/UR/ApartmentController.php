@@ -73,7 +73,7 @@ class ApartmentController extends Controller
     {
         $apartments = Apartment::where('user_id', Auth::user()->id)->get(); 
 
-        return view('dashboard', compact('apartments'));
+        return view('list-apartment', compact('apartments'));
     }
 
     /**

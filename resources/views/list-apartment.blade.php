@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container-fluid">
       <div class="row flex-nowrap">
-        <div id="my-height" class="bg-dark col col-md-4 col-lg-3 d-flex flex-column justify-content-between">
+        <div class="bg-dark col col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between my-shadow">
           <div class="bg-dark p-2 "> 
             <ul class="nav nav-pills flex-column mt-4">
               <li class="nav-item py-2 py-sm-0">
@@ -26,13 +27,12 @@
         </div>
 
         <div class="col">
-          @include('partials.dash-user-info')
+          @include('partials.apartmentsTable')
         </div>
 
         
       </div>
     </div>
-   
 
 @endsection
 
