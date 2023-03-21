@@ -1,0 +1,41 @@
+.my-dimension {
+    width: 40rem;
+    height: 40rem;
+
+}
+
+h1 {
+    color: #005555;
+}
+
+h2 {
+    color: #005555;
+}
+
+.my-square {
+    width: 20rem;
+    height: 19.8rem;
+    background-color: red;
+    margin-left: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+img {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.top-right {
+    border-top-right-radius: 50px;
+}
+
+.bottom-right {
+    border-bottom-right-radius: 50px;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #005555;
+    width: 5rem;
+    height: 5rem;
+}
