@@ -19,7 +19,7 @@
     <div class="card shadow-sm" style="width: 18rem;">
       <div class="card-title text-center ">
         <h5 class="p-4">Appartamenti registrati</h5>
-        <p class="display-3 text-primary"><span class="count" total="30">0</span></p>
+        <p class="display-3 text-primary"><span class="count" total="{{count($apartments)}}">0</span></p>
       </div>
     </div>
   </div>
