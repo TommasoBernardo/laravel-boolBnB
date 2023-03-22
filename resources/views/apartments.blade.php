@@ -5,8 +5,8 @@
 @section('content')
     <div class="container">
         <form action="{{ route('apartments.index') }}" method="GET">
-            <div class="row">
-                <div class="col-12 mt-3">
+            <div class="row justify-content-center">
+                <div class="col-6 mt-3 ">
                     <div id="searchBox"></div>
                     <div class="d-none">
                         <input type="text" id="latitude" name="latitude">
@@ -76,15 +76,15 @@
             @foreach ($apartmentsIndex as $apartment)
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center ">
                     <div id="my-card" class="card mt-5" style=" height: 34rem;">
-                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid "
+                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid fix-img"
                             style="height: 18rem;" alt="{{ $apartment->title }}">
                         <div class="card-body">
-                            <p class="card-text"> {{ $apartment->address }}</p>
+                            <p class="card-text lead"> {{ $apartment->address }}</p>
                             <p class="card-text my-title fw-bold"> {{ $apartment->title }}</p>
 
-                            <p class="card-text">{{ $apartment->rooms }} : rooms
+                            <p class="card-text"><strong>Rooms: </strong> {{ $apartment->rooms }} 
                             </p>
-                            <p class="card-text"> {{ $apartment->beds }} : beds</p>
+                            <p class="card-text"><strong>Beds: </strong> {{ $apartment->beds }}</p>
                             <a href="{{ route('apartments.show', $apartment->slug) }}"
                                 class="btn placeholder-glow  btn-green" id="border">Show more </a>
                             </p>
