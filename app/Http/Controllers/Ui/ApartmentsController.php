@@ -48,6 +48,7 @@ class ApartmentsController extends Controller
 
         $apartments = Apartment::orderBy('id', 'DESC');
 
+        $apartments->where('visible',1);
 
 
 
@@ -57,7 +58,8 @@ class ApartmentsController extends Controller
                 ->having("distance", "<", $maxDistance)
                 ->orderBy("distance")
                 ->whereBetween("latitude", [$minLat, $maxLat])
-                ->whereBetween("longitude", [$minLng, $maxLng]);
+                ->whereBetween("longitude", [$minLng, $maxLng])
+                ->where('visible',1);
 
             if ($request->rooms) {
                 $apartments->where('rooms', '>=', $rooms);
