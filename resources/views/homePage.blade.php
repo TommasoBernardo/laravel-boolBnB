@@ -11,17 +11,17 @@
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
             </ol>
-            <div class="search-box-hero d-flex justify-content-center align-items-center">
+            <div class="search-box-hero d-flex justify-content-center align-items-center ">
                 <div class="row">
-                    <div class="col text-light text-center">
-                        <h1 class="heading fw-bold ">
-                            Easiest way to find your dream home
+                    <div class="col text-light" >
+                        <h1 class="heading fw-bold " >
+                            Easiest way to find your dream home <i class="fa-regular fa-paper-plane"></i>
                         </h1>
-                        <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
+                        {{-- <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
                             data-aos="fade-up" data-aos-delay="200">
                             <input type="text" class="form-control px-4" placeholder="es. New York" />
                             <button type="submit" class="btn btn-outline-success ms-2">Search</button>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
             </div>
@@ -53,13 +53,13 @@
     <div class="container mb-5">
         <div class="row mb-5 align-items-center">
             <div class="col-lg-9 col-sm-3 ">
-                <h2 class="font-weight-bold text-success heading fw-bold">
+                <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) " >
                     Popular Properties
                 </h2>
             </div>
             <div class="col-lg-3 col-sm-3 d-flex  justify-content-end">
-                <div>
-                    <a href="{{route('apartments.index')}}" class="btn btn-success text-white rounded-5 ">View all properties</a>
+                <div class="">
+                    <button href="{{route('apartments.index')}}" class="btn text-white custom-button rounded-5" style="background-color:rgb(0, 85, 85)">View all properties</button>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                                                 <p class=""><i class="fa-solid fa-bed"></i> {{ $apartment->beds }} </span>
                                             </div>
                                             <div class="mt-2" >
-                                                <a href="{{route('apartments.show',$apartment->slug)}}" class="btn btn-outline-success rounded-5 "> See details </a>
+                                                <a href="" class="btn btn-outline-success rounded-5 "> See details </a>
                                             </div>
                                         </div>
                                     </div>
@@ -105,8 +105,8 @@
     {{-- banner propreties --}}
     <div class="bg-color p-4">
         <div class="container mt-5 mb-5">
-            <div class="row justify-center">
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                    <div class="card border-0  " style="width: 18rem;">
                        <div class="card-body text-center">
                         <div class="icon mb-4">
@@ -116,9 +116,9 @@
                          <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
                          <a href="#" class="link-about-us ">About Us</a>
                        </div>
-                     </div>
+                    </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -130,7 +130,7 @@
                     </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -142,7 +142,7 @@
                     </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -172,8 +172,8 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-4 col-md-4 col-sm-2">
-                    <div class="card border-0 text-center p-3">
+                <div class="col-lg-4 col-md-4 col-sm-12 card-agent">
+                    <div class="card border-0 text-center p-3 ">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
@@ -189,18 +189,18 @@
                                     A great manager is a skilled communicator who is able to clearly and effectively convey their ideas and expectations to their team. They are also good listeners, open to feedback and able to understand and respond to their team members' concerns and needs. 
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2 ">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
                                 </ul>  
@@ -209,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-12 card-agent">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -226,28 +226,27 @@
                                     A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success.  
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
 
                                 </ul>  
-                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-12 card-agent">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -264,18 +263,18 @@
                                     A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success. 
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
 
