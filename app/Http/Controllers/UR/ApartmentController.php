@@ -160,6 +160,8 @@ class ApartmentController extends Controller
 
         $data = $request->validate($regoleDaAggiornare, $this->messaggiValidazione);
 
+        $data['slug'] = Str::slug($data['title']);
+        
 
         if (isset($data['cover_image'])) {
             if (isset($apartment->cover_image)) {
