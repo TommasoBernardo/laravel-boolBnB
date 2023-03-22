@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-center">
-                    <button type="submit" class="btn  mt-3 search-button">search</button>
+                    <button type="submit" class="btn  mt-3 search-button">Search</button>
                 </div>
             </div>
 
