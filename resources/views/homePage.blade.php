@@ -11,17 +11,17 @@
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
             </ol>
-            <div class="search-box-hero d-flex justify-content-center align-items-center">
+            <div class="search-box-hero">
                 <div class="row">
-                    <div class="col text-light text-center">
-                        <h1 class="heading fw-bold ">
-                            Easiest way to find your dream home
+                    <div class="col text-light" >
+                        <h1 class="heading fw-bold " >
+                            Easiest way to find your dream home <i class="fa-regular fa-paper-plane"></i>
                         </h1>
-                        <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
+                        {{-- <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
                             data-aos="fade-up" data-aos-delay="200">
                             <input type="text" class="form-control px-4" placeholder="es. New York" />
                             <button type="submit" class="btn btn-outline-success ms-2">Search</button>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
             </div>
@@ -53,13 +53,13 @@
     <div class="container mb-5">
         <div class="row mb-5 align-items-center">
             <div class="col-lg-9 col-sm-3 ">
-                <h2 class="font-weight-bold text-success heading fw-bold">
+                <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) " >
                     Popular Properties
                 </h2>
             </div>
             <div class="col-lg-3 col-sm-3 d-flex  justify-content-end">
-                <div>
-                    <a href="#" target="_blank" class="btn btn-success text-white rounded-5 ">View all properties</a>
+                <div class="">
+                    <button href="#" target="_blank" class="btn text-white custom-button rounded-5" style="background-color:rgb(0, 85, 85)">View all properties</button>
                 </div>
             </div>
         </div>
