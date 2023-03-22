@@ -105,8 +105,8 @@
     {{-- banner propreties --}}
     <div class="bg-color p-4">
         <div class="container mt-5 mb-5">
-            <div class="row justify-center">
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                    <div class="card border-0  " style="width: 18rem;">
                        <div class="card-body text-center">
                         <div class="icon mb-4">
@@ -116,9 +116,9 @@
                          <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
                          <a href="#" class="link-about-us ">About Us</a>
                        </div>
-                     </div>
+                    </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -130,7 +130,7 @@
                     </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -142,7 +142,7 @@
                     </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
+               <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
@@ -172,8 +172,8 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-4 col-md-4 col-sm-2">
-                    <div class="card border-0 text-center p-3">
+                <div class="col-lg-4 col-md-4 col-sm-12 card-agent">
+                    <div class="card border-0 text-center p-3 ">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
@@ -209,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-12 card-agent">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -246,7 +246,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-12 card-agent">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">

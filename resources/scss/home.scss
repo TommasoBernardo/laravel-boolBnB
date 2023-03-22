@@ -70,3 +70,17 @@ ul.icon{
         
     }
 }
+
+
+
+@media screen and (max-width: 780px) {
+    div.wrap-cards-propreties{
+        display: flex;
+        justify-content: center;
+    }
+    div.card-agent{
+        display: flex;
+        justify-content: center;
+    }
+
+}
