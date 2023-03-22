@@ -124,7 +124,7 @@
         <div class="mb-3">
 
             <label class="form-label" for="cover_image">Inserisci un'immagine di cover: </label>
-            <input class="form-control {{$errors->has('cover_image') ? 'is-invalid' : '' }}" type="file" value="{{old('cover_image',$apartment->cover_image)}}" name="cover_image" id="cover_image" required  >
+            <input class="form-control {{$errors->has('cover_image') ? 'is-invalid' : '' }}" type="file" value="{{old('cover_image',$apartment->cover_image)}}" name="cover_image" id="cover_image" >
             @if($errors->has('cover_image'))
             <div class="alert alert-danger mt-3">
                 @foreach ($errors->get('cover_image') as $error)
