@@ -37,7 +37,7 @@
                             <div class="col-lg-4">
                                 <div class="input-container">
                                     <select class="select-menu" name="distanceKm" id="distanceKm">
-                                        <option value="" disabled selected>Filtra per distanza</option>
+                                        <option value="20">Filtra per distanza</option>
                                         <option value="20">20Km</option>
                                         <option value="40">40Km</option>
                                         <option value="60">60Km</option>
@@ -82,7 +82,7 @@
                             <p class="card-text lead"> {{ $apartment->address }}</p>
                             <p class="card-text my-title fw-bold"> {{ $apartment->title }}</p>
 
-                            <p class="card-text"><strong>Rooms: </strong> {{ $apartment->rooms }} 
+                            <p class="card-text"><strong>Rooms: </strong> {{ $apartment->rooms }}
                             </p>
                             <p class="card-text"><strong>Beds: </strong> {{ $apartment->beds }}</p>
                             <a href="{{ route('apartments.show', $apartment->slug) }}"
