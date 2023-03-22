@@ -102,6 +102,7 @@
 
         </div>
     </div>
+    {{-- banner propreties --}}
     <div class="bg-color p-4">
         <div class="container mt-2">
             <div class="row justify-center">
@@ -156,6 +157,139 @@
             </div>
         </div>
     </div>
+
+    {{-- section cards Our agents --}}
+    <section>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h1 class="mb-3 fw-bold" style="color:rgb(0, 85, 85) ;">
+                        Our Agents 
+                    </h1>
+                    <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores. 
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-sm-2">
+                    <div class="card border-0 text-center p-3">
+                        <div class="img-profile mb-3">
+                            <img src="https://i.pravatar.cc/100" alt="" srcset="">
+                        </div>
+                        <div class="wrap-content">
+                            <div class="content mb-5">
+                                <h4>
+                                    James Doe
+                                </h4>
+                                <span style="color: gray">
+                                    Real Estate Agent
+                                </span>
+                                <p class="mt-2">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                </p>
+                            </div>
+                            <div class="mb-5">
+                                <ul class="icon d-flex justify-content-center ">
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+
+                                </ul>  
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-2">
+                    <div class="card border-0 text-center p-3">
+                        <div class="img-profile mb-3">
+                            <img src="https://i.pravatar.cc/100" alt="" srcset="">
+                        </div>
+                        <div class="wrap-content">
+                            <div class="content mb-5">
+                                <h4>
+                                    Jean Smith
+                                </h4>
+                                <span style="color: gray">
+                                    Real Estate Agent
+                                </span>
+                                <p class="mt-2">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                </p>
+                            </div>
+                            <div class="mb-5">
+                                <ul class="icon d-flex justify-content-center ">
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+
+                                </ul>  
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-2">
+                    <div class="card border-0 text-center p-3">
+                        <div class="img-profile mb-3">
+                            <img src="https://i.pravatar.cc/100" alt="" srcset="">
+                        </div>
+                        <div class="wrap-content">
+                            <div class="content mb-5">
+                                <h4>
+                                    Alicia Huston
+                                </h4>
+                                <span style="color: gray">
+                                    Real Estate Agent
+                                </span>
+                                <p class="mt-2">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                </p>
+                            </div>
+                            <div class="mb-5">
+                                <ul class="icon d-flex justify-content-center ">
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap ">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+
+                                </ul>  
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 @endsection
 @section('script')
     @vite(['resources/js/sliderCard.js'])
