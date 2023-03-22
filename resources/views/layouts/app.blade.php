@@ -71,12 +71,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     {{-- cdn Bootstrap --}}
- 
+
 
     {{-- font-awesome --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Usando Vite -->
@@ -89,13 +87,9 @@
 </head>
 
 <body>
-    <button
-        type="button"
-        class="btn btn-success btn-lg"
-        id="btn-back-to-top"
-        >
-  <i class="fas fa-arrow-up"></i>
-</button>
+    <button type="button" class="btn btn-success btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <div id="app">
 
@@ -144,6 +138,12 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
+                                @if(!Auth::user()->name and Auth::user()->surname)
+                                {{Auth::user()->surname}}
+                                @endif
+                                @if(!Auth::user()->name and !Auth::user()->surname)
+                                User {{Auth::user()->id}}
+                                @endif
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -173,8 +173,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-6 pe-5">
-                        <img  class="text-center" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                        style="width: 185px;" alt="logo">
+                        <img class="text-center" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 185px;" alt="logo">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate facilis voluptates culpa. Aspernatur debitis atque recusandae beatae porro, consequatur repellat.</p>
                     </div>
                     <div class="col-6  text-end">
@@ -187,7 +186,9 @@
                     </div>
                     <div class="col-12 my-3 text-center">
                         <div class="text-center align-self-end ">
-                            <small class="">Copyright &copy; <script>document.write(new Date().getFullYear())</script><strong> BoolBnB</strong></small>
+                            <small class="">Copyright &copy; <script>
+                                    document.write(new Date().getFullYear())
+                                </script><strong> BoolBnB</strong></small>
                         </div>
                     </div>
                 </div>

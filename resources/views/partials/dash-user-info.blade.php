@@ -4,7 +4,7 @@
       <div class="d-flex flex-column align-items-center text-center">
         <img src="https://i.pravatar.cc/300" alt="Profile picture" class="rounded-circle" width="150">
         <div class="mt-3">
-          <h4>Ciao, {{Auth::user()->name }} {{Auth::user()->surname }}</h4>
+          <h4>Ciao, {{Auth::user()->name }} {{Auth::user()->surname }} @if(!Auth::user()->name and !Auth::user()->surname) User {{Auth::user()->id}} @endif</h4>
           <p class="text-secondary mb-1">{{Auth::user()->email }}</p>
           <p class="text-muted font-size-sm">{{Auth::user()->date_of_birth }}</p>
         </div>
