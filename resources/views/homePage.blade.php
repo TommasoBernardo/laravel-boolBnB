@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-3 col-sm-3 d-flex  justify-content-end">
                 <div>
-                    <a href="#" target="_blank" class="btn btn-success text-white rounded-5 ">View all properties</a>
+                    <a href="{{route('apartments.index')}}" class="btn btn-success text-white rounded-5 ">View all properties</a>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                                                 <p class=""><i class="fa-solid fa-bed"></i> {{ $apartment->beds }} </span>
                                             </div>
                                             <div class="mt-2" >
-                                                <a href="" class="btn btn-outline-success rounded-5 "> See details </a>
+                                                <a href="{{route('apartments.show',$apartment->slug)}}" class="btn btn-outline-success rounded-5 "> See details </a>
                                             </div>
                                         </div>
                                     </div>
