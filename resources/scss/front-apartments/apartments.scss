@@ -113,13 +113,16 @@ select.select-menu {
 
 button.search-button {
     border: 3px solid rgb(0, 87, 85);
-    background-color: whitesmoke;
-    color: #005555;
+    background-color: #005555;
+    color: whitesmoke;
+
+    &:hover {
+        background-color: whitesmoke;
+        border: 3px solid #005555;
+    }
 }
 
-input.form-check-input {
-    color: #005555;
-}
+
 
 .form-check-input:checked {
     background-color: #005555;
