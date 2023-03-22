@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary mt-3">cerca</button>
+                    <button type="submit" class="btn btn-primary mt-3">search</button>
                 </div>
             </div>
         </form>
@@ -64,9 +64,9 @@
                             <p class="card-text"> {{ $apartment->address }}</p>
                             <p class="card-text my-title fw-bold"> {{ $apartment->title }}</p>
 
-                            <p class="card-text">{{ $apartment->rooms }} : stanze
+                            <p class="card-text">{{ $apartment->rooms }} : rooms
                             </p>
-                            <p class="card-text"> {{ $apartment->beds }} : letti</p>
+                            <p class="card-text"> {{ $apartment->beds }} : beds</p>
                             <a href="{{ route('apartments.show', $apartment->slug) }}"
                                 class="btn placeholder-glow  btn-green" id="border">Show more </a>
 
