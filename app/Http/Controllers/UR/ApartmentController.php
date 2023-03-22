@@ -9,12 +9,14 @@ use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+
 
 
 class ApartmentController extends Controller
 {
     protected $regoleValidazione = [
-        'title' => 'required|max:150|min:5|string',
+        'title' => 'required|max:150|min:5|string|unique:apartments',
         'rooms' => 'required|numeric|min:1|integer',
         'beds' => 'required|numeric|min:1|integer',
         'bathrooms' => 'required|numeric|min:1|integer',
@@ -27,6 +29,7 @@ class ApartmentController extends Controller
         'services' => 'required|exists:services,id|array'
     ];
     protected $messaggiValidazione = [
+        'title.unique' => 'questo titolo esiste già, sceglierne un altro.',
         'title.required' => 'il campo è obbligatorio.',
         'title.max' => 'il campo non può contenere più di 150 caratteri.',
         'title.min' => 'il campo non può contenere meno di 5 caratteri.',
@@ -153,6 +156,7 @@ class ApartmentController extends Controller
         $regoleDaAggiornare = $this->regoleValidazione;
 
         $regoleDaAggiornare['cover_image'] = ['max:300','image'];
+        $regoleDaAggiornare['title'] = ['required','max:150','min:5','string', Rule::unique('apartments')->ignore($apartment->id)];
 
         $data = $request->validate($regoleDaAggiornare, $this->messaggiValidazione);
 
