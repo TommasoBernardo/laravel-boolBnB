@@ -65,5 +65,40 @@ h3 {
         width: 100%;
     }
 
+    .my-dimension {
+        height: 40rem;
+        width: 50rem;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .my-img {
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .my-dimension {
+        height: 25rem;
+        width: 30rem;
+    }
+
+    .my-square {
+        width: 20rem;
+        height: 19.8rem;
+        background-color: red;
+        margin-left: 0.3rem;
+        margin-bottom: 0.3rem;
+        display: none;
+    }
+
+    .my-users {
+        border-radius: 50%;
+        vertical-align: text-top;
+        display: none;
+    }
 
 }
