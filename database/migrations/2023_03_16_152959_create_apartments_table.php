@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('slug', 255)->unique();
-            $table->string('title', 150)->nullable(false);
+            $table->string('title', 150)->nullable(false)->uniqid();
             $table->tinyInteger('rooms')->unsigned()->nullable(false);
             $table->tinyInteger('beds')->unsigned()->nullable(false);
             $table->tinyInteger('bathrooms')->unsigned()->nullable(false);
