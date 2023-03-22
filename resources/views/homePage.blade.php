@@ -189,18 +189,18 @@
                                     A great manager is a skilled communicator who is able to clearly and effectively convey their ideas and expectations to their team. They are also good listeners, open to feedback and able to understand and respond to their team members' concerns and needs. 
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2 ">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
                                 </ul>  
@@ -226,23 +226,22 @@
                                     A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success.  
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
 
                                 </ul>  
-                                
                             </div>
                         </div>
                     </div>
@@ -264,18 +263,18 @@
                                     A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success. 
                                 </p>
                             </div>
-                            <div class="mb-5">
-                                <ul class="icon d-flex justify-content-center ">
-                                    <li class="icon-circle-wrap">
+                            <div class="mb-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
                                     </li>
-                                    <li class="icon-circle-wrap">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
 
