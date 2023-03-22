@@ -28,7 +28,8 @@
             </div>
             <div class="col-lg-6 col-md-3 col-sm-1 d-flex justify-content-end">
                 <div class="circle">
-                    <img src="https://i.pravatar.cc/100" class="img-fluid my-users" alt="">
+                    <img src="https://i.pravatar.cc/100" class="img-fluid my-users d-md-none d-sm-none d-lg-block"
+                        alt="">
                 </div>
             </div>
         </div>
