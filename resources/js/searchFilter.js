@@ -7,8 +7,9 @@ var options = {
     },
     autocompleteOptions: {
         key: "hJqueTcOWatAGBZnKxzHkdEbmyM9feG4",
-        language: "it-IT",
+        language: "it-IT"
     },
+    placeholder: "Inserisci indirizzo",
 }
 var ttSearchBox = new tt.plugins.SearchBox(tt.services, options)
 var searchBoxHTML = ttSearchBox.getSearchBoxHTML()
@@ -18,8 +19,8 @@ let longitudine = null
 let address = null
 
 ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
-    
-    
+
+
     console.log(data.data.result);
 
 
@@ -35,12 +36,12 @@ ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
     const inputLatidudine = document.getElementById('latitude').setAttribute('value', latitudine)
     const inputLongitudine = document.getElementById('longitude').setAttribute('value', longitudine)
     const inputAddress = document.getElementById('address').setAttribute('value', address)
-    
+
     document.getElementById('latitude').value = latitudine
     document.getElementById('longitude').value = longitudine
     document.getElementById('address').value = address
 
-    
+
 });
 
 
