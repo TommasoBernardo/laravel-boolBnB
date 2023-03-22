@@ -197,13 +197,12 @@
                                     <li class="icon-circle-wrap">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </li>
-                                    <li class="icon-circle-wrap ">
+                                    <li class="icon-circle-wrap">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </li>
                                     <li class="icon-circle-wrap ">
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
-
                                 </ul>  
                                 
                             </div>
