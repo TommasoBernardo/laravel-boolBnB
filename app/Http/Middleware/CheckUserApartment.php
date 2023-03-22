@@ -25,7 +25,7 @@ class CheckUserApartment
             
             
             if ($request->user()->id != $request->route('apartment')->user_id) {
-                return redirect()->route('apartment.index');
+                return redirect()->route('dashboard.index');
             }
             
             
