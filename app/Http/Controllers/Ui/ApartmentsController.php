@@ -13,10 +13,20 @@ class ApartmentsController extends Controller
     public function index(Request $request)
     {
 
+        
+        $apartmentwithoutName = Apartment::where('address', 'like', '%' . $request->address . '%')->first();
+        
+        if ($apartmentwithoutName) {
+            $latitude = $apartmentwithoutName->latitude;
+            $longitude = $apartmentwithoutName->longitude;
+        }else{
 
-        $address = $request->input('address');
-        $latitude = $request->input('latitude');
-        $longitude = $request->input('longitude');
+            $address = $request->input('address');
+            $latitude = $request->input('latitude');
+            $longitude = $request->input('longitude');
+            
+        }
+
 
         $rooms = $request->input('rooms');
         $beds = $request->input('beds');

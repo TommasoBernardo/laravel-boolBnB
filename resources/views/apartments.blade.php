@@ -10,7 +10,6 @@
                     <label for="searchBox">Indirizzo:</label>
                     <div id="searchBox"></div>
                     <div class="d-none">
-                        <input type="text" id="address" name="address">
                         <input type="text" id="latitude" name="latitude">
                         <input type="text" id="longitude" name="longitude">
                     </div>
