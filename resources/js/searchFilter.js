@@ -16,7 +16,7 @@ var searchBoxHTML = ttSearchBox.getSearchBoxHTML()
 
 let latitudine = null
 let longitudine = null
-let address = null
+// let address = null
 
 ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
 
@@ -26,7 +26,7 @@ ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
 
     latitudine = data.data.result.position.lat;
     longitudine = data.data.result.position.lng;
-    address = data.data.result.address.freeformAddress;
+    // address = data.data.result.address.freeformAddress;
 
 
 
@@ -35,17 +35,21 @@ ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
 
     const inputLatidudine = document.getElementById('latitude').setAttribute('value', latitudine)
     const inputLongitudine = document.getElementById('longitude').setAttribute('value', longitudine)
-    const inputAddress = document.getElementById('address').setAttribute('value', address)
-
+    // const inputAddress = document.getElementById('address').setAttribute('value', address)
+    
     document.getElementById('latitude').value = latitudine
     document.getElementById('longitude').value = longitudine
-    document.getElementById('address').value = address
+    // document.getElementById('address').value = address
 
 
 });
 
 
 document.getElementById("searchBox").append(searchBoxHTML)
+
+
+const input = document.querySelector('input.tt-search-box-input').setAttribute('name','address')
+
 
 
 document.getElementById('latitude').addEventListener('input', () => {
@@ -57,9 +61,9 @@ document.getElementById('longitude').addEventListener('input', () => {
     document.getElementById('longitude').value = longitudine
 })
 
-document.getElementById('address').addEventListener('input', () => {
-    document.getElementById('address').value = address
-})
+// document.getElementById('address').addEventListener('input', () => {
+//     document.getElementById('address').value = address
+// })
 
 // document.getElementById('latitude').disabled = true;
 // document.getElementById('longitude').disabled = true;

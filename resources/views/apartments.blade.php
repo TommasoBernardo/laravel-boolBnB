@@ -9,7 +9,7 @@
                 <div class="col-12 mt-3">
                     <div id="searchBox"></div>
                     <div class="d-none">
-                        <input type="text" id="address" name="address">
+                        <input type="text" id="latitude" name="latitude">
                         <input type="text" id="longitude" name="longitude">
                         <input type="text" id="latitude" name="latitude">
                     </div>
