@@ -7,6 +7,19 @@
     overflow: hidden;
 }
 
+// Header section
+.nav-link:hover {
+    color: #005555;
+    font-weight: bold;
+}
+
+
+.logo_sito {
+    width: 6rem;
+}
+
+
+
 // For Login & Register pages
 .background-image {
     background-image: url("https://s25562.pcdn.co/wp-content/uploads/2021/06/1100-Knollwood-entrance-house-residential-Quita-Cutrer.jpg.webp");
@@ -35,11 +48,18 @@ i:hover {
 
 #my-height {
     min-height: 90.4vh;
+
+}
+
+// Set edit.blade height
+#set-height {
+    height: 64.7vh;
+    overflow-y: hidden;
 }
 
 // Footer styling
 .footer {
-    background-color: #ebebdb;
+    background-color: #f7f7f7;
     color: #4c5c68;
 
     ul {
