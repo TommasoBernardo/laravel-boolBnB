@@ -29,7 +29,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <!-- Usando Vite -->
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/app.js', 'resources/js/backToTop-btn.js'])
 
     @yield('scss')
 
@@ -38,6 +38,14 @@
 </head>
 
 <body>
+    <button
+        type="button"
+        class="btn btn-success btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+
     <div id="app">
 
 
@@ -116,6 +124,31 @@
         <main class="">
             @yield('content')
         </main>
+
+        <footer class="container-fluid footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 pe-5">
+                        <img  class="text-center" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                        style="width: 185px;" alt="logo">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate facilis voluptates culpa. Aspernatur debitis atque recusandae beatae porro, consequatur repellat.</p>
+                    </div>
+                    <div class="col-6  text-end">
+                        <h4>Explore</h4>
+                        <ul class="footer-menu">
+                            <li><a class="hover-color" href="#">Link 1</a></li>
+                            <li><a class="hover-color" href="#">Link 2</a></li>
+                            <li><a class="hover-color" href="#">Link 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 my-3 text-center">
+                        <div class="text-center align-self-end ">
+                            <small class="">Copyright &copy; <script>document.write(new Date().getFullYear())</script><strong> BoolBnB</strong></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     @yield('script')
 </body>
