@@ -104,7 +104,7 @@
     </div>
     {{-- banner propreties --}}
     <div class="bg-color p-4">
-        <div class="container mt-2">
+        <div class="container mt-5 mb-5">
             <div class="row justify-center">
                <div class="col-lg-3 col-md-6 mt-3 col-sm-1">
                    <div class="card border-0  " style="width: 18rem;">
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-4 col-sm-2">
+                <div class="col-lg-4 col-md-4 col-sm-2">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -186,7 +186,7 @@
                                     Real Estate Agent
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                    A great manager is a skilled communicator who is able to clearly and effectively convey their ideas and expectations to their team. They are also good listeners, open to feedback and able to understand and respond to their team members' concerns and needs. 
                                 </p>
                             </div>
                             <div class="mb-5">
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-2">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -224,7 +224,7 @@
                                     Real Estate Agent
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                    A great manager is also a strong leader who is able to inspire and motivate their team to achieve their goals. They lead by example and are able to establish trust and respect with their team through their actions and words. 
                                 </p>
                             </div>
                             <div class="mb-5">
@@ -248,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-2">
+                <div class="col-lg-4 col-md-4  col-sm-2">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
@@ -262,7 +262,7 @@
                                     Real Estate Agent
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias? 
+                                    A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success. 
                                 </p>
                             </div>
                             <div class="mb-5">
