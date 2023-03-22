@@ -18,7 +18,7 @@ use App\Http\Controllers\UR\DashboardController;
 |
 */
 
-Route::get('/', [HomepageController::class , 'index'] );
+Route::get('/', [HomepageController::class , 'index'] )->name('home');
 
 Route::get('/apartments', [UiApartmentsController::class, 'index'])->name('apartments.index');
 Route::get('/apartments/{apartment}', [UiApartmentsController::class, 'show'])->name('apartments.show');
