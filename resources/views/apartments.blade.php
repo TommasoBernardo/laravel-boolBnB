@@ -11,7 +11,6 @@
                     <div class="d-none">
                         <input type="text" id="latitude" name="latitude">
                         <input type="text" id="longitude" name="longitude">
-                        <input type="text" id="latitude" name="latitude">
                     </div>
                 </div>
                 <div class="container">
