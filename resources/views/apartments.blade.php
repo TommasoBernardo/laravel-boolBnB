@@ -6,48 +6,67 @@
     <div class="container">
         <form action="{{ route('apartments.index') }}" method="GET">
             <div class="row">
-                <div class="col-6 mt-3">
-                    <label for="searchBox">Indirizzo:</label>
+                <div class="col-12 mt-3">
                     <div id="searchBox"></div>
                     <div class="d-none">
                         <input type="text" id="address" name="address">
-                        <input type="text" id="latitude" name="latitude">
                         <input type="text" id="longitude" name="longitude">
+                        <input type="text" id="latitude" name="latitude">
                     </div>
                 </div>
-                <div class="col-6 mt-3">
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="rooms">Numero stanze:</label>
-                            <input type="number" name="rooms" id="rooms">
+                <div class="container">
+
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="row list-filter">
+                            <div class="col-lg-4 col-md-6 col">
+                                <div class="input-container">
+                                    <input placeholder="Filtra per numero di letti" class="input-field" type="text">
+                                    <label for="input-field" class="input-label">Numero di letti</label>
+                                    <span class="input-highlight"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="input-container">
+                                    <input placeholder="Filtra per numero di stanze" class="input-field" type="text">
+                                    <label for="input-field" class="input-label">Numero di stanze</label>
+                                    <span class="input-highlight"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-container">
+                                    <select class="select-menu" name="distanceKm" id="distanceKm">
+                                        <option value="" disabled selected>Filtra per distanza</option>
+                                        <option value="20">20Km</option>
+                                        <option value="40">40Km</option>
+                                        <option value="60">60Km</option>
+                                        <option value="80">80Km</option>
+                                        <option value="100">100Km</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <label for="beds">Numero letti:</label>
-                            <input type="number" name="beds" id="beds">
-                        </div>
-                        <div class="col-6">
-                            <label for="distanceKm">Inserisci distanza in Km:</label>
-                            <select name="distanceKm" id="distanceKm">
-                                <option value="20">20Km</option>
-                                <option value="40">40Km</option>
-                                <option value="60">60Km</option>
-                                <option value="80">80Km</option>
-                                <option value="100">100Km</option>
-                            </select>
-                        </div>
-                        <div class="col-6">
-                            @foreach ($services as $service)
-                                <input type="checkbox" class="form-check-input" name="services[]"
-                                    value="{{ $service->id }}">
-                                <label class="form-check-label"> {{ $service->type }} </label>
-                            @endforeach
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-evenly flex-column">
+                                <p class="fs-6 text-secondary"> Filtra per servizi</p>
+                                <div class="services d-flex justify-content-around">
+                                    @foreach ($services as $service)
+                                        <input type="checkbox" class="form-check-input" name="services[]"
+                                            value="{{ $service->id }}">
+                                        <label class="form-check-label mr-3"> {{ $service->type }} </label>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary mt-3">search</button>
+                    <button type="submit" class="btn  mt-3 search-button">search</button>
                 </div>
             </div>
+
         </form>
         <div class="mt-3 text-center">
             <h1 class="fw-bold">
@@ -69,8 +88,6 @@
                             <p class="card-text"> {{ $apartment->beds }} : beds</p>
                             <a href="{{ route('apartments.show', $apartment->slug) }}"
                                 class="btn placeholder-glow  btn-green" id="border">Show more </a>
-
-
                             </p>
                         </div>
                     </div>
@@ -78,7 +95,9 @@
             @endforeach
         </div>
     </div>
-    {{ $apartmentsIndex->links() }}
+    <div class="prev-next d-flex justify-content-center">
+        {{ $apartmentsIndex->links() }}
+    </div>
     </div>
 @endsection
 
