@@ -224,7 +224,7 @@
                                     Real Estate Agent
                                 </span>
                                 <p class="mt-2">
-                                    A great manager is also a strong leader who is able to inspire and motivate their team to achieve their goals. They lead by example and are able to establish trust and respect with their team through their actions and words. 
+                                    A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success.  
                                 </p>
                             </div>
                             <div class="mb-5">
@@ -280,8 +280,7 @@
                                         <i class="fa-brands fa-instagram"></i>
                                     </li>
 
-                                </ul>  
-                                
+                                </ul>
                             </div>
                         </div>
                     </div>
