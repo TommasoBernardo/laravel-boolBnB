@@ -2,10 +2,12 @@
 
 @import "../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css";
 
+
 #wrapper {
     overflow: hidden;
 }
 
+// For Login & Register pages
 .background-image {
     background-image: url("https://s25562.pcdn.co/wp-content/uploads/2021/06/1100-Knollwood-entrance-house-residential-Quita-Cutrer.jpg.webp");
     background-size: cover;
@@ -20,6 +22,7 @@
     height: 100vh;
 }
 
+// For Dashboard's sidebar
 .nav-pills span:hover,
 span:active,
 i:hover {
@@ -34,5 +37,32 @@ i:hover {
     min-height: 90.4vh;
 }
 
-@import '../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css';
+// Footer styling
+.footer {
+    background-color: #ebebdb;
+    color: #4c5c68;
 
+    ul {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: #4c5c68;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+}
+
+
+
+// Back to top button
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
