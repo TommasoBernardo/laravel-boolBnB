@@ -6,7 +6,7 @@
         <tr>
             <th scope="col">Title</th>
             <th scope="col">Address</th>
-            <th scope="col">Visible</th>
+            <th scope="col">Visibility</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -17,9 +17,9 @@
                 <td>{{ $apartment->address }}</td>
                 <td>
                     @if ($apartment->visible == 1)
-                        Visibile
+                        Visible
                     @else
-                        Non visibile
+                        Invisible
                     @endif
                 </td>
                 <td>
