@@ -133,3 +133,19 @@ button.search-button {
 div.filter-list {
     border: 2px solid black;
 }
+
+section.bg-color-div-email{
+    background-color: #005555;
+
+    i.icon-send-email{
+        color: rgb(255, 202, 44);
+    }
+
+    input.input-email-user{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+    }
+}
