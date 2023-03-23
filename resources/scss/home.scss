@@ -4,9 +4,20 @@ div.hero-parent{
     .search-box-hero{
         position: absolute;
         z-index: 2;
-        left: 35% ;
+        left: 50% ;
         top: 30%;
+        width: 100%;
+        transform: translate(-50%);
     }
+}
+
+img.jumbo-img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.5);
+
 }
 
 button.custom-button{

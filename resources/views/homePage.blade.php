@@ -17,26 +17,26 @@
                         <h1 class="heading fw-bold " >
                             Easiest way to find your dream home <i class="fa-regular fa-paper-plane"></i>
                         </h1>
-                        {{-- <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
+                       <form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3 ps-3  mt-5"
                             data-aos="fade-up" data-aos-delay="200">
                             <input type="text" class="form-control px-4" placeholder="es. New York" />
-                            <button type="submit" class="btn btn-outline-success ms-2">Search</button>
-                        </form> --}}
+                            <button type="submit" class="btn btn-success ms-2">Search</button>
+                        </form> 
                     </div>
                 </div>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" style="height:550px ;">
-                    <img src="{{ asset('storage/img/cover_img/cover_image-1.jpg') }}" class="d-block w-100"
-                        class="img-fluid" style="object-position: center;  " alt="...">
+                <div class="carousel-item active" style="height: 550px;" >
+                    <img src="{{ asset('storage/img/cover_img/cover_image-1.jpg') }}" class=" jumbo-img "
+                        alt="...">
                 </div>
-                <div class="carousel-item" style="height:550px ;">
-                    <img src="{{ asset('storage/img/cover_img/cover_image-2.jpg') }}" class="d-block w-100"
-                        class="img-fluid" style="object-position: center;  " alt="...">
+                <div class="carousel-item" style="height: 550px;" >
+                    <img src="{{ asset('storage/img/cover_img/cover_image-2.jpg') }}" class="jumbo-img"
+                        alt="...">
                 </div>
-                <div class="carousel-item" style="height:550px ;">
-                    <img src="{{ asset('storage/img/cover_img/cover_image-3.jpg') }}" class="d-block w-100"
-                        class="img-fluid" style="object-position:center ; " alt="...">
+                <div class="carousel-item" style="height: 550px;" >
+                    <img src="{{ asset('storage/img/cover_img/cover_image-3.jpg') }}" class="jumbo-img"
+                         alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
