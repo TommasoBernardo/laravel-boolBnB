@@ -3,8 +3,6 @@
     @vite(['resources/js/home.js'])
 @endsection
 @section('content')
-    {{-- to do: icone card/ titolo search-bar jumbo / bottone 'proprieties'  --}}
-
     {{-- Slider-carousel --}}
     <div class="container-carousel mb-5">
         <div id="carouselExampleIndicators" class="carousel slide hero-parent" data-bs-ride="carousel">
