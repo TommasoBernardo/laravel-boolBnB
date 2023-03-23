@@ -58,7 +58,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="col-12 text-center">
@@ -98,7 +98,7 @@
         {{ $apartmentsIndex->links() }}
     </div>
     <section class="bg-color-div-email ">
-        <div class="container m-5">
+        <div class="container mt-5">
             <div class="row justify-content-center p-5">
                 <div class="col-lg-6 col-md-12 col-sm-1">
                     <div class="mb-3 text-light fw-bold">
