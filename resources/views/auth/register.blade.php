@@ -9,7 +9,7 @@
                 <img src="{{asset('storage/img/BoolBnB-logo.png')}}" style="width: 140px;" alt="logo">
                 <h4 class="my-4 pb-1">Registrati</h4>
             </div>
-            <form method="POST" id="invio" action="{{ route('register') }}">
+            <form method="POST" id="formRegister" action="{{ route('register') }}">
                 @csrf
                 <div class="mb-4 row">
                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
@@ -60,7 +60,7 @@
 
 
                         <span class="invalid-feedback" id="errorMex" role="alert">
-                            <strong> Password diversa  </strong>
+                            <strong> Password diversa </strong>
                         </span>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
                 </div>
 
                 <script>
-                    const form = document.getElementById('invio')
+                    const form = document.getElementById('formRegister')
 
                     form.addEventListener('submit', (event) => {
                         const password = document.getElementById('password').value
