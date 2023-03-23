@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <form action="{{ route('apartments.index') }}" method="GET">
+        <form action="{{ route('apartments.index') }}" id='formFilter' method="GET">
             <div class="row justify-content-center">
                 <div class="col-6 mt-3 ">
                     <div id="searchBox"></div>
@@ -21,7 +21,8 @@
                         <div class="row list-filter">
                             <div class="col-lg-4 col-md-6 col">
                                 <div class="input-container">
-                                    <input placeholder="Filtra per numero di letti" class="input-field" type="text" name="beds">
+                                    <input placeholder="Filtra per numero di letti" class="input-field" type="text"
+                                        name="beds">
                                     <label for="input-field" class="input-label">Numero di letti</label>
                                     <span class="input-highlight"></span>
                                 </div>
@@ -29,7 +30,8 @@
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="input-container">
-                                    <input placeholder="Filtra per numero di stanze" class="input-field" type="text" name="rooms">
+                                    <input placeholder="Filtra per numero di stanze" class="input-field" type="text"
+                                        name="rooms">
                                     <label for="input-field" class="input-label">Numero di stanze</label>
                                     <span class="input-highlight"></span>
                                 </div>
