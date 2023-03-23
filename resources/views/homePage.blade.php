@@ -26,15 +26,15 @@
                 </div>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" style="height:800px ;">
+                <div class="carousel-item active" style="height:550px ;">
                     <img src="{{ asset('storage/img/cover_img/cover_image-1.jpg') }}" class="d-block w-100"
                         class="img-fluid" style="object-position: center;  " alt="...">
                 </div>
-                <div class="carousel-item" style="height:800px ;">
+                <div class="carousel-item" style="height:550px ;">
                     <img src="{{ asset('storage/img/cover_img/cover_image-2.jpg') }}" class="d-block w-100"
                         class="img-fluid" style="object-position: center;  " alt="...">
                 </div>
-                <div class="carousel-item" style="height:800px ;">
+                <div class="carousel-item" style="height:550px ;">
                     <img src="{{ asset('storage/img/cover_img/cover_image-3.jpg') }}" class="d-block w-100"
                         class="img-fluid" style="object-position:center ; " alt="...">
                 </div>
@@ -106,14 +106,19 @@
     <div class="bg-color p-4">
         <div class="container mt-5 mb-5">
             <div class="row">
+               <div class="col-12">
+                    <h1 class="mb-3 fw-bold text-white text-center">
+                       Why people choose us
+                    </h1>
+                </div> 
                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
                    <div class="card border-0  " style="width: 18rem;">
                        <div class="card-body text-center">
                         <div class="icon mb-4">
-                            <i class="fa-solid fa-building"></i>
+                            <i class="fa-solid fa-user"></i>
                         </div>
-                         <h5 class="card-subtitle mb-2">Our properties</h5>
-                         <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
+                         <h5 class="card-subtitle mb-2">Quality 1</h5>
+                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias corporis voluptate quasi? Rerum!</p>
                          <a href="#" class="link-about-us ">About Us</a>
                        </div>
                     </div>
@@ -122,10 +127,10 @@
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
-                        <i class="fa-solid fa-building-user"></i>
+                        <i class="fa-solid fa-user"></i>
                      </div>
-                      <h5 class="card-subtitle mb-2">Propreties on Sales</h5>
-                      <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
+                      <h5 class="card-subtitle mb-2">Quality 2</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias corporis voluptate quasi? Rerum!</p>
                       <a href="#" class="link-about-us ">About Us</a>
                     </div>
                   </div>
@@ -136,8 +141,8 @@
                      <div class="icon mb-4">
                         <i class="fa-solid fa-user"></i></i>
                      </div>
-                      <h5 class="card-subtitle mb-2">Real Estate Agent</h5>
-                      <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
+                      <h5 class="card-subtitle mb-2">Quality 3</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias corporis voluptate quasi? Rerum!</p>
                       <a href="#" class="link-about-us ">About Us</a>
                     </div>
                   </div>
@@ -146,10 +151,10 @@
                 <div class="card border-0  " style="width: 18rem;">
                     <div class="card-body text-center">
                      <div class="icon mb-4">
-                        <i class="fa-solid fa-house-circle-check"></i></i>
+                        <i class="fa-solid fa-user"></i></i>
                      </div>
-                      <h5 class="card-subtitle mb-2">House for Sale</h5>
-                      <p class="card-text">Our real estate properties are carefully selected and offer excellent quality, providing our clients with comfortable and stylish living spaces that meet their specific needs and preferences. </p>
+                      <h5 class="card-subtitle mb-2">Quality 4</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias corporis voluptate quasi? Rerum!</p>
                       <a href="#" class="link-about-us ">About Us</a>
                     </div>
                   </div>
@@ -164,7 +169,7 @@
             <div class="row mt-5">
                 <div class="col text-center">
                     <h1 class="mb-3 fw-bold" style="color:rgb(0, 85, 85) ;">
-                        Our Agents 
+                        What people say about us 
                     </h1>
                     <p class="">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores. 
@@ -183,10 +188,10 @@
                                     James Doe
                                 </h4>
                                 <span style="color: gray">
-                                    Real Estate Agent
+                                    Wonderful experience
                                 </span>
                                 <p class="mt-2">
-                                    A great manager is a skilled communicator who is able to clearly and effectively convey their ideas and expectations to their team. They are also good listeners, open to feedback and able to understand and respond to their team members' concerns and needs. 
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis, fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi! Iusto nihil amet dolorum nemo?
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -220,10 +225,10 @@
                                     Jean Smith
                                 </h4>
                                 <span style="color: gray">
-                                    Real Estate Agent
+                                    Wonderful experience
                                 </span>
                                 <p class="mt-2">
-                                    A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success.  
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis, fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi! Iusto nihil amet dolorum nemo?
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -257,10 +262,10 @@
                                     Alicia Huston
                                 </h4>
                                 <span style="color: gray">
-                                    Real Estate Agent
+                                    Wonderful experience
                                 </span>
                                 <p class="mt-2">
-                                    A great manager is also a strategic thinker who is able to anticipate potential problems and devise effective solutions. They are able to make well-informed decisions based on data and analysis, and are able to adapt and pivot when necessary to keep their team on track and moving towards success. 
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis, fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi! Iusto nihil amet dolorum nemo?
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
