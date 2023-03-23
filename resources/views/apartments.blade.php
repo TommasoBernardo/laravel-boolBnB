@@ -97,6 +97,25 @@
     <div class="prev-next d-flex justify-content-center">
         {{ $apartmentsIndex->links() }}
     </div>
+    <section class="bg-color-div-email ">
+        <div class="container m-5">
+            <div class="row justify-content-center p-5">
+                <div class="col-lg-6 col-md-12 col-sm-1">
+                    <div class="mb-3 text-light fw-bold">
+                        <label for="email-user" class="form-label">Inserisci la tua email <i class="fa-solid fa-envelope-circle-check icon-send-email"></i> </label>
+                        <input type="email" class="form-control input-email-user" id="email-user" placeholder="youemail@example.com">
+                    </div>
+                    <div class="mb-3 text-light fw-bold">
+                        <label for="text-user" class="form-label">Facci sapere la tua esperienza, scrivici qualcosa! <i class="fa-solid fa-comment icon-send-email"></i></label>
+                        <textarea class="form-control input-email-user" id="text-user" rows="3"></textarea>
+                    </div>
+                    <div class="wrap-button-send-email">
+                        <button class="btn btn-warning"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 
 @section('script')
