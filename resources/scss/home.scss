@@ -20,6 +20,12 @@ img.jumbo-img{
 
 }
 
+div.div-wrap-button-properties{
+    justify-content: end;
+    display: flex;
+}
+
+
 button.custom-button{
     padding: 0.9rem 2rem;
 }
@@ -92,6 +98,49 @@ ul.icon{
     div.card-agent{
         display: flex;
         justify-content: center;
+    }
+
+    h1.heading{
+        font-size: 1.5rem;
+    }
+
+    div.hero-parent{
+        position: relative;
+    
+        .search-box-hero{
+            position: absolute;
+            z-index: 2;
+            left: 50% ;
+            top: 20%;
+            width: 100%;
+            transform: translate(-50%);
+        }
+    }
+
+   
+}
+
+@media screen and (max-width: 580px) {
+    
+    div.div-wrap-button-properties{
+        justify-content: start;
+        display: flex;
+    }
+    h1.heading{
+        font-size: 1.2rem;
+    }
+
+    div.hero-parent{
+        position: relative;
+    
+        .search-box-hero{
+            position: absolute;
+            z-index: 2;
+            left: 50% ;
+            top: 20%;
+            width: 100%;
+            transform: translate(-50%);
+        }
     }
 
 }
