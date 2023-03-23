@@ -47,6 +47,38 @@ document.getElementById("searchBox").append(searchBoxHTML)
 
 // const input = document.querySelector('input.tt-search-box-input').setAttribute('name','address')
 
+if (window.location.href == "http://127.0.0.1:8000/dashboard/apartment/create"){
+    
+    document.querySelector('input.tt-search-box-input').required = true;
+    document.getElementById('cover_image').required = true;
+}
+
+if (document.getElementById('address').value){
+    document.querySelector('input.tt-search-box-input').value = document.getElementById('address').value
+}
+
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+document.getElementById('formCrud').addEventListener('submit', (event) => {
+
+    let isChecked = false;
+
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            isChecked = true;
+        }
+    });
+
+    if (!isChecked) {
+        event.preventDefault();
+
+        const mexErrore = document.getElementById('errorMex').classList.add('d-block');
+    }
+});
+
+
+
 
 document.getElementById('latitude').addEventListener('input',()=>{
     document.getElementById('latitude').value = latitudine
