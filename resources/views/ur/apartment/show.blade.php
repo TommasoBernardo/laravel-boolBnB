@@ -67,7 +67,7 @@
             <h3 class="d-inline-block my-3">Si trova in </h3>
             <div class="row">
                 <div class="col-lg-12">
-                    <span class="fs-5">Via {{ $apartment->address }}</span>
+                    <span class="fs-5">{{ $apartment->address }}</span>
                     <div class="map my-2">
                     </div>
                 </div>
