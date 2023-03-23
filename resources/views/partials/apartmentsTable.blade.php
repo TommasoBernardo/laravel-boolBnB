@@ -10,7 +10,7 @@
             <th scope="col">Actions</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider">
         @foreach ($apartments as $apartment)
             <tr class="{{ $apartment->visible ? 'table-success' : 'table-danger' }}">
                 <th scope="row">{{ $apartment->title }}</th>
