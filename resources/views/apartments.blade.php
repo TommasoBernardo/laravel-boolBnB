@@ -97,7 +97,6 @@
     <div class="prev-next d-flex justify-content-center">
         {{ $apartmentsIndex->links() }}
     </div>
-    </div>
 @endsection
 
 @section('script')
