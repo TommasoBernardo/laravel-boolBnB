@@ -50,6 +50,7 @@
         </a>
     </div>
 </div>
+
 {{-- Cards-slider-Popular properties --}}
 <div class="container mb-5">
     <div class="row mb-5 align-items-center">
@@ -66,14 +67,18 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper position-relative">
                 <div class="swiper-wrapper">
                     {{-- single-card --}}
+
+                  
+
                     @foreach ($apartments as $apartment)
                     <div class=" swiper-slide">
                         <div class="flex-column" id="myCarousel">
-                            <div href="property-single.html" class="img">
-                                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top" style=" height:250px ; border-radius:2rem; " alt="{{ $apartment->title }}">
+                            
+                            <div href="property-single.html" class="img img-box">
+                                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top property-img" style=" height:250px ; border-radius:2rem; object-fit: cover; object-position: ; " alt="{{ $apartment->title }}">
                             </div>
                             <div class="flex-column mt-3">
                                 <div class="mb-3">
@@ -88,7 +93,7 @@
                                             </span>
                                     </div>
                                     <div class="mt-2">
-                                        <a href="{{ route('apartments.show', $apartment->slug) }}" class="btn btn-outline-success rounded-5 ">
+                                        <a href="{{ route('apartments.show', $apartment->slug) }}" class="details-button">
                                             See details </a>
                                     </div>
                                 </div>
@@ -98,8 +103,8 @@
                     @endforeach
 
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next arrow"></div>
+                <div class="swiper-button-prev arrow"></div>
             </div>
         </div>
 
