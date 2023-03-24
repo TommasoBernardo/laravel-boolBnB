@@ -1,3 +1,4 @@
+
 <div class="d-flex justify-content-center">
     <div class="card border-0 mt-5 ">
         <div class="card-body">
@@ -45,5 +46,5 @@
 </div>
 
 @section('script')
-    @vite(['resources/js/counter.js'])
+    @vite(['resources/js/counter.js','resources/js/popupDelete.js'])
 @endsection

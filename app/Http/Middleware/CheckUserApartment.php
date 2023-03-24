@@ -25,7 +25,7 @@ class CheckUserApartment
             
             
             if ($request->user()->id != $request->route('apartment')->user_id) {
-                return redirect()->route('dashboard.index');
+                return redirect()->route('dashboard.index')->with('message', "You cannot access this area")->with('alert-type', 'warning');
             }
             
             

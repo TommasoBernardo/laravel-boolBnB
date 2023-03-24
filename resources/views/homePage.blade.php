@@ -25,7 +25,7 @@
                         </div>
                         <button type="submit" class="btn btn-success ms-2">Search</button>
                     </form>
-                    <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Selezionare dal menu a tendina</p>
+                    <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Selezionare una via dal menu a tendina</p>
                 </div>
             </div>
         </div>

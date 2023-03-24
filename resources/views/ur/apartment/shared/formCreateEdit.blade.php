@@ -98,6 +98,7 @@
             <div id="searchBox">
 
             </div>
+            <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Selezionare una via dal menu a tendina</p>
             @if($errors->has('address'))
             <div class="alert alert-danger mt-3">
                 @foreach ($errors->get('address') as $error)
