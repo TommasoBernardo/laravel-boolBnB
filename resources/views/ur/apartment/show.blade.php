@@ -1,37 +1,27 @@
 @extends('layouts.app')
 @section('scss')
-@vite(['resources/js/show.js'])
+    @vite(['resources/js/show.js'])
 @endsection
 @section('content')
-<div class="d-none">
-    <input type="text" id="latitude" value="{{ $apartment->latitude }}">
-    <input type="text" id="longitude" value="{{ $apartment->longitude }}">
-</div>
-@if (session('message'))
-<div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('message') }}"></div>
-@endif
-
-<div class="container img-container p-5 my-4 ">
-    <h1 class="m-4 text-md-center">{{ $apartment->title }}</h1>
-    <div class="row p-5">
-        <div class="col-lg-6 col-md-12">
-            <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-        </div>
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top " alt="{{ $apartment->title }}">
-                </div>
-                <div class="col-sm-6">
-                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-                </div>
-                <div class="col-sm-6">
-                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-                </div>
-                <div class="col-sm-6">
-                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-
-                    </div>
+    <div class="d-none">
+        <input type="text" id="latitude" value="{{ $apartment->latitude }}">
+        <input type="text" id="longitude" value="{{ $apartment->longitude }}">
+    </div>
+    <div class="container img-container p-5 my-4 ">
+        <h1 class="m-4 text-md-center">{{ $apartment->title }}</h1>
+        <div class="row p-5">
+            <div class="col-lg-6 col-md-12">
+                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
+                    alt="{{ $apartment->title }}">
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    @foreach ($apartment->images as $image)
+                        <div class="col-sm-6">
+                            <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid"
+                                alt="{{ $apartment->title }}">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -77,12 +67,14 @@
         <div class="row mt-5 mb-5">
             <div class="col d-flex justify-content-center">
                 <div class="wrapper-return-index">
-                    <a href="{{ route('apartment.index')  }}" class="btn fw-bold" style="background-color: #005555; color:white; padding: .8rem 2rem; font-size: 1.1rem " >Return to your apartment</a>
+                    <a href="{{ route('apartment.index') }}" class="btn fw-bold"
+                        style="background-color: #005555; color:white; padding: .8rem 2rem; font-size: 1.1rem ">Return to
+                        your apartment</a>
                 </div>
             </div>
         </div>
     </div>
 @endsection
 @section('script')
-@vite(['resources/js/mapShow.js','resources/js/popupDelete.js'])
+    @vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js'])
 @endsection

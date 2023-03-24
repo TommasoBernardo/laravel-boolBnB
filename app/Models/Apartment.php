@@ -18,7 +18,7 @@ class Apartment extends Model
         return $this->belongsToMany(Service::class);
     }
 
-    
+
     public function sponsors()
     {
         return $this->belongsToMany(Sponsor::class);
@@ -27,6 +27,11 @@ class Apartment extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 
     public function getRouteKeyName()

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use App\Models\Image;
 
 
 
@@ -21,7 +22,8 @@ class ApartmentController extends Controller
         'beds' => 'required|numeric|min:1|integer|max:255',
         'bathrooms' => 'required|numeric|min:1|integer|max:255',
         'square_meters' => 'required|numeric|min:30|integer|max:4294967295',
-        'cover_image' => 'required|max:1024|image',
+        'cover_image' => 'required|image',
+        'images' => '',
         'visible' => 'required|boolean',
         'address' => 'required|string',
         'latitude' => 'required|numeric',
@@ -78,7 +80,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments = Apartment::where('user_id', Auth::user()->id)->get(); 
+        $apartments = Apartment::where('user_id', Auth::user()->id)->get();
 
         return view('list-apartment', compact('apartments'));
     }
@@ -90,11 +92,11 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        
+
         $apartment = new Apartment();
         $services = Service::all();
 
-        return view('ur.apartment.create', compact('apartment','services'));
+        return view('ur.apartment.create', compact('apartment', 'services'));
     }
 
     /**
@@ -105,10 +107,7 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        
         $data = $request->validate($this->regoleValidazione, $this->messaggiValidazione);
-        
 
         $data['cover_image'] = Storage::put('img/cover_image', $data['cover_image']);
 
@@ -119,8 +118,18 @@ class ApartmentController extends Controller
         $newApartment->save();
         $newApartment->services()->sync($data['services'] ?? []);
 
-        return redirect()->route('apartment.show',$newApartment->slug)->with('message', "$newApartment->title has been created")->with('alert-type', 'info');
+        if (isset($data['images'])) {
+            foreach ($data['images'] as $img) {
+                $newImages = new Image();
+                $newImages->apartment_id = $newApartment->id;
+                $newImages->path = Storage::put('img/apartment_images', $img);
+                $newImages->save();
+            }
+        }
+
+        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente");
     }
+
 
     /**
      * Display the specified resource.
@@ -154,18 +163,18 @@ class ApartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Apartment $apartment)
-    {   
+    {
 
-        
+
         $regoleDaAggiornare = $this->regoleValidazione;
 
-        $regoleDaAggiornare['cover_image'] = ['max:300','image'];
-        $regoleDaAggiornare['title'] = ['required','max:150','min:5','string', Rule::unique('apartments')->ignore($apartment->id)];
+        $regoleDaAggiornare['cover_image'] = ['max:300', 'image'];
+        $regoleDaAggiornare['title'] = ['required', 'max:150', 'min:5', 'string', Rule::unique('apartments')->ignore($apartment->id)];
 
         $data = $request->validate($regoleDaAggiornare, $this->messaggiValidazione);
 
         $data['slug'] = Str::slug($data['title']);
-        
+
 
         if (isset($data['cover_image'])) {
             if (isset($apartment->cover_image)) {
@@ -173,6 +182,33 @@ class ApartmentController extends Controller
             }
             $data['cover_image'] = Storage::put('img/cover_image', $data['cover_image']);
         }
+
+
+        if (array_key_exists('images', $data)) {
+            foreach ($data['images'] as $img) {
+                $newImages = new Image();
+                $newImages->apartment_id = $apartment->id;
+                $newImages->path = Storage::put('img/apartment_images/' . $apartment->id, $img);
+                $newImages->save();
+            }
+        }
+
+        if (array_key_exists('images', $data)) {
+            // Elimina le immagini esistenti
+            foreach ($apartment->images as $image) {
+                Storage::delete($image->path);
+                $image->delete();
+            }
+
+            // Carica le nuove immagini
+            foreach ($data['images'] as $img) {
+                $newImages = new Image();
+                $newImages->apartment_id = $apartment->id;
+                $newImages->path = Storage::put('img/apartment_images/' . $apartment->id, $img);
+                $newImages->save();
+            }
+        }
+
 
 
         $apartment->update($data);
@@ -189,10 +225,19 @@ class ApartmentController extends Controller
      */
     public function destroy(Apartment $apartment)
     {
+        // Elimina le immagini aggiuntive dell'appartamento
+        $images = $apartment->images;
+        foreach ($images as $image) {
+            Storage::delete('img/extra_images/' . $image->filename);
+            $image->delete();
+        }
+
+        // Elimina l'immagine di copertina dell'appartamento
+        Storage::delete('img/cover_image/' . $apartment->cover_image);
+
+        // Elimina l'appartamento
         $apartment->delete();
 
-        Storage::delete('img/cover_image', $apartment->cover_image);
-
-        return redirect()->route('apartment.index')->with('message', "The apartment $apartment->title has been removed")->with('alert-type', 'warning');
+        return redirect()->route('apartment.index')->with('message', "L'appartamento è stato eliminato correttamente");
     }
 }
