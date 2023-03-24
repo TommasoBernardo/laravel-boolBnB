@@ -30,9 +30,9 @@ ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
 
     console.log(latitudine, longitudine);
 
-    const inputLatidudine = document.getElementById('latitude').setAttribute('value',latitudine)
-    const inputLongitudine = document.getElementById('longitude').setAttribute('value', longitudine)
-    const inputAddress = document.getElementById('address').setAttribute('value', address)
+    document.getElementById('latitude').setAttribute('value',latitudine)
+    document.getElementById('longitude').setAttribute('value', longitudine)
+    document.getElementById('address').setAttribute('value', address)
 
 
     document.getElementById('latitude').value = latitudine
@@ -75,10 +75,30 @@ document.getElementById('formCrud').addEventListener('submit', (event) => {
 
         const mexErrore = document.getElementById('errorMex').classList.add('d-block');
     }
+
+
+    if (document.getElementById('latitude').value == '') {
+        event.preventDefault();
+        document.getElementById('mexErrore').classList.remove('d-none')
+    }
+
+   
+
+
 });
 
+document.querySelector('input.tt-search-box-input').addEventListener('click', () => {
+
+    document.getElementById('mexErrore').classList.add('d-none')
 
 
+})
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click',()=>{
+        document.getElementById('errorMex').classList.remove('d-block');
+    })
+});
 
 document.getElementById('latitude').addEventListener('input',()=>{
     document.getElementById('latitude').value = latitudine
