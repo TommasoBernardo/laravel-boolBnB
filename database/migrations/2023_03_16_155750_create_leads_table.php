@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('apartment_id');
             $table->string('email', 255)->nullable(false);
-            $table->string('name', 150)->nullable(false);
+            $table->string('name', 150)->nullable();
             $table->text('message')->nullable(false);
-            $table->tinyInteger('phone_number')->nullable()->unsigned();
+            $table->bigInteger('phone_number')->nullable()->unsigned();
             $table->boolean('show')->default(true);
             $table->timestamps();
             $table->foreign('apartment_id')->references('id')->on('apartments');

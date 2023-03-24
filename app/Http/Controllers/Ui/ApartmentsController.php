@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Ui;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMessage;
 use App\Models\Apartment;
+use App\Models\Lead;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class ApartmentsController extends Controller
 {
@@ -90,5 +93,28 @@ class ApartmentsController extends Controller
     public function show(Apartment $apartment)
     {
         return view('apartmentShow', compact('apartment'));
+    }
+
+    public function store(Request $request){
+         
+    //     $data = $request->validate(
+    //         ['name' => 'nullable|string|max:150|min:5',
+    //          'email' => '|email|max:255',
+    //          'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
+    //          'message' => '|string|min:5',
+    //          'apartment_id'=>'',
+    //  ]); 
+     $data =  $request->all();
+     $apartment = Apartment::where('id',$data['apartment_id'] )->first();
+
+    
+
+     $newLead = new Lead();
+     $newLead->fill($data);
+     $newLead->save();
+        
+     Mail::to('example@mail.com')->send(new SendMessage($newLead));
+
+     return redirect()->route('apartments.show', $apartment->slug );
     }
 }

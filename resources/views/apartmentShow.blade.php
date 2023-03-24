@@ -79,26 +79,31 @@
                             Send a email 
                         </h3>
                     </div> 
-                    <form action="" class="d-flex justify-content-center ">
+                    <form action="{{ route('lead.store' , $apartment->slug) }}" method="POST"  class="d-flex justify-content-center ">
+                        @csrf
                         <div class="wrap-send-email w-85 ">
                             <div class="mb-3  fw-bold">
                                 <label for="" class="form-label">Inserisci li tuo nome </label>
-                                <input type="text" class="form-control input-email-user" id="" placeholder="luca">
+                                <input type="text" name="name" class="form-control input-email-user" id="" placeholder="luca">
                             </div>
                             <div class="mb-3 fw-bold">
                                 <label for="email-user" class="form-label">Inserisci la tua email *  </label>
-                                <input type="email" class="form-control input-email-user" id="" placeholder="youemail@example.com">
+                                <input type="email"  name="email" class="form-control input-email-user" id="" placeholder="youemail@example.com">
                             </div>
                             <div class="mb-3  fw-bold">
                                 <label for="" class="form-label">Inserisci li tuo numero di telefono </label>
-                                <input type="number" class="form-control input-email-user" id="" placeholder="123456">
+                                <input type="number"  name="phone_number"  class="form-control input-email-user" id="" placeholder="123456">
                             </div>
                             <div class="mb-3  fw-bold">
                                 <label for="text-user" class="form-label">Facci sapere la tua esperienza, scrivici qualcosa! *  </label>
-                                <textarea class="form-control input-email-user" id="text-user" rows="2"></textarea>
+                                <textarea  name="message"  class="form-control input-email-user" id="text-user" rows="2"></textarea>
+                            </div>
+                            <div class="mb-3  fw-bold d-none">
+                                <label for="text-user" class="form-label">Facci sapere la tua esperienza, scrivici qualcosa! *  </label>
+                                <input  name="apartment_id" type="text"  class="form-control input-email-user" id="text-user" value="{{ $apartment->id }}">
                             </div>
                             <div class="wrap-button-send-email text-center  mt-2">
-                                <button class="btn btn-warning fw-bold text-light" style="padding: .8rem 2rem; font-size: 1.1rem" > Send email </button>
+                                <button type="submit" class="btn btn-warning fw-bold text-light" style="padding: .8rem 2rem; font-size: 1.1rem" > Send email </button>
                             </div>
                         </div>
                     </form>

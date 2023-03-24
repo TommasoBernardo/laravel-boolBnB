@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Ui\HomepageController;
 use App\Http\Controllers\UR\ApartmentController;
@@ -22,7 +23,7 @@ Route::get('/', [HomepageController::class , 'index'] )->name('home');
 
 Route::get('/apartments', [UiApartmentsController::class, 'index'])->name('apartments.index');
 Route::get('/apartments/{apartment}', [UiApartmentsController::class, 'show'])->name('apartments.show');
-
+Route::post('/apartments/{apartment}/lead', [UiApartmentsController::class, 'store'])->name('lead.store');
 
 Route::middleware(['auth', 'userApartment'])->prefix('dashboard')->group(function () {
     Route::resource('/apartment', ApartmentController::class);
