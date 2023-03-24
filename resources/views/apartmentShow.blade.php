@@ -97,8 +97,8 @@
                                 <label for="text-user" class="form-label">Facci sapere la tua esperienza, scrivici qualcosa! *  </label>
                                 <textarea class="form-control input-email-user" id="text-user" rows="2"></textarea>
                             </div>
-                            <div class="wrap-button-send-email text-center mt-2">
-                                <button class="btn btn-warning" style="padding: .8rem 2rem; font-size: 1.1rem" > Send email <i class="fa-solid fa-paper-plane"></i></button>
+                            <div class="wrap-button-send-email text-center  mt-2">
+                                <button class="btn btn-warning fw-bold text-light" style="padding: .8rem 2rem; font-size: 1.1rem" > Send email </button>
                             </div>
                         </div>
                     </form>
@@ -107,6 +107,17 @@
 
         </div>
     </div>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col d-flex justify-content-center">
+                <div class="wrapper-return-index ">
+                    <a href="{{ route('apartments.index')  }}" class="btn fw-bold" style="background-color: #005555; color:white; padding: .8rem 2rem; font-size: 1.1rem " >Return to All appartments</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>    
 {{-- <section class="bg-color-div-email ">
     <form action="">
         <div class="container mt-5">
