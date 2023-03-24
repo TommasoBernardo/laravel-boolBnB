@@ -68,11 +68,13 @@
         </div>
 
     </form>
-    <div class="mt-3 text-center">
+    @if($apartmentsIndex->isEmpty())
+    <div class="mt-3 text-center" style="height: 360px;">
         <h1 class="fw-bold">
-            All Apartments
+            Non ci sono risultati per la tua ricerca
         </h1>
     </div>
+    @endif
     <div class="row ">
         @foreach ($apartmentsIndex as $apartment)
         <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center ">
