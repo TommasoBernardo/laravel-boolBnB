@@ -1,18 +1,18 @@
 
-// var popup = document.getElementById('popup_message');
-// if (popup) {
-//     // show a message in a toast
-//     Swal.fire({
-//         toast: true,
-//         animation: false,
-//         icon: popup.dataset.type,
-//         title: popup.dataset.message,
-//         type: popup.dataset.type,
-//         position: 'top-right',
-//         timer: 3000,
-//         showConfirmButton: false,
-//     });
-// }
+var popup = document.getElementById('popup_message');
+if (popup) {
+    // show a message in a toast
+    Swal.fire({
+        toast: true,
+        animation: false,
+        icon: popup.dataset.type,
+        title: popup.dataset.message,
+        type: popup.dataset.type,
+        position: 'top-right',
+        timer: 3000,
+        showConfirmButton: false,
+    });
+}
 
 const deleteBtns = document.querySelectorAll('form.d-inline-block');
 
