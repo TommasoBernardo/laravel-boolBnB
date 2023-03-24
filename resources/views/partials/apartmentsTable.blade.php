@@ -4,7 +4,8 @@
 <div class="text-center mt-4">
     <a href="{{ route('apartment.create') }}" class="btn btn-primary">Create item</a>
 </div>
-<table class="table">
+<table class="table mt-3">
+    @if(count($apartments) > 0)
     <thead>
         <tr>
             <th scope="col">Title</th>
@@ -13,6 +14,7 @@
             <th scope="col">Actions</th>
         </tr>
     </thead>
+    @endif
     <tbody class="table-group-divider">
         @foreach ($apartments as $apartment)
         <tr class="{{ $apartment->visible ? 'table-success' : 'table-danger' }}">
