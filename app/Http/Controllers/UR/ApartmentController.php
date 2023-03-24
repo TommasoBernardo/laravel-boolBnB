@@ -23,7 +23,7 @@ class ApartmentController extends Controller
         'bathrooms' => 'required|numeric|min:1|integer|max:255',
         'square_meters' => 'required|numeric|min:30|integer|max:4294967295',
         'cover_image' => 'required|image',
-        'images' => 'image',
+        'images' => '',
         'visible' => 'required|boolean',
         'address' => 'required|string',
         'latitude' => 'required|numeric',
@@ -107,13 +107,9 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-
         $data = $request->validate($this->regoleValidazione, $this->messaggiValidazione);
 
-
-
-        $data['cover_image'] = Storage::put('img/cover_image',  $data['cover_image']);
+        $data['cover_image'] = Storage::put('img/cover_image', $data['cover_image']);
 
         $newApartment = new Apartment();
         $newApartment->fill($data);
@@ -133,6 +129,7 @@ class ApartmentController extends Controller
 
         return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente");
     }
+
 
     /**
      * Display the specified resource.
@@ -196,6 +193,22 @@ class ApartmentController extends Controller
             }
         }
 
+        if (array_key_exists('images', $data)) {
+            // Elimina le immagini esistenti
+            foreach ($apartment->images as $image) {
+                Storage::delete($image->path);
+                $image->delete();
+            }
+
+            // Carica le nuove immagini
+            foreach ($data['images'] as $img) {
+                $newImages = new Image();
+                $newImages->apartment_id = $apartment->id;
+                $newImages->path = Storage::put('img/apartment_images/' . $apartment->id, $img);
+                $newImages->save();
+            }
+        }
+
 
 
         $apartment->update($data);
@@ -212,10 +225,19 @@ class ApartmentController extends Controller
      */
     public function destroy(Apartment $apartment)
     {
+        // Elimina le immagini aggiuntive dell'appartamento
+        $images = $apartment->images;
+        foreach ($images as $image) {
+            Storage::delete('img/extra_images/' . $image->filename);
+            $image->delete();
+        }
+
+        // Elimina l'immagine di copertina dell'appartamento
+        Storage::delete('img/cover_image/' . $apartment->cover_image);
+
+        // Elimina l'appartamento
         $apartment->delete();
 
-        Storage::delete('img/cover_image', $apartment->cover_image);
-
-        return redirect()->route('apartment.index')->with('message', "l'elemento è stato eliminato correttamente");
+        return redirect()->route('apartment.index')->with('message', "L'appartamento è stato eliminato correttamente");
     }
 }
