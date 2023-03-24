@@ -91,6 +91,10 @@
                         }
 
                     })
+
+                    document.getElementById('password-confirm').addEventListener('click', () => {
+                        document.getElementById('errorMex').classList.remove('d-block')
+                    })
                 </script>
 
                 <div class="mb-4 row">
