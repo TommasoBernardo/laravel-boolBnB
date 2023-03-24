@@ -14,26 +14,31 @@ class ApartmentsController extends Controller
     {
 
         
-        $apartmentwithoutName = Apartment::where('address', 'like', '%' . $request->address . '%')->first();
+        // $apartmentwithoutName = Apartment::where('address', 'like', '%' . $request->address . '%')->first();
         
-        if ($apartmentwithoutName) {
-            $latitude = $apartmentwithoutName->latitude;
-            $longitude = $apartmentwithoutName->longitude;
-        }else{
+        // if ($apartmentwithoutName) {
+        //     $latitude = $apartmentwithoutName->latitude;
+        //     $longitude = $apartmentwithoutName->longitude;
+        // }else{
 
-            $address = $request->input('address');
-            $latitude = $request->input('latitude');
-            $longitude = $request->input('longitude');
             
-        }
-
+        // }
+        
+        $address = $request->input('address');
+        $latitude = $request->input('latitude');
+        $longitude = $request->input('longitude');
 
         $rooms = $request->input('rooms');
         $beds = $request->input('beds');
         $services = $request->input('services');
 
         $earthRadius = 6371;
-        $maxDistance = $request->input('distanceKm');
+
+        if($request->distanceKm){
+            $maxDistance = $request->input('distanceKm');
+        }else{
+            $maxDistance = 20;
+        }
 
         $latPerKm = 0.00904371733; // (1 km = 0.00904371733 latitudine)
         $lngPerKm = 0.0109664041; // (1 km = 0.0109664041 longitudine)
