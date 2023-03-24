@@ -16,23 +16,12 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top "
-                            alt="{{ $apartment->title }}">
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
-                            alt="{{ $apartment->title }}">
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
-                            alt="{{ $apartment->title }}">
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
-                            alt="{{ $apartment->title }}">
-
-                    </div>
+                    @foreach ($apartment->images as $image)
+                        <div class="col-sm-6">
+                            <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid"
+                                alt="{{ $apartment->title }}">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
