@@ -56,20 +56,38 @@ h3 {
     // background-color: red;
 }
 
-section.bg-color-div-email {
-    background-color: #005555;
+// section.bg-color-div-email{
+//     background-color: #005555;
 
-    i.icon-send-email {
-        color: rgb(255, 202, 44);
-    }
+//     i.icon-send-email{
+//         color: rgb(255, 202, 44);
+//     }
 
-    input.input-email-user {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-    }
+//     input.input-email-user{
+//         display: block;
+//         width: 100%;
+//         padding: 10px;
+//         font-size: 16px;
+//         border: none;
+//     }
+// }
+
+
+div.bg-color-div-email{
+     background-color: #005555;
+
+}
+
+div.wrap-send-email{
+    color: white;
+            
+    input.input-email-user{
+                 display: block;
+                 width: 100%;
+                 padding: 10px;
+                 font-size: 16px;
+                 border: none;
+             }
 }
 
 
