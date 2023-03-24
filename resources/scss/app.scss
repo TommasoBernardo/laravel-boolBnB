@@ -17,6 +17,46 @@
     width: 4.5rem;
 }
 
+//Details button
+.details-button {
+    border: 2px solid #005555;
+    padding: .4rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #005555;
+
+    &:hover {
+        background-color: #005555;
+        color: white;
+        transition: ease-in-out .3s all;
+    }
+}
+
+.arrow {
+    background-color: #005555;
+    color: white;
+    padding: 1.7rem;
+    border-radius: 10px;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+
+    }
+}
+
+.img-box {
+    overflow: hidden;
+
+    &:hover .property-img {
+        transform: scale(1.1);
+    }
+
+    .property-img {
+        transition: transform 0.25s;
+    }
+}
+
 
 
 // For Login & Register pages
