@@ -165,3 +165,12 @@
         </div>
     </form>
 </div>
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col d-flex justify-content-center">
+            <div class="wrapper-return-index">
+                <a href="{{ route('apartment.index')  }}" class="btn fw-bold" style="background-color: #005555; color:white; padding: .8rem 2rem; font-size: 1.1rem " >Back</a>
+            </div>
+        </div>
+    </div>
+</div>
