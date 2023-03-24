@@ -89,6 +89,12 @@ document.getElementById('formCrud').addEventListener('submit', (event) => {
 
 document.querySelector('input.tt-search-box-input').addEventListener('click', () => {
 
+    document.getElementById('latitude').value = ''
+    document.getElementById('longitude').value = ''
+    document.getElementById('address').value = ''
+
+
+
     document.getElementById('mexErrore').classList.add('d-none')
 
 
