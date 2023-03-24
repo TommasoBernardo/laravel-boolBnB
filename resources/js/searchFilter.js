@@ -31,8 +31,8 @@ ttSearchBox.on('tomtom.searchbox.resultselected', function (data) {
 
     console.log(latitudine, longitudine);
 
-    const inputLatidudine = document.getElementById('latitude').setAttribute('value', latitudine)
-    const inputLongitudine = document.getElementById('longitude').setAttribute('value', longitudine)
+    document.getElementById('latitude').setAttribute('value', latitudine)
+    document.getElementById('longitude').setAttribute('value', longitudine)
     // const inputAddress = document.getElementById('address').setAttribute('value', address)
 
     document.getElementById('latitude').value = latitudine
@@ -46,28 +46,59 @@ window.addEventListener('load', () => {
     if (window.location.href == 'http://127.0.0.1:8000/apartments') {
         localStorage.clear();
     }
-    const searchInput = document.querySelector('input.tt-search-box-input');
+    if (window.location.href == 'http://127.0.0.1:8000/'){
+        localStorage.clear();
+    }
+    const searchInput = document.querySelector('input.tt-search-box-input')
+    const inputLatidudine = document.getElementById('latitude')
+    const inputLongitudine = document.getElementById('longitude');
     const searchValue = localStorage.getItem('searchboxValue');
+    const searchValueLongitude = localStorage.getItem('searchValueLongitude');
+    const searchValueLatitude = localStorage.getItem('searchValueLatitude');
+
     console.log(window.location.href)
     if (searchValue) {
         searchInput.value = searchValue;
+        inputLatidudine.value = searchValueLongitude;
+        inputLongitudine.value = searchValueLatitude;
     }
 
 });
 
+
+
+
+
 document.getElementById('formFilter').addEventListener('submit', (event) => {
 
     const searchInput = document.querySelector('input.tt-search-box-input');
+    const inputLatidudine = document.getElementById('latitude')
+    const inputLongitudine = document.getElementById('longitude');
     localStorage.setItem('searchboxValue', searchInput.value);
+    localStorage.setItem('searchValueLongitude', inputLatidudine.value);
+    localStorage.setItem('searchValueLatitude', inputLongitudine.value);
+
+
+
+    if (document.getElementById('latitude').value == ''){
+        event.preventDefault();
+        document.getElementById('mexErrore').classList.remove('d-none')
+    }
 
 });
+
 
 
 document.getElementById("searchBox").append(searchBoxHTML)
 
 
-const input = document.querySelector('input.tt-search-box-input').setAttribute('name', 'address')
+const input = document.querySelector('input.tt-search-box-input')
 
+input.setAttribute('name', 'address')
+
+input.addEventListener('click',() => {
+    document.getElementById('mexErrore').classList.add('d-none')
+})
 
 document.getElementById('latitude').addEventListener('input', () => {
     document.getElementById('latitude').value = latitudine
