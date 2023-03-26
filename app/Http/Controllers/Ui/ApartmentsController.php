@@ -127,4 +127,14 @@ class ApartmentsController extends Controller
 
         return redirect()->route('apartments.show', $apartment->slug );
     }
+
+    public function update(Lead $lead)
+    {
+
+
+        $lead->update(['show' => false]);
+       
+
+        return redirect()->route('dashboard.messageIndex');
+    }
 }
