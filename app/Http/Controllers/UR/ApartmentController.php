@@ -127,7 +127,7 @@ class ApartmentController extends Controller
             }
         }
 
-        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente");
+        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente")->with('alert-type', 'warning');
     }
 
 
@@ -238,6 +238,6 @@ class ApartmentController extends Controller
         // Elimina l'appartamento
         $apartment->delete();
 
-        return redirect()->route('apartment.index')->with('message', "L'appartamento è stato eliminato correttamente");
+        return redirect()->route('apartment.index')->with('message', "L'appartamento è stato eliminato correttamente")->with('alert-type', 'warning');
     }
 }
