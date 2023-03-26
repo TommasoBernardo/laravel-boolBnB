@@ -124,9 +124,6 @@
                             </div>
                             @endif
                         </div>
-                        <div class="mb-3  fw-bold d-none">
-                            <input name="apartment_id" type="text" class="form-control input-email-user" value="{{ $apartment->id }}">
-                        </div>
                         <div class="wrap-button-send-email text-center  mt-2">
                             <button type="submit" class="btn btn-warning fw-bold text-light" style="padding: .8rem 2rem; font-size: 1.1rem"> Send email </button>
                         </div>

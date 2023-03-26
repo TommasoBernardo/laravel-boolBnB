@@ -95,7 +95,7 @@ class ApartmentsController extends Controller
         return view('apartmentShow', compact('apartment'));
     }
 
-    public function store(Request $request){
+    public function store(Request $request, Apartment $apartment){
 
         //     $data = $request->validate(
         //         ['name' => 'nullable|string|max:150|min:5',
@@ -111,16 +111,14 @@ class ApartmentsController extends Controller
             'email' => 'required|email|max:255',
             'message' => 'required|string|min:5',
             'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
-            'apartment_id' => ''
         ]);
 
-        $data =  $request->all();
-        $apartment = Apartment::where('id',$data['apartment_id'] )->first();
 
         
 
         $newLead = new Lead();
         $newLead->fill($data);
+        $newLead->apartment_id = $apartment->id;
         $newLead->save();
 
         // Mail::to('example@mail.com')->send(new SendMessage($newLead));
