@@ -29,6 +29,11 @@ class Apartment extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function leads()
+    {
+        return $this->hasMany(Lead::class);
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
