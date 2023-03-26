@@ -123,7 +123,7 @@ class ApartmentsController extends Controller
 
         // Mail::to('example@mail.com')->send(new SendMessage($newLead));
 
-        return redirect()->route('apartments.show', $apartment->slug );
+        return redirect()->route('apartments.show', $apartment->slug)->with('message','Messaggio inviato con successo')->with('alert-type', 'success');;
     }
 
     public function update(Lead $lead)

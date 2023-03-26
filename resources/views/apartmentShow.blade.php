@@ -3,6 +3,10 @@
 @vite(['resources/js/show.js'])
 @endsection
 @section('content')
+@if (session('message'))
+<div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('message') }}"></div>
+@endif
+
 <div class="d-none">
     <input type="text" id="latitude" value="{{ $apartment->latitude }}">
     <input type="text" id="longitude" value="{{ $apartment->longitude }}">
@@ -178,5 +182,5 @@
 
 
 @section('script')
-@vite(['resources/js/mapShow.js'])
+@vite(['resources/js/mapShow.js','resources/js/popupDelete.js'])
 @endsection
