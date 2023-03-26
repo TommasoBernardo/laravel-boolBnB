@@ -31,6 +31,8 @@ Route::middleware(['auth', 'userApartment'])->prefix('dashboard')->group(functio
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/message', [DashboardController::class, 'messageIndex'])->name('dashboard.messageIndex');
+    Route::put('/message/{lead}/edit', [UiApartmentsController::class, 'update'])->name('dashboard.messageUpdate');
 })->name('dashboard');
 
 Route::middleware('auth')->prefix('ur')->name('ur.')->group(function () {

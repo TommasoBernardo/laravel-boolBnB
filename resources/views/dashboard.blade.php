@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
+                        <a href="{{route('dashboard.messageIndex')}}" class="nav-link text-white">
                             <i class="fs-5 fa fa-comments"></i><span class="fs-5 ms-3 d-none d-sm-inline">Messages</span>
                         </a>
                     </li>

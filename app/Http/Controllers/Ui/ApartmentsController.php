@@ -96,25 +96,45 @@ class ApartmentsController extends Controller
     }
 
     public function store(Request $request){
-         
-    //     $data = $request->validate(
-    //         ['name' => 'nullable|string|max:150|min:5',
-    //          'email' => '|email|max:255',
-    //          'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
-    //          'message' => '|string|min:5',
-    //          'apartment_id'=>'',
-    //  ]); 
-     $data =  $request->all();
-     $apartment = Apartment::where('id',$data['apartment_id'] )->first();
 
-    
+        //     $data = $request->validate(
+        //         ['name' => 'nullable|string|max:150|min:5',
+        //          'email' => '|email|max:255',
+        //          'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
+        //          'message' => '|string|min:5',
+        //          'apartment_id'=>'',
+        //  ]); 
 
-     $newLead = new Lead();
-     $newLead->fill($data);
-     $newLead->save();
+
+        $data = $request->validate([
+            'name' => 'nullable|string|max:150|min:5',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string|min:5',
+            'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
+            'apartment_id' => ''
+        ]);
+
+        $data =  $request->all();
+        $apartment = Apartment::where('id',$data['apartment_id'] )->first();
+
         
-     Mail::to('example@mail.com')->send(new SendMessage($newLead));
 
-     return redirect()->route('apartments.show', $apartment->slug );
+        $newLead = new Lead();
+        $newLead->fill($data);
+        $newLead->save();
+
+        // Mail::to('example@mail.com')->send(new SendMessage($newLead));
+
+        return redirect()->route('apartments.show', $apartment->slug );
+    }
+
+    public function update(Lead $lead)
+    {
+
+
+        $lead->update(['show' => false]);
+       
+
+        return redirect()->route('dashboard.messageIndex');
     }
 }
