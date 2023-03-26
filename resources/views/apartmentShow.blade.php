@@ -81,20 +81,48 @@
                     @csrf
                     <div class="wrap-send-email w-85 ">
                         <div class="mb-3  fw-bold">
-                            <label for="name" class="form-label">Inserisci li tuo nome </label>
-                            <input type="text" name="name" class="form-control input-email-user" value="@if(Auth::check() and Auth::user()->name) {{ Auth::user()->name }}@endif" id="name" placeholder="luca">
+                            <label for="name" class="form-label {{ $errors->has('name') ? 'is-invalid' : '' }}">Inserisci li tuo nome </label>
+                            <input type="text" name="name" class="form-control input-email-user" maxlength="150" minlength="5" value="@if(Auth::check() and Auth::user()->name) {{ Auth::user()->name }}@endif" id="name" placeholder="luca">
+                            @if ($errors->has('name'))
+                            <div class="alert alert-danger mt-3">
+                                @foreach ($errors->get('name') as $error)
+                                {{ $error }}
+                                @endforeach
+                            </div>
+                            @endif
                         </div>
                         <div class="mb-3 fw-bold">
-                            <label for="email-user" class="form-label">Inserisci la tua email * </label>
-                            <input type="email" name="email" class="form-control input-email-user" id="email-user" value="@if(Auth::check()) {{ Auth::user()->email }}@endif" placeholder="youemail@example.com">
+                            <label for="email-user" class="form-label {{ $errors->has('email') ? 'is-invalid' : '' }}">Inserisci la tua email * </label>
+                            <input type="email" name="email" class="form-control input-email-user" id="email-user" maxlength="255" required value="@if(Auth::check()) {{ Auth::user()->email }}@endif" placeholder="youemail@example.com">
+                            @if ($errors->has('email'))
+                            <div class="alert alert-danger mt-3">
+                                @foreach ($errors->get('email') as $error)
+                                {{ $error }}
+                                @endforeach
+                            </div>
+                            @endif
                         </div>
                         <div class="mb-3  fw-bold">
-                            <label for="phone_number" class="form-label">Inserisci li tuo numero di telefono </label>
-                            <input type="number" name="phone_number" class="form-control input-email-user" id="phone_number" placeholder="123456">
+                            <label for="phone_number" class="form-label {{ $errors->has('phone_number') ? 'is-invalid' : '' }}">Inserisci li tuo numero di telefono </label>
+                            <input type="number" name="phone_number" class="form-control input-email-user" id="phone_number" placeholder="">
+                            @if ($errors->has('phone_number'))
+                            <div class="alert alert-danger mt-3">
+                                @foreach ($errors->get('phone_number') as $error)
+                                {{ $error }}
+                                @endforeach
+                            </div>
+                            @endif
                         </div>
                         <div class="mb-3  fw-bold">
-                            <label for="text-user" class="form-label">Facci sapere la tua esperienza, scrivici qualcosa! * </label>
-                            <textarea name="message" class="form-control input-email-user" id="text-user" rows="2"></textarea>
+                            <label for="text-user" class="form-label {{ $errors->has('message') ? 'is-invalid' : '' }}">Facci sapere la tua esperienza, scrivici qualcosa! * </label>
+                            <textarea name="message" class="form-control input-email-user" id="text-user" rows="2" minlength="5" required></textarea>
+                            @if ($errors->has('message'))
+                            <div class="alert alert-danger mt-3">
+                                @foreach ($errors->get('message') as $error)
+                                {{ $error }}
+                                @endforeach
+                            </div>
+                            @endif
                         </div>
                         <div class="mb-3  fw-bold d-none">
                             <input name="apartment_id" type="text" class="form-control input-email-user" value="{{ $apartment->id }}">
