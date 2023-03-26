@@ -22,7 +22,7 @@ return new class extends Migration
             $table->bigInteger('phone_number')->nullable()->unsigned();
             $table->boolean('show')->default(true);
             $table->timestamps();
-            $table->foreign('apartment_id')->references('id')->on('apartments');
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
