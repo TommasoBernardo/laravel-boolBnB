@@ -127,7 +127,7 @@ class ApartmentController extends Controller
             }
         }
 
-        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente")->with('alert-type', 'warning');
+        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente")->with('alert-type', 'success');
     }
 
 
