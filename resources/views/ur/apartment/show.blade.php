@@ -84,7 +84,7 @@
                 <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">
                     @csrf
                     
-                    <input type="text" name="sponsor_id" id="sponsor_id">
+                    <input type="text" name="sponsor_id" id="sponsor_id" class="d-none">
                     <button id="submit-button" class="button button--small button--green">Purchase</button>    
                 </form>
             </div>
