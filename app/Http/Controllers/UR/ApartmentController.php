@@ -221,7 +221,7 @@ class ApartmentController extends Controller
         }
 
         // Elimina l'immagine di copertina dell'appartamento
-        Storage::delete('img/cover_image' . $apartment->cover_image);
+        Storage::delete('img/cover_image' , $apartment->cover_image);
 
         // Elimina l'appartamento
         $apartment->delete();
