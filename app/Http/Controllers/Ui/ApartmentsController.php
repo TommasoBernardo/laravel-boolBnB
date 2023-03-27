@@ -97,14 +97,7 @@ class ApartmentsController extends Controller
 
     public function store(Request $request, Apartment $apartment){
 
-        //     $data = $request->validate(
-        //         ['name' => 'nullable|string|max:150|min:5',
-        //          'email' => '|email|max:255',
-        //          'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
-        //          'message' => '|string|min:5',
-        //          'apartment_id'=>'',
-        //  ]); 
-
+       
 
         $data = $request->validate([
             'name' => 'nullable|string|max:150|min:5',
