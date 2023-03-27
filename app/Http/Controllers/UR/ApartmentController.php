@@ -22,7 +22,7 @@ class ApartmentController extends Controller
         'beds' => 'required|numeric|min:1|integer|max:255',
         'bathrooms' => 'required|numeric|min:1|integer|max:255',
         'square_meters' => 'required|numeric|min:30|integer|max:4294967295',
-        'cover_image' => 'required|image|max:2048',
+        'cover_image' => 'required|image|max:10240',
         'images' => 'max:10240',
         'visible' => 'required|boolean',
         'address' => 'required|string',
@@ -168,7 +168,7 @@ class ApartmentController extends Controller
 
         $regoleDaAggiornare = $this->regoleValidazione;
 
-        $regoleDaAggiornare['cover_image'] = ['max:300', 'image'];
+        $regoleDaAggiornare['cover_image'] = ['max:10240', 'image'];
         $regoleDaAggiornare['title'] = ['required', 'max:150', 'min:5', 'string', Rule::unique('apartments')->ignore($apartment->id)];
 
         $data = $request->validate($regoleDaAggiornare, $this->messaggiValidazione);
@@ -184,33 +184,22 @@ class ApartmentController extends Controller
         }
 
 
-        if (array_key_exists('images', $data)) {
-            foreach ($data['images'] as $img) {
+        if (isset($data['images'])) {
+            if ($apartment->images != null) {
+                foreach($apartment->images as $image){
+                    Storage::delete('img/apartment_images', $image->path);
+                    $image->delete();
+                }
+            }
+            foreach($data['images'] as $image){
                 $newImages = new Image();
                 $newImages->apartment_id = $apartment->id;
-                $newImages->path = Storage::put('img/apartment_images/' . $apartment->id, $img);
+                $newImages->path = Storage::put('img/apartment_images', $image);
                 $newImages->save();
             }
         }
 
-        if (array_key_exists('images', $data)) {
-            // Elimina le immagini esistenti
-            foreach ($apartment->images as $image) {
-                Storage::delete($image->path);
-                $image->delete();
-            }
-
-            // Carica le nuove immagini
-            foreach ($data['images'] as $img) {
-                $newImages = new Image();
-                $newImages->apartment_id = $apartment->id;
-                $newImages->path = Storage::put('img/apartment_images/' . $apartment->id, $img);
-                $newImages->save();
-            }
-        }
-
-
-
+       
         $apartment->update($data);
         $apartment->services()->sync($data['services'] ?? []);
 
@@ -226,9 +215,8 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         // Elimina le immagini aggiuntive dell'appartamento
-        $images = $apartment->images;
-        foreach ($images as $image) {
-            Storage::delete('img/extra_images/' . $image->filename);
+        foreach ($apartment->images as $image) {
+            Storage::delete('img/apartment_images',$image->path);
             $image->delete();
         }
 
