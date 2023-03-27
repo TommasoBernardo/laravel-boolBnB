@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use App\Models\Image;
-
-
+use App\Models\Sponsor;
 
 class ApartmentController extends Controller
 {
@@ -139,7 +138,8 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        return view('ur.apartment.show', compact('apartment'));
+        $sponsors = Sponsor::all();
+        return view('ur.apartment.show', compact('apartment', 'sponsors'));
     }
 
     /**

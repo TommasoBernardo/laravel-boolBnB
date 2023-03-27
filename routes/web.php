@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\Ui\HomepageController;
 use App\Http\Controllers\UR\ApartmentController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::post('/apartments/{apartment}/lead', [UiApartmentsController::class, 'sto
 
 Route::middleware(['auth', 'userApartment'])->prefix('dashboard')->group(function () {
     Route::resource('/apartment', ApartmentController::class);
+    Route::post('/{apartment}/payment', [SponsorController::class, 'store'])->name('pay.sponsor');
 })->name('dashboard');
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {

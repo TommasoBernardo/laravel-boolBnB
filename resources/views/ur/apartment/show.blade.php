@@ -62,6 +62,35 @@
                 </div>
             </div>
         </div>
+
+        {{-- Payment --}}
+        <div class="container">
+            <div class="row">
+                @foreach ($sponsors as $sponsor)
+                <div class="col-4">
+                    <h2>{{ $sponsor->name }}</h2>
+                    <p>{{ $sponsor->duration }}</p>
+                    <p>{{ $sponsor->price }}</p>
+                    <a id="pay-btn" class="btn btn-success">Pay</a>
+                </div>
+                @endforeach
+            </div>
+
+            <div id="braintree-box" class="d-none">
+                <p id="cancel-payment" class="text-end m-0 text-danger fw-bold">X</p>
+
+                <div id="dropin-container"></div>
+
+                <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">
+                    @csrf
+                    
+                    <input type="text" name="sponsor_id" id="sponsor_id">
+                    <button id="submit-button" class="button button--small button--green">Purchase</button>    
+                </form>
+            </div>
+
+            
+        </div>
     </div>
     <div class="container">
         <div class="row mt-5 mb-5">
@@ -76,5 +105,5 @@
     </div>
 @endsection
 @section('script')
-    @vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js'])
+    @vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js', 'resources/js/payment.js'])
 @endsection
