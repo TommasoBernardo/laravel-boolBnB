@@ -74,9 +74,13 @@
 
 
     {{-- font-awesome --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Usando Vite -->
     @vite(['resources/js/app.js', 'resources/js/backToTop-btn.js'])
 
@@ -94,16 +98,18 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-xxl-top">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_sito">
-                        <img src="{{asset('storage/img/BoolBnB-logo.png')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('storage/img/BoolBnB-logo.png') }}" class="img-fluid" alt="">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -111,11 +117,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                      
-                            <a class="nav-link  @if(Route::current()->getName() == 'home') active @endif" href="{{ url('/') }}">{{ __('Home') }}</a>
+
+                            <a class="nav-link  @if (Route::current()->getName() == 'home') active @endif"
+                                href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  @if(Route::current()->getName() == 'apartments.index') active @endif" href="{{ url('/apartments') }}">{{ __('Apartments') }}</a>
+                            <a class="nav-link  @if (Route::current()->getName() == 'apartments.index') active @endif"
+                                href="{{ url('/apartments') }}">{{ __('Apartments') }}</a>
                         </li>
                     </ul>
 
@@ -123,39 +131,41 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
                         @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                                @if(!Auth::user()->name and Auth::user()->surname)
-                                {{Auth::user()->surname}}
-                                @endif
-                                @if(!Auth::user()->name and !Auth::user()->surname)
-                                User {{Auth::user()->id}}
-                                @endif
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('dashboard') }}">{{ __('Dashboard') }}</a>
-                                <a class="dropdown-item" href="{{ url('ur/profile') }}">{{ __('Profile') }}</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                    @if (!Auth::user()->name and Auth::user()->surname)
+                                        {{ Auth::user()->surname }}
+                                    @endif
+                                    @if (!Auth::user()->name and !Auth::user()->surname)
+                                        User {{ Auth::user()->id }}
+                                    @endif
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('dashboard') }}">{{ __('Dashboard') }}</a>
+                                    <a class="dropdown-item" href="{{ url('ur/profile') }}">{{ __('Profile') }}</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -165,35 +175,39 @@
         <main class="">
             @yield('content')
         </main>
-{{-- 
+        {{-- 
         @dd(Route::currentRouteName()) --}}
         {{-- @dd(Route::current()->getPrefix()) --}}
-        @if(Route::currentRouteName() != 'dashboard.index' && Route::currentRouteName() != 'apartment.index')
-   
-        <footer class="container-fluid footer">
-            <div class="container pt-3">
-                <div class="row align-items-center">
-                    <div class="col-6 pe-5">
-                        <img src="{{asset('storage/img/BoolBnB-logo.png')}}" style="width: 120px;" alt="logo">
-                        <p class="mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate facilis voluptates culpa. Aspernatur debitis atque recusandae beatae porro, consequatur repellat.</p>
-                    </div>
-                    <div class="col-6  text-end">
-                        <h4>Explore</h4>
-                        <ul class="footer-menu">
-                            <li><a class="hover-color" href="{{ url('/') }}">Home</a></li>
-                            <li><a class="hover-color" href="{{ url('/apartments') }}">Apartments</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 my-3 text-center">
-                        <div class="text-center align-self-end ">
-                            <small class="">Copyright &copy; <script>
-                                    document.write(new Date().getFullYear())
-                                </script><strong> BoolBnB</strong></small>
+        @if (Route::currentRouteName() != 'dashboard.index' && Route::currentRouteName() != 'apartment.index')
+            <footer class="container-fluid footer">
+                <div class="container pt-3">
+                    <div class="row align-items-center">
+                        <div class="col-6 pe-5">
+                            <img src="{{ asset('storage/img/BoolBnB-logo.png') }}" style="width: 120px;"
+                                alt="logo">
+                            <p class="mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+                                facilis voluptates culpa. Aspernatur debitis atque recusandae beatae porro, consequatur
+                                repellat.</p>
+                        </div>
+                        <div class="col-6  text-end">
+                            <h4>Explore</h4>
+                            <ul class="footer-menu">
+                                <li><a class="hover-color" href="{{ url('/') }}">Home</a></li>
+                                <li><a class="hover-color" href="{{ url('/apartments') }}">Apartments</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 my-3 text-center">
+                            <div class="text-center align-self-end ">
+                                <small class="">Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear())
+                                    </script><strong> BoolBnB</strong>
+                                </small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         @endif
 
     </div>
