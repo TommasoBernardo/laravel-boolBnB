@@ -96,6 +96,8 @@ const input = document.querySelector('input.tt-search-box-input')
 
 input.setAttribute('name', 'address')
 
+input.setAttribute('autocomplete','off')
+
 input.addEventListener('click',() => {
     document.getElementById('mexErrore').classList.add('d-none')
 })
