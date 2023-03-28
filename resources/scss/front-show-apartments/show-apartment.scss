@@ -1,36 +1,8 @@
-.my-dimension {
-    height: 40rem;
-    width: 40rem;
-}
-
-h1 {
-    color: #005555;
-}
-
-h2 {
-    color: #005555;
-}
-
+h1,
+h2,
 h3 {
     color: #005555;
 }
-
-.my-square {
-    width: 20rem;
-    height: 19.8rem;
-    background-color: red;
-    margin-left: 0.3rem;
-    margin-bottom: 0.3rem;
-}
-
-.my-img {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    height: 100%;
-    width: 100%;
-}
-
-
 
 .top-right {
     border-top-right-radius: 50px;
@@ -53,11 +25,8 @@ h3 {
 .my-maps {
     width: 100%;
     height: 25rem;
-    // background-color: red;
 }
 
-// section.bg-color-div-email{
-//     background-color: #005555;
 
 //     i.icon-send-email{
 //         color: rgb(255, 202, 44);
@@ -88,53 +57,66 @@ div.wrap-send-email {
         font-size: 16px;
         border: none;
     }
-}
-
-
-@media screen and (max-width: 980px) {
-    .my-img {
-        border-top-left-radius: 0%;
-        border-bottom-left-radius: 0%;
-        height: 100%;
-        width: 100%;
-    }
-
-    .my-dimension {
-        height: 40rem;
-        width: 50rem;
-    }
-
 
 }
 
-@media screen and (max-width: 600px) {
-    .my-img {
-        border-top-left-radius: 0%;
-        border-bottom-left-radius: 0%;
-        height: 100%;
-        width: 100%;
-    }
 
-    .my-dimension {
-        height: 25rem;
-        width: 30rem;
-    }
-
-    .my-square {
-        width: 20rem;
-        height: 19.8rem;
-        background-color: red;
-        margin-left: 0.3rem;
-        margin-bottom: 0.3rem;
-        display: none;
-    }
-
+@media screen and (max-width: 580px) {
     .my-users {
         border-radius: 50%;
         vertical-align: text-top;
         display: none;
     }
 
+    div.return-arrow {
+        display: none;
+
+    }
+
+}
+
+// Braintree style
+.button {
+
+    cursor: pointer;
+    font-weight: 500;
+    left: 3px;
+    line-height: inherit;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+}
+
+.button--small {
+
+    padding: 10px 20px;
+    font-size: 0.875rem;
+}
+
+.button--green {
+
+    outline: none;
+    background-color: #64d18a;
+    border-color: #64d18a;
+    color: white;
+    transition: all 200ms ease;
+}
+
+.button--green:hover {
+
+    background-color: #8bdda8;
+    color: white;
+}
+
+#cancel-payment {
+
+    cursor: pointer;
 }
 
 // Braintree style

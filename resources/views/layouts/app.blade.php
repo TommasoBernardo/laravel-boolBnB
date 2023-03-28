@@ -83,19 +83,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://js.braintreegateway.com/web/dropin/1.36.0/js/dropin.js"></script>
-    
+
     <!-- Usando Vite -->
     @vite(['resources/js/app.js', 'resources/js/backToTop-btn.js'])
 
     @yield('scss')
 
 
-    
+
 </head>
 
 <body>
     <button type="button" class="btn btn-success btn-lg" id="btn-back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up icon"></i>
     </button>
 
     <div id="app">
@@ -188,9 +188,11 @@
                         <div class="col-6 pe-5">
                             <img src="{{ asset('storage/img/BoolBnB-logo.png') }}" style="width: 120px;"
                                 alt="logo">
-                            <p class="mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
-                                facilis voluptates culpa. Aspernatur debitis atque recusandae beatae porro, consequatur
-                                repellat.</p>
+                            <p class="mt-3">"Eleviamo la tua esperienza di viaggio attraverso una vasta selezione di
+                                alloggi confortevoli e accoglienti in tutto il mondo. Sia che tu stia cercando un
+                                rifugio in montagna o una casa sulla spiaggia, siamo qui per aiutarti a trovare il tuo
+                                posto perfetto per rilassarti e vivere avventure indimenticabili. Il tuo
+                                viaggio inizia con noi</p>
                         </div>
                         <div class="col-6  text-end">
                             <h4>Explore</h4>

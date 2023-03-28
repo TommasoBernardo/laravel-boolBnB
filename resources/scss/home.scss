@@ -1,17 +1,17 @@
-div.hero-parent{
+div.hero-parent {
     position: relative;
 
-    .search-box-hero{
+    .search-box-hero {
         position: absolute;
         z-index: 2;
-        left: 50% ;
+        left: 50%;
         top: 30%;
         width: 100%;
         transform: translate(-50%);
     }
 }
 
-img.jumbo-img{
+img.jumbo-img {
     height: 100%;
     width: 100%;
     display: block;
@@ -20,150 +20,152 @@ img.jumbo-img{
 
 }
 
-div.div-wrap-button-properties{
+div.div-wrap-button-properties {
     justify-content: end;
     display: flex;
 }
 
 
-button.custom-button{
+button.custom-button {
     padding: 0.9rem 2rem;
 }
 
 
 
-div.bg-color{
+div.bg-color {
     background-color: rgb(0, 85, 85);
 }
 
-h5.card-subtitle{
+h5.card-subtitle {
     color: rgb(0, 85, 85);
 }
-p.card-text{
+
+p.card-text {
     font-size: .8rem;
 }
-a.link-about-us{
+
+a.link-about-us {
     text-decoration: none;
-} 
-div.icon{
-    font-size: 2rem;
-   
 }
-div.img-profile{
-    img{
+
+div.icon {
+    font-size: 2rem;
+
+}
+
+div.img-profile {
+    img {
         width: 100px;
         height: 100px;
         border-radius: 50%;
     }
 }
 
-div.content{
+div.content {
 
-    h4{
+    h4 {
         color: rgb(0, 85, 85);
     }
 }
 
-ul.icon{
+ul.icon {
     list-style-type: none;
     margin-right: 2rem;
 
-    li.icon-circle-wrap{
+    li.icon-circle-wrap {
         width: 50px;
         height: 50px;
         border-radius: 50%;
         padding: .7rem 0 1rem 0;
         background-color: rgb(0, 85, 85);
         color: white;
-       
-        &:hover{
+
+        &:hover {
             background-color: white;
-            border: 2px solid  rgb(0, 85, 85);
+            border: 2px solid rgb(0, 85, 85);
             transform: scale(1.1);
-            color: rgb(0, 85, 85) ;
-           
+            color: rgb(0, 85, 85);
+
         }
-        
-        
+
+
     }
 }
 
 @media screen and (max-width: 1021px) {
-    ul.icon{
+    ul.icon {
         list-style-type: none;
         margin-right: 2rem;
-    
-        li.icon-circle-wrap{
-           display: flex;
-           justify-content: center;
+
+        li.icon-circle-wrap {
+            display: flex;
+            justify-content: center;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-           
+
             background-color: rgb(0, 85, 85);
             color: white;
-           
-            &:hover{
+
+            &:hover {
                 background-color: white;
-                border: 2px solid  rgb(0, 85, 85);
+                border: 2px solid rgb(0, 85, 85);
                 transform: scale(1.1);
-                color: rgb(0, 85, 85) ;
-               
+                color: rgb(0, 85, 85);
             }
-            
-            
         }
     }
-    
 }
 
 @media screen and (max-width: 780px) {
-    div.wrap-cards-propreties{
-        display: flex;
-        justify-content: center;
-    }
-    div.card-agent{
+    div.wrap-cards-propreties {
         display: flex;
         justify-content: center;
     }
 
-    h1.heading{
+    div.card-agent {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1.heading {
         font-size: 1.5rem;
     }
 
-    div.hero-parent{
+    div.hero-parent {
         position: relative;
-    
-        .search-box-hero{
+
+        .search-box-hero {
             position: absolute;
             z-index: 2;
-            left: 50% ;
+            left: 50%;
             top: 20%;
             width: 100%;
             transform: translate(-50%);
         }
     }
 
-   
+
 }
 
 @media screen and (max-width: 580px) {
-    
-    div.div-wrap-button-properties{
+
+    div.div-wrap-button-properties {
         justify-content: start;
         display: flex;
     }
-    h1.heading{
+
+    h1.heading {
         font-size: 1.2rem;
     }
 
-    div.hero-parent{
+    div.hero-parent {
         position: relative;
-    
-        .search-box-hero{
+
+        .search-box-hero {
             position: absolute;
             z-index: 2;
-            left: 50% ;
+            left: 50%;
             top: 20%;
             width: 100%;
             transform: translate(-50%);
