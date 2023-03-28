@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('scss')
     @vite(['resources/js/show.js'])
+    @vite(['resources/js/show-slider.js'])
 @endsection
 @section('content')
     @if (session('message'))
