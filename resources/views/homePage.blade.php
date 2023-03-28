@@ -78,6 +78,7 @@
                     @foreach ($apartments as $apartment)
                     @foreach($apartment->sponsors as $sponsor)
                     @if($sponsor->pivot->end_date > $dateNow)
+                    @if($apartment->visible != 0)
                     @php $count++; @endphp
                     <div class=" swiper-slide">
                         <div class="flex-column" id="myCarousel">
@@ -106,7 +107,7 @@
                         </div>
                     </div>
                     @endif
-
+                    @endif
                     @endforeach
                     @endforeach
                     @if($count == 0)
