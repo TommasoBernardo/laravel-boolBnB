@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Mail;
 
 class ApartmentsController extends Controller
 {
+
+    private function haversineDistance($latitude1, $longitude1, $latitude2, $longitude2)
+    {
+        $earthRadius = 6371; // in kilometers
+        $dLat = deg2rad($latitude2 - $latitude1);
+        $dLon = deg2rad($longitude2 - $longitude1);
+        $lat1 = deg2rad($latitude1);
+        $lat2 = deg2rad($latitude2);
+        $a = sin($dLat / 2) * sin($dLat / 2) + cos($lat1) * cos($lat2) * sin($dLon / 2) * sin($dLon / 2);
+        $c = 2 * asin(sqrt($a));
+        $distance = $earthRadius * $c;
+        return $distance; // in kilometers
+    }
+
+
     public function index(Request $request)
     {
 
@@ -82,12 +97,18 @@ class ApartmentsController extends Controller
             }
         }
 
+        $apartments = $apartments->simplePaginate(12);
+        
+        foreach ($apartments as $apartment) {
+            $distance = $this->haversineDistance($latitude, $longitude, $apartment->latitude, $apartment->longitude);
+            $apartment->distance = round($distance, 2);
+        }
+        
 
-
-        $apartmentsIndex = $apartments->simplePaginate(12);
+        
         $services = Service::all();
-
-        return view('apartments', compact('apartmentsIndex', 'services'));
+        
+        return view('apartments', compact('apartments', 'services'));
     }
 
     public function show(Apartment $apartment)
