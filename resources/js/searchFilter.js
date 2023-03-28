@@ -1,4 +1,3 @@
-
 var options = {
     searchOptions: {
         key: "hJqueTcOWatAGBZnKxzHkdEbmyM9feG4",
@@ -9,7 +8,7 @@ var options = {
         key: "hJqueTcOWatAGBZnKxzHkdEbmyM9feG4",
         language: "it-IT"
     },
-    placeholder: "Inserisci indirizzo",
+    placeholder: "Enter an address",
 }
 var ttSearchBox = new tt.plugins.SearchBox(tt.services, options)
 var searchBoxHTML = ttSearchBox.getSearchBoxHTML()
@@ -46,7 +45,7 @@ window.addEventListener('load', () => {
     if (window.location.href == 'http://127.0.0.1:8000/apartments') {
         localStorage.clear();
     }
-    if (window.location.href == 'http://127.0.0.1:8000/'){
+    if (window.location.href == 'http://127.0.0.1:8000/') {
         localStorage.clear();
     }
     const searchInput = document.querySelector('input.tt-search-box-input')
@@ -80,7 +79,7 @@ document.getElementById('formFilter').addEventListener('submit', (event) => {
 
 
 
-    if (document.getElementById('latitude').value == ''){
+    if (document.getElementById('latitude').value == '') {
         event.preventDefault();
         document.getElementById('mexErrore').classList.remove('d-none')
     }
@@ -96,9 +95,9 @@ const input = document.querySelector('input.tt-search-box-input')
 
 input.setAttribute('name', 'address')
 
-input.setAttribute('autocomplete','off')
+input.setAttribute('autocomplete', 'off')
 
-input.addEventListener('click',() => {
+input.addEventListener('click', () => {
     document.getElementById('mexErrore').classList.add('d-none')
 })
 

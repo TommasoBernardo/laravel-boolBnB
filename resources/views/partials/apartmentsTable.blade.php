@@ -2,7 +2,7 @@
 <div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('message') }}"></div>
 @endif
 <div class="text-center mt-4">
-    <a href="{{ route('apartment.create') }}" class="btn btn-primary">Create item</a>
+    <a href="{{ route('apartment.create') }}" class="btn btn-primary">Add new apartment</a>
 </div>
 <table class="table mt-3">
     @if(count($apartments) > 0)

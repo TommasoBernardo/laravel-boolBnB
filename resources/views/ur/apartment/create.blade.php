@@ -3,7 +3,7 @@
 
 @section('content')
 
-@include('ur.apartment.shared.formCreateEdit', ["route" => 'apartment.store', 'methodRoute' => 'POST', "bottone" => 'crea'])
+@include('ur.apartment.shared.formCreateEdit', ["route" => 'apartment.store', 'methodRoute' => 'POST', "bottone" => 'Save new apartment'])
 
 @endsection
 
