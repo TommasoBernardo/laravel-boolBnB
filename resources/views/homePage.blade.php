@@ -76,13 +76,17 @@
                     @php $count = 0; @endphp
 
                     @foreach ($apartments as $apartment)
+                    @php $lastActiveSponsor = null; @endphp
                     @foreach($apartment->sponsors as $sponsor)
                     @if($sponsor->pivot->end_date > $dateNow)
-                    @if($apartment->visible != 0)
-                    @php $count++; @endphp
-                    <div class=" swiper-slide">
-                        <div class="flex-column" id="myCarousel">
+                    @php $lastActiveSponsor = $sponsor; @endphp
+                    @endif
+                    @endforeach
 
+                    @if(!is_null($lastActiveSponsor) && $apartment->visible != 0)
+                    @php $count++; @endphp
+                    <div class="swiper-slide">
+                        <div class="flex-column" id="myCarousel">
                             <div href="property-single.html" class="img img-box">
                                 <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top property-img" style=" height:250px ; border-radius:2rem; object-fit: cover; object-position: ; " alt="{{ $apartment->title }}">
                             </div>
@@ -107,12 +111,12 @@
                         </div>
                     </div>
                     @endif
-                    @endif
                     @endforeach
-                    @endforeach
+
                     @if($count == 0)
                     <p class="text-center fs-1 text-danger">Nessun appartamento in evidenza.</p>
                     @endif
+
                 </div>
                 <div class="swiper-button-next arrow"></div>
                 <div class="swiper-button-prev arrow"></div>
