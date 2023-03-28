@@ -17,56 +17,56 @@ class ServiceSeeder extends Seeder
     {
         $services = [
             [
-                'type' => 'wi-fi',
+                'type' => 'Wi-fi',
                 'icon' => '<i class="fa-solid fa-wifi"></i>',
             ],
             [
-                'type' => 'posto macchina',
+                'type' => 'Parking slot',
                 'icon' => '<i class="fa-solid fa-car"></i>',
             ],
             [
-                'type' => 'piscina',
+                'type' => 'Pool',
                 'icon' => '<i class="fa-solid fa-person-swimming"></i>',
             ],
             [
-                'type' => 'portineria',
+                'type' => 'Concierge',
                 'icon' => '<i class="fa-solid fa-bell-concierge"></i>
                 ',
             ],
             [
-                'type' => 'sauna',
+                'type' => 'Sauna',
                 'icon' => '<i class="fa-solid fa-hot-tub-person"></i>',
             ],
             [
-                'type' => 'vista mare',
+                'type' => 'Sea view',
                 'icon' => '<i class="fa-solid fa-water"></i>',
             ],
             [
-                'type' => 'palestra',
+                'type' => 'Gym',
                 'icon' => '<i class="fa-solid fa-dumbbell"></i>',
             ],
             [
-                'type' => 'lavanderia',
+                'type' => 'Laundry',
                 'icon' => '<i class="fa-solid fa-soap"></i>',
             ],
             [
-                'type' => 'cucina',
+                'type' => 'Kitchen',
                 'icon' => '<i class="fa-solid fa-kitchen-set"></i>',
             ],
             [
-                'type' => 'aria condizionata',
+                'type' => 'Air conditioning',
                 'icon' => '<i class="fa-solid fa-fan"></i>',
             ],
             [
-                'type' => 'animali',
+                'type' => 'Animals',
                 'icon' => '<i class="fa-solid fa-paw"></i>',
             ],
             [
-                'type' => 'asciuga capelli',
+                'type' => 'Hairdryer',
                 'icon' => '<i class="fa-solid fa-wind"></i>',
             ],
             [
-                'type' => 'giardino',
+                'type' => 'Garden',
                 'icon' => '<i class="fa-solid fa-tree"></i>',
             ],
         ];
