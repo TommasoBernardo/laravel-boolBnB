@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- <div class="container mt-4">
+    {{-- <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -71,65 +71,68 @@
     </div>
 </div> --}}
 
-<div class="container-fluid" id="wrapper">
-    <div class="row">
-        <div class="col-lg-8 d-none d-lg-block background-image"></div>
-        <div class="col-lg-4">
-            <div class="login-form">
-                <div class=" rounded-3 text-black">
-                    <div class="row g-0">
-                      
-                        <div class=" p-md-5 mx-md-4">
-          
-                          <div class="text-center">
-                            <img src="{{asset('storage/img/BoolBnB-logo.png')}}"
-                              style="width: 185px;" alt="logo">
-                            <h4 class="my-3 pb-1">Accedi</h4>
-                          </div>
-          
-                          <form method="POST" action="{{ route('login') }}"> 
-                            @csrf
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block background-image"></div>
+            <div class="col-lg-4">
+                <div class="login-form">
+                    <div class=" rounded-3 text-black">
+                        <div class="row g-0">
 
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form2Example11">Email</label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="Inserisci la tua email" value="{{ old('email') }}" required autocomplete="email" name="email" autofocus />
+                            <div class=" p-md-5 mx-md-4">
 
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                            </div>
-          
-                            <div class=" mb-4">
-                                <label class="form-label" for="form2Example22">Password</label>
-                                <input type="password" id="form2Example22" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Inserisci la tua password" required autocomplete="current-password"/>
+                                <div class="text-center mb-5">
+                                    <img src="{{ asset('storage/img/BoolBnB-logo.png') }}" style="width: 185px;"
+                                        alt="logo">
+                                </div>
 
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11">Email</label>
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                            placeholder="Inserisci la tua email" value="{{ old('email') }}" required
+                                            autocomplete="email" name="email" autofocus />
+
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class=" mb-4">
+                                        <label class="form-label" for="form2Example22">Password</label>
+                                        <input type="password" id="form2Example22"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
+                                            placeholder="Inserisci la tua password" required
+                                            autocomplete="current-password" />
+
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <button type="submit"
+                                            class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                            type="button">Sign in</button>
+                                    </div>
+
+                                    <div class="text-center pb-4">
+                                        <p class="mb-0 me-2">Do not have an account? Create one!</p>
+                                        <a href="{{ route('register') }}" class="btn btn-outline-danger mt-3"> Create
+                                            account</a>
+                                    </div>
+                                </form>
                             </div>
-          
-                            <div class="text-center pt-1 mb-5 pb-1">
-                              <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Accedi</button>
-                            </div>
-          
-                            <div class="text-center pb-4">
-                              <p class="mb-0 me-2">Non hai un account? Creane uno!</p>
-                              <a href="{{ route('register') }}" class="btn btn-outline-danger mt-3">Crea account</a>
-                            </div>
-          
-                          </form>
-          
                         </div>
-                      
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
