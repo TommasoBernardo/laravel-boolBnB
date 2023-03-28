@@ -78,10 +78,6 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script src="https://js.braintreegateway.com/web/dropin/1.36.0/js/dropin.js"></script>
 
     <!-- Usando Vite -->
@@ -197,6 +193,7 @@
                             <ul class="footer-menu">
                                 <li><a class="hover-color" href="{{ url('/') }}">Home</a></li>
                                 <li><a class="hover-color" href="{{ url('/apartments') }}">Apartments</a></li>
+                                <li><a class="hover-color" href="{{ url('/about') }}">About us</a></li>
                             </ul>
                         </div>
                         <div class="col-12 my-3 text-center">

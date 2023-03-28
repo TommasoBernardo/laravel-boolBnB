@@ -20,6 +20,10 @@ use App\Http\Controllers\UR\DashboardController;
 |
 */
 
+Route::get('/about', function(){
+    return view('about_us');
+})->name('about');
+
 Route::get('/', [HomepageController::class , 'index'] )->name('home');
 
 Route::get('/apartments', [UiApartmentsController::class, 'index'])->name('apartments.index');
