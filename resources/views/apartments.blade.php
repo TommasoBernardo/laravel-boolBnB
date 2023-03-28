@@ -73,7 +73,7 @@
         </div>
 
     </form>
-    @if ($apartmentsIndex->isEmpty())
+    @if ($apartments->isEmpty())
     <div class="mt-3 text-center" style="height: 360px;">
         <h1 class="fw-bold">
             Non ci sono risultati per la tua ricerca
@@ -81,7 +81,7 @@
     </div>
     @endif
     <div class="row ">
-        @foreach ($apartmentsIndex as $apartment)
+        @foreach ($apartments as $apartment)
         <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center ">
             <div id="my-card" class="card mt-5" style=" height: 35rem;">
                 <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid fix-img" style="height: 18rem;" alt="{{ $apartment->title }}">
@@ -93,6 +93,7 @@
                     <div class="d-flex mb-4">
                         <p class="card-text me-3">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color: #005555 "></i> </p>
                         <p class="card-text"> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: #005555 "></i> </p>
+                        <p class="card-text ms-3"> {{$apartment->distance}} distanza </p>
                     </div>
                     <div class=" d-flex justify-content-center div-button-icon">
                         <a href="{{ route('apartments.show', $apartment->slug) }}" class="btn placeholder-glow  btn-green" id="border" style="padding: .5rem 1.5rem">Show more details </a>
@@ -104,7 +105,7 @@
     </div>
 </div>
 <div class="prev-next d-flex justify-content-center">
-    {{ $apartmentsIndex->links() }}
+    {{ $apartments->links() }}
 </div>
 @endsection
 
