@@ -46,7 +46,6 @@ window.addEventListener('load', () => {
         localStorage.clear();
     }
     if (window.location.href == 'http://127.0.0.1:8000/') {
-    if (window.location.href == 'http://127.0.0.1:8000/') {
         localStorage.clear();
     }
     const searchInput = document.querySelector('input.tt-search-box-input')
