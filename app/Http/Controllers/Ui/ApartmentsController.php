@@ -149,6 +149,6 @@ class ApartmentsController extends Controller
         $lead->update(['show' => false]);
        
 
-        return redirect()->route('dashboard.messageIndex')->with('message', 'Elemento eliminato dalla vista')->with('alert-type', 'warning');
+        return redirect()->route('dashboard.messageIndex')->with('message', 'Messaggio eliminato dalla vista')->with('alert-type', 'warning');
     }
 }
