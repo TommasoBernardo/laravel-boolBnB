@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid img-box">
+<div class="container-fluid cover-box">
     
 </div>
 <div class="contain-fluid about-bg">
