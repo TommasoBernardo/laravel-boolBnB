@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Ui;
 
 use App\Http\Controllers\Controller;
 use App\Models\Apartment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomepageController extends Controller
@@ -12,7 +13,9 @@ class HomepageController extends Controller
     {
         $apartments = Apartment::all(); 
 
-        return view('homePage', compact('apartments'));
+        $dateNow = Carbon::now();
+
+        return view('homePage', compact('apartments','dateNow'));
     }
 
 }
