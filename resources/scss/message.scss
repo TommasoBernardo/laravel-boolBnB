@@ -1,0 +1,27 @@
+.has-details {
+    position: relative;
+  }
+  
+th{
+    width: 300px;
+}
+
+  .details {
+    position: absolute;
+    top: 0;
+    transform: translateY(10%) scale(0);
+    transition: transform 0.2s ease-in;
+    transform-origin: left;
+    display: inline;
+    background: white;
+    border-radius: 1.5rem;
+    z-index: 2;
+    width: 350px;
+    padding: 2rem;
+    border: 1px solid black;
+  }
+  
+  .has-details:hover span {
+    transform: translateY(40%) scale(4);
+    transform: translateX(-50%) scale(1);
+  }
