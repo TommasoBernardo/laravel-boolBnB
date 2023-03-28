@@ -1,27 +1,15 @@
-.has-details {
-    position: relative;
-  }
-  
+
 th{
-    width: 300px;
+    width: 250px;
 }
 
-  .details {
-    position: absolute;
-    top: 0;
-    transform: translateY(10%) scale(0);
-    transition: transform 0.2s ease-in;
-    transform-origin: left;
-    display: inline;
-    background: white;
-    border-radius: 1.5rem;
-    z-index: 2;
-    width: 350px;
-    padding: 2rem;
-    border: 1px solid black;
+
+  div.details {
+    color: white;   
+    background: rgb(5, 115, 115);
+    border-radius: 1.1rem;
+    padding: 1rem;
+    width: 100%;
+    
   }
   
-  .has-details:hover span {
-    transform: translateY(40%) scale(4);
-    transform: translateX(-50%) scale(1);
-  }
