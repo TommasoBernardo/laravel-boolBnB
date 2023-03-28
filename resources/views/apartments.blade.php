@@ -8,7 +8,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6 mt-3 ">
                     <div id="searchBox"></div>
-                    <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Selezionare una via dal menu a tendina
+                    <p id="mexErrore" class="text-center text-danger fs-5 m-0 d-none">Please select a street from the drop
+                        down menu
                     </p>
                     <div class="d-none">
                         <input type="text" id="latitude" name="latitude">
@@ -23,25 +24,25 @@
                         <div class="row list-filter">
                             <div class="col-lg-4 col-md-6 col">
                                 <div class="input-container">
-                                    <input placeholder="Filtra per numero di letti" class="input-field" type="text"
+                                    <input placeholder="Filter by number of beds" class="input-field" type="text"
                                         name="beds" min="0">
-                                    <label for="input-field" class="input-label">Numero di letti</label>
+                                    <label for="input-field" class="input-label">Number of beds</label>
                                     <span class="input-highlight"></span>
                                 </div>
 
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="input-container">
-                                    <input placeholder="Filtra per numero di stanze" class="input-field" type="text"
+                                    <input placeholder="Filter by number of rooms" class="input-field" type="text"
                                         name="rooms" min="0">
-                                    <label for="input-field" class="input-label">Numero di stanze</label>
+                                    <label for="input-field" class="input-label">Number of rooms</label>
                                     <span class="input-highlight"></span>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="input-container">
                                     <select class="select-menu" name="distanceKm" id="distanceKm">
-                                        <option value="" selected disabled>Filtra per distanza</option>
+                                        <option value="" selected disabled>Filter by distance</option>
                                         <option value="2">2Km</option>
                                         <option value="4">4Km</option>
                                         <option value="6">6Km</option>
@@ -54,7 +55,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-evenly flex-column">
-                                <p class="fs-6 text-secondary"> Filtra per servizi</p>
+                                <p class="fs-6 text-secondary"> Filter by services</p>
                                 <div class="services d-flex justify-content-around">
                                     <div class="row">
                                         @foreach ($services as $service)
@@ -78,9 +79,7 @@
         </form>
         @if ($apartmentsIndex->isEmpty())
             <div class="mt-3 text-center" style="height: 360px;">
-                <h1 class="fw-bold">
-                    Non ci sono risultati per la tua ricerca
-                </h1>
+                <h1 class="fw-bold">There are no results for your search</h1>
             </div>
         @endif
         <div class="row ">

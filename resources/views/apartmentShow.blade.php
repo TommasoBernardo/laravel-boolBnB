@@ -120,7 +120,7 @@
                         <div class="wrap-send-email w-75">
                             <div class="mb-3  fw-bold">
                                 <label for="name"
-                                    class="form-label {{ $errors->has('name') ? 'is-invalid' : '' }}">Inserisci li tuo nome
+                                    class="form-label {{ $errors->has('name') ? 'is-invalid' : '' }}">Enter your name there
                                 </label>
                                 <input type="text" name="name" class="form-control input-email-user" maxlength="150"
                                     minlength="5"
@@ -136,7 +136,7 @@
                             </div>
                             <div class="mb-3 fw-bold">
                                 <label for="email-user"
-                                    class="form-label {{ $errors->has('email') ? 'is-invalid' : '' }}">Inserisci la tua
+                                    class="form-label {{ $errors->has('email') ? 'is-invalid' : '' }}">Enter yours
                                     email * </label>
                                 <input type="email" name="email" class="form-control input-email-user" id="email-user"
                                     maxlength="255" required
@@ -152,8 +152,8 @@
                             </div>
                             <div class="mb-3  fw-bold">
                                 <label for="phone_number"
-                                    class="form-label {{ $errors->has('phone_number') ? 'is-invalid' : '' }}">Inserisci li
-                                    tuo numero di telefono </label>
+                                    class="form-label {{ $errors->has('phone_number') ? 'is-invalid' : '' }}">Enter your
+                                    phone number </label>
                                 <input type="number" name="phone_number" class="form-control input-email-user"
                                     id="phone_number" placeholder="">
                                 @if ($errors->has('phone_number'))
@@ -166,9 +166,10 @@
                             </div>
                             <div class="mb-3  fw-bold">
                                 <label for="text-user"
-                                    class="form-label {{ $errors->has('message') ? 'is-invalid' : '' }}">scrivi qualcosa!
+                                    class="form-label {{ $errors->has('message') ? 'is-invalid' : '' }}">Enter your
+                                    message
                                     * </label>
-                                <textarea name="message" class="form-control input-email-user" id="text-user" rows="2" minlength="5"
+                                <textarea name="message" class="form-control input-email-user" id="text-user" rows="6" minlength="5"
                                     required></textarea>
                                 @if ($errors->has('message'))
                                     <div class="alert alert-danger mt-3">

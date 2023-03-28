@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-2">
                 <div class="wrapper-return-arrow position-absolute">
-                    <a href="{{ route('apartment.index') }}" class="btn fw-bold my-4 ms-2"
+                    <a href="{{ route('apartment.index') }}" class="btn fw-bold  ms-2"
                         style="padding: .6rem 1.2rem; font-size: 1.1rem ">
-                        <i class="fa-solid fa-arrow-left fs-1" style="color: #125655;"></i> </a>
+                        <i class="fa-solid fa-arrow-left fs-1 mt-2" style="color: #125655;"></i> </a>
                 </div>
             </div>
         </div>
