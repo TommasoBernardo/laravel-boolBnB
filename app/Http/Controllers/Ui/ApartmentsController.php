@@ -7,6 +7,7 @@ use App\Mail\SendMessage;
 use App\Models\Apartment;
 use App\Models\Lead;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -68,21 +69,77 @@ class ApartmentsController extends Controller
         $maxLng = $longitude + ($maxDistance / $earthRadius) * (180 / pi() / cos($latitude * pi() / 180));
 
 
+        $current_date = Carbon::now();
 
-        $apartments = Apartment::orderBy('id', 'DESC');
+        $latest_sponsorship = DB::table('apartment_sponsor')
+        ->select('apartment_id', DB::raw('MAX(end_date) AS end_date'))
+        ->where(function ($query) use ($current_date) {
+            $query->whereNull('end_date')
+                ->orWhere('end_date', '>', $current_date);
+        })
+        ->groupBy('apartment_id');
 
-        $apartments->where('visible',1);
+        $apartments = Apartment::leftJoinSub($latest_sponsorship,
+            'latest_sponsorship',
+            function ($join) {
+                $join->on('apartments.id', '=', 'latest_sponsorship.apartment_id');
+            }
+        )
+        ->leftJoin('apartment_sponsor', function ($join) {
+            $join->on('apartments.id', '=', 'apartment_sponsor.apartment_id')
+                ->whereColumn('apartment_sponsor.apartment_id', '=', 'latest_sponsorship.apartment_id')
+                ->whereColumn('apartment_sponsor.end_date', '=', 'latest_sponsorship.end_date');
+        })
+        ->select('apartments.*', 'apartment_sponsor.end_date')
+        ->where('visible', 1)
+            ->orderByRaw('CASE WHEN apartment_sponsor.end_date IS NULL OR apartment_sponsor.end_date > ? THEN 0 ELSE 1 END', [$current_date])
+            ->orderByRaw('COALESCE(apartment_sponsor.end_date, \'9999-12-31\') ASC')
+            ->orderBy('apartments.id', 'desc')
+            ->distinct();
+
 
 
 
         if ($request->address) {
+            $current_date = Carbon::now();
 
-            $apartments = Apartment::select("*", DB::raw("(6371 * acos(cos(radians($latitude)) * cos(radians(latitude)) * cos(radians(longitude) - radians($longitude)) + sin(radians($latitude)) * sin(radians(latitude)))) AS distance"))
-                ->having("distance", "<", $maxDistance)
-                ->orderBy("distance")
+            $subquery = DB::table('apartment_sponsor')
+                ->select('apartment_id', DB::raw('MAX(end_date) as last_sponsor_end_date'))
+                ->where(function ($query) use ($current_date) {
+                    $query->whereNull('end_date')
+                        ->orWhere('end_date', '>', $current_date);
+                })
+                ->groupBy('apartment_id');
+
+            $apartments = Apartment::select(
+                    "apartments.*",
+                    DB::raw("(6371 * acos(cos(radians($latitude)) * cos(radians(latitude)) * cos(radians(longitude) - radians($longitude)) + sin(radians($latitude)) * sin(radians(latitude)))) AS distance"),
+                    DB::raw("COALESCE(apartment_sponsor.end_date, NULL) as sponsor_end_date")
+                )
+                ->leftJoin(DB::raw("({$subquery->toSql()}) as last_sponsors"), function ($join) {
+                    $join->on('apartments.id', '=', 'last_sponsors.apartment_id');
+                })
+                ->addBinding($subquery->getBindings(), 'join')
+                ->leftJoin('apartment_sponsor', function ($join) use ($current_date) {
+                    $join->on('apartments.id', '=', 'apartment_sponsor.apartment_id')
+                    ->where(function ($query) use ($current_date) {
+                        $query->whereNull('apartment_sponsor.end_date')
+                        ->orWhere('apartment_sponsor.end_date', '>', $current_date);
+                    });
+                })
+                ->where('visible', 1)
                 ->whereBetween("latitude", [$minLat, $maxLat])
                 ->whereBetween("longitude", [$minLng, $maxLng])
-                ->where('visible',1);
+                ->whereRaw('(last_sponsors.last_sponsor_end_date IS NULL OR apartment_sponsor.end_date = last_sponsors.last_sponsor_end_date)')
+                ->orderByRaw('CASE WHEN sponsor_end_date IS NULL OR sponsor_end_date > ? THEN 0 ELSE 1 END', [$current_date])
+                ->orderByRaw('COALESCE(sponsor_end_date, \'9999-12-31\') ASC')
+                ->orderBy('distance')
+                ->distinct();
+
+
+
+        
+
 
             if ($request->rooms) {
                 $apartments->where('rooms', '>=', $rooms);
