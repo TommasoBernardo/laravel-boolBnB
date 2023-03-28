@@ -12,15 +12,13 @@
         <input type="text" id="latitude" value="{{ $apartment->latitude }}">
         <input type="text" id="longitude" value="{{ $apartment->longitude }}">
     </div>
-    {{-- Return Arrow --}}
-    <div class="container-fluid sticky-xxl-top mt-3 ">
+    <div class="container-fluid return-arrow sticky-lg-top sticky-md-top sticky-sm-top mt-3 ">
         <div class="row">
             <div class="col-2">
-                <div class="wrapper return-arrow position-absolute">
-                    <a href="{{ route('apartments.index') }}" class="btn fw-bold my-4 ms-2"
-                        style="background-color: #005555c7; color:white; padding: .6rem 1.2rem; font-size: 1.1rem ">
-                        <i class="fa-solid fa-arrow-left fs-3"></i>
-                    </a>
+                <div class="wrapper-return-arrow position-absolute">
+                    <a href="{{ route('apartment.index') }}" class="btn fw-bold my-4 ms-2"
+                        style="padding: .6rem 1.2rem; font-size: 1.1rem ">
+                        <i class="fa-solid fa-arrow-left fs-1" style="color: #125655;"></i> </a>
                 </div>
             </div>
         </div>
