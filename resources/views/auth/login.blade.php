@@ -92,7 +92,7 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example11">Email</label>
                                         <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                            placeholder="Inserisci la tua email" value="{{ old('email') }}" required
+                                            placeholder="Insert your email" value="{{ old('email') }}" required
                                             autocomplete="email" name="email" autofocus />
 
                                         @error('email')
@@ -106,7 +106,7 @@
                                         <label class="form-label" for="form2Example22">Password</label>
                                         <input type="password" id="form2Example22"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
-                                            placeholder="Inserisci la tua password" required
+                                            placeholder="Insert you password" required
                                             autocomplete="current-password" />
 
                                         @error('password')
