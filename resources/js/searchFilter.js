@@ -52,15 +52,44 @@ window.addEventListener('load', () => {
     const searchInput = document.querySelector('input.tt-search-box-input')
     const inputLatidudine = document.getElementById('latitude')
     const inputLongitudine = document.getElementById('longitude');
+    const inputBeds = document.getElementById('beds');
+    const inputRooms = document.getElementById('rooms');
+    const inputDistanzaKm = document.getElementById('distanceKm');
     const searchValue = localStorage.getItem('searchboxValue');
     const searchValueLongitude = localStorage.getItem('searchValueLongitude');
     const searchValueLatitude = localStorage.getItem('searchValueLatitude');
+    const searchValueBeds = localStorage.getItem('searchValueBeds');
+    const searchValueRooms = localStorage.getItem('searchValueRooms');
+    const searchValueDistanceKm = localStorage.getItem('searchValueDistanceKm');
 
-    console.log(window.location.href)
+    
+    const checkboxes = document.querySelectorAll('.myCheckbox');
+
+    checkboxes.forEach((checkbox) => {
+        const checkboxValue = checkbox.value;
+
+        // Controlla se il valore della checkbox è già stato salvato in localStorage
+        const isChecked = localStorage.getItem(checkboxValue) === 'true';
+        checkbox.checked = isChecked;
+
+        // Aggiungi l'evento change per salvare lo stato della selezione in localStorage
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(checkboxValue, checkbox.checked);
+        });
+    });
+
+
+
+
+    // console.log(window.location.href)
+
     if (searchValue) {
         searchInput.value = searchValue;
         inputLatidudine.value = searchValueLongitude;
         inputLongitudine.value = searchValueLatitude;
+        inputBeds.value = searchValueBeds
+        inputRooms.value = searchValueRooms
+        inputDistanzaKm.value = searchValueDistanceKm
     }
 
 });
@@ -74,10 +103,27 @@ document.getElementById('formFilter').addEventListener('submit', (event) => {
     const searchInput = document.querySelector('input.tt-search-box-input');
     const inputLatidudine = document.getElementById('latitude')
     const inputLongitudine = document.getElementById('longitude');
+    const inputBeds = document.getElementById('beds');
+    const inputRooms = document.getElementById('rooms');
+    const inputDistanzaKm = document.getElementById('distanceKm');
+
     localStorage.setItem('searchboxValue', searchInput.value);
     localStorage.setItem('searchValueLongitude', inputLatidudine.value);
     localStorage.setItem('searchValueLatitude', inputLongitudine.value);
+    localStorage.setItem('searchValueBeds', inputBeds.value);
+    localStorage.setItem('searchValueRooms', inputRooms.value);
+    localStorage.setItem('searchValueDistanceKm', inputDistanzaKm.value);
 
+    const checkboxes = document.querySelectorAll('.myCheckbox');
+    checkboxes.forEach((checkbox) => {
+        const checkboxValue = checkbox.value;
+        const isChecked = checkbox.checked;
+        if (isChecked) {
+            localStorage.setItem(checkboxValue, isChecked);
+        } else {
+            localStorage.removeItem(checkboxValue);
+        }
+    });
 
 
     if (document.getElementById('latitude').value == ''){
