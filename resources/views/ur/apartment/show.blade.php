@@ -96,7 +96,7 @@
 </div>
 
 {{-- Payment --}}
-<div class="container">
+<div class="container mb-3">
     <div class="row">
         @foreach ($sponsors as $sponsor)
         <div class="col-4">
