@@ -92,7 +92,7 @@
                     <div class="d-flex mb-4">
                         <p class="card-text me-3">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color: #005555 "></i> </p>
                         <p class="card-text"> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: #005555 "></i> </p>
-                        <p class="card-text ms-3"> Distance: {{$apartment->distance}} Km </p>
+                        @if(isset($apartment->distance))<p class="card-text ms-3"> Distance: {{$apartment->distance}} Km </p>@endif
                     </div>
                     <div class=" d-flex justify-content-center div-button-icon">
                         <a href="{{ route('apartments.show', $apartment->slug) }}" class="btn placeholder-glow  btn-green" id="border" style="padding: .5rem 1.5rem">Show more details </a>

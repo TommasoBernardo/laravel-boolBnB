@@ -95,14 +95,16 @@ class ApartmentsController extends Controller
                     $query->whereIn('service_id', $services);
                 }, '=', count($services));
             }
+            $apartments = $apartments->simplePaginate(12);
+            
+            foreach ($apartments as $apartment) {
+                $distance = $this->haversineDistance($latitude, $longitude, $apartment->latitude, $apartment->longitude);
+                $apartment->distance = round($distance, 2);
+            }
+        }else{
+            $apartments = $apartments->simplePaginate(12);
         }
 
-        $apartments = $apartments->simplePaginate(12);
-        
-        foreach ($apartments as $apartment) {
-            $distance = $this->haversineDistance($latitude, $longitude, $apartment->latitude, $apartment->longitude);
-            $apartment->distance = round($distance, 2);
-        }
         
 
         
