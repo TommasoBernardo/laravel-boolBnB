@@ -27,8 +27,7 @@
                             </div>
                             <button type="submit" class="btn btn-success ms-2">Search</button>
                         </form>
-                        <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Selezionare una via dal menu a
-                            tendina</p>
+                        <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Write an address into the searchbar</p>
                     </div>
                 </div>
             </div>
@@ -198,8 +197,7 @@
                         What people say about us
                     </h1>
                     <p class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel
-                        nisi qui reprehenderit totam? Quod maiores.
+                        Our mission is to create a world where people can belong through healthy travel that is local, authentic, diverse, inclusive and sustainable.
                     </p>
                 </div>
             </div>
@@ -218,10 +216,7 @@
                                     Wonderful experience
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis,
-                                    fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit
-                                    voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi!
-                                    Iusto nihil amet dolorum nemo?
+                                    I absolutely loved my stay at this fabulous BoolBnB property. The hosts were so kind and accommodating, they truly made me feel welcome. The house was sparkling clean and provided all the amenities I could need. Would definitely recommend staying here!
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -255,13 +250,10 @@
                                     Jean Smith
                                 </h4>
                                 <span style="color: gray">
-                                    Wonderful experience
+                                    Great customer service, understanding hosts.
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis,
-                                    fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit
-                                    voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi!
-                                    Iusto nihil amet dolorum nemo?
+                                    I had a wonderful experience staying at this BoolBnB. The apartment was clean and spacious, and the host was incredibly responsive and helpful with any questions I had. Everything was exactly as described and check-in/check-out were super smooth. Highly recommend!
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -295,13 +287,10 @@
                                     Alicia Huston
                                 </h4>
                                 <span style="color: gray">
-                                    Wonderful experience
+                                    Airbnb has made traveling a dream
                                 </span>
                                 <p class="mt-2">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quas quos facilis,
-                                    fugiat deleniti sed impedit. Aut illum, architecto corporis blanditiis voluptatum sit
-                                    voluptatem iste debitis sint nobis iusto, sapiente accusamus atque iure harum nisi!
-                                    Iusto nihil amet dolorum nemo?
+                                    We've been using Airbnb for 10 years now, and this company is supreme. Compared to the competition, they are in a different category. When you host, you know to the penny what you're going to pay. When you rent, the same is true. Definitely the best service
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
