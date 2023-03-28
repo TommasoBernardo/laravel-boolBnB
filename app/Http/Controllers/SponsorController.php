@@ -30,6 +30,6 @@ class SponsorController extends Controller
 
     
 
-        return redirect()->route('apartment.show', $apartment->slug);
+        return redirect()->route('apartment.show', $apartment->slug)->with('message', 'Acquisto avvenuto con successo')->with('alert-type', 'success');
     }
 }
