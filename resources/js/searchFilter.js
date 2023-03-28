@@ -1,4 +1,3 @@
-
 var options = {
     searchOptions: {
         key: "hJqueTcOWatAGBZnKxzHkdEbmyM9feG4",
@@ -9,7 +8,7 @@ var options = {
         key: "hJqueTcOWatAGBZnKxzHkdEbmyM9feG4",
         language: "it-IT"
     },
-    placeholder: "Enter address",
+    placeholder: "Enter an address",
 }
 var ttSearchBox = new tt.plugins.SearchBox(tt.services, options)
 var searchBoxHTML = ttSearchBox.getSearchBoxHTML()
@@ -46,6 +45,7 @@ window.addEventListener('load', () => {
     if (window.location.href == 'http://127.0.0.1:8000/apartments') {
         localStorage.clear();
     }
+    if (window.location.href == 'http://127.0.0.1:8000/') {
     if (window.location.href == 'http://127.0.0.1:8000/') {
         localStorage.clear();
     }

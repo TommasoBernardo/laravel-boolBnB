@@ -186,13 +186,11 @@
                 <div class="container pt-3">
                     <div class="row align-items-center">
                         <div class="col-6 pe-5">
-                            <img src="{{ asset('storage/img/BoolBnB-logo.png') }}" style="width: 120px;"
-                                alt="logo">
-                            <p class="mt-3">"Eleviamo la tua esperienza di viaggio attraverso una vasta selezione di
-                                alloggi confortevoli e accoglienti in tutto il mondo. Sia che tu stia cercando un
-                                rifugio in montagna o una casa sulla spiaggia, siamo qui per aiutarti a trovare il tuo
-                                posto perfetto per rilassarti e vivere avventure indimenticabili. Il tuo
-                                viaggio inizia con noi</p>
+                            <a href="#"><img src="{{ asset('storage/img/BoolBnB-logo.png') }}" style="width: 120px;"
+                                alt="logo"></a>
+                            <p class="mt-3">We improve your journey experience with a vast selection of comfy and welcoming apartments all over the world. Whether you're looking for a refuge in the mountains or beach house, we are here to help you finding the perfect place to relax and enjoy unbelievable adventures. <br>
+                                <strong>Your journey begins with us!</strong>
+                            </p>
                         </div>
                         <div class="col-6  text-end">
                             <h4>Explore</h4>
