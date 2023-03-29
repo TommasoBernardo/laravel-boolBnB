@@ -71,28 +71,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-center">
+                <div class="col-12 ms-4 mt-2 mb-5">
                     <button type="submit" class="btn  mt-3 search-button">Search</button>
                 </div>
             </div>
-
         </form>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="fw-bolder title-apartments" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
+                    All apartments : 
+                </h1>
+            </div>
+        </div>
         @if ($apartments->isEmpty())
             <div class="mt-3 text-center" style="height: 360px;">
                 <h1 class="fw-bold">There are no results for your search</h1>
             </div>
         @endif
-    </div>
-
-    {{-- new cards --}}
-    <div class="container">
         <div class="row">
             <div class="">
-                <div class=" d-flex justify-content-center flex-wrap">
+                <div class=" d-flex card-wrap flex-wrap">
                     @foreach ($apartments as $apartment)
                         <div class="flip-card-container">
                             <div class="flip-card">
-                                <div class="card-front">
+                                <div class="card-front d-flex justify-content-center">
                                     <figure>
                                         <div class="img-bg"></div>
                                         <img class="card-img"
@@ -101,13 +103,12 @@
                                         <figcaption>{{ $apartment->title }} </figcaption>
                                     </figure>
     
-                                    <ul class="card-ul">
+                                    <ul class="card-ul fw-bolder">
                                         <li class="card-li">{{ $apartment->title }} </li>
                                         <li class="card-li">{{ $apartment->address }}</li>
                                         @if (isset($apartment->distance))<li class="card-li"> Distance: {{$apartment->distance}} Km</li> @endif
-                                        <li class="card-li">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color:white; margin-right: .7rem "></i>      
-                                            
-                                            {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: white"></i> </li>
+                                        <li class="card-li">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color:white; margin-right: .7rem ">
+                                        </i> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: white"></i> </li>
                                     </ul>
                                 </div>
     
@@ -139,6 +140,10 @@
             </div>
         </div>
     </div>
+
+    {{-- new cards --}}
+
+    
     <div class="prev-next d-flex justify-content-center">
         {{ $apartments->links() }}
     </div>
