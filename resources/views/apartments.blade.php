@@ -82,36 +82,13 @@
                 <h1 class="fw-bold">There are no results for your search</h1>
             </div>
         @endif
-        {{-- <div class="row ">
-        @foreach ($apartments as $apartment)
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-3 justify-content-sm-center ">
-            <div id="my-card" class="card mt-5" style=" height: 35rem;">
-                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid fix-img" style="height: 18rem;" alt="{{ $apartment->title }}">
-                <div class="card-body">
-                    <div class="" style=" height: 6rem;">
-                        <h5 class="card-text my-title fw-bold"> {{ $apartment->title }}</h5>
-                        <p class="card-text lead"> {{ $apartment->address }}</p>
-                    </div>
-                    <div class="d-flex mb-4">
-                        <p class="card-text me-3">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color: #005555 "></i> </p>
-                        <p class="card-text"> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: #005555 "></i> </p>
-                        @if (isset($apartment->distance))<p class="card-text ms-3"> Distance: {{$apartment->distance}} Km </p>@endif
-                    </div>
-                    <div class=" d-flex justify-content-center div-button-icon">
-                        <a href="{{ route('apartments.show', $apartment->slug) }}" class="btn placeholder-glow  btn-green" id="border" style="padding: .5rem 1.5rem">Show more details </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-            </div> --}}
     </div>
 
     {{-- new cards --}}
     <div class="container">
         <div class="row">
             <div class="">
-                <div class=" d-flex flex-wrap">
+                <div class=" d-flex justify-content-center flex-wrap">
                     @foreach ($apartments as $apartment)
                         <div class="flip-card-container">
                             <div class="flip-card">
