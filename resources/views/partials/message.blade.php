@@ -8,9 +8,16 @@
 
 @php $count = 0; @endphp
 
+@foreach ($apartments as $apartment)
+@foreach ($apartment->leads as $lead)
+@if ($lead->show != 0)
+@php $count++; @endphp
+@endif
+@endforeach
+@endforeach
 
+@if($count != 0)
 <div class="container-fluid">
-    @if (count($apartments) > 0 )
     <div class="row">
         <div class="col-lg-12 col-md-6">
             <table class="table">
@@ -28,7 +35,6 @@
                     @foreach ($apartments as $apartment)
                     @foreach ($apartment->leads as $lead)
                     @if ($lead->show != 0)
-                    @php $count++; @endphp
                     <tr>
                         <td> {{ $apartment->title }} </td>
                         <td>{{ $lead->email }} </td>
@@ -59,11 +65,8 @@
             </table>
         </div>
     </div>
-    @endif
 </div>
-
-
-@if ($count == 0)
+@else
 <p class="alert alert-danger">There are no messages</p>
 @endif
 </div>
