@@ -11,6 +11,10 @@ class Apartment extends Model
 
     protected $fillable = ['user_id', 'slug', 'title', 'rooms', 'beds', 'bathrooms', 'square_meters', 'visible', 'address', 'cover_image', 'longitude', 'latitude'];
 
+    public function statistic()
+    {
+        return $this->hasOne(Statistic::class);
+    }
 
 
     public function services()

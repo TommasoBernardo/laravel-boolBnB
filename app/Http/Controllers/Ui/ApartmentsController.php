@@ -7,6 +7,7 @@ use App\Mail\SendMessage;
 use App\Models\Apartment;
 use App\Models\Lead;
 use App\Models\Service;
+use App\Models\Statistic;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -170,8 +171,18 @@ class ApartmentsController extends Controller
         return view('apartments', compact('apartments', 'services'));
     }
 
-    public function show(Apartment $apartment)
+    public function show(Apartment $apartment,Request $request)
     {
+
+
+        $newStatistic = new Statistic();
+        $newStatistic->apartment_id = $apartment->id;
+        $newStatistic->ip_address = $request->ip();
+        $newStatistic->date = Carbon::now();
+        $newStatistic->save();
+
+
+
         return view('apartmentShow', compact('apartment'));
     }
 
