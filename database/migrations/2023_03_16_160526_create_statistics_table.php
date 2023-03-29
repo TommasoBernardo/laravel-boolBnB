@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('apartment_id');
-            $table->integer('ip_address')->unsigned();
+            $table->string('ip_address',20);
             $table->dateTime('date');
             $table->timestamps();
             $table->foreign('apartment_id')->references('id')->on('apartments');
