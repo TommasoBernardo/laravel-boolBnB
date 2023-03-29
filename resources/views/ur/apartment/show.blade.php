@@ -64,19 +64,19 @@
             <div class="row  mt-md-0">
                 <h3 class="my-2">Apartment information</h3>
                 <div class="col-lg-6 col-md-12 col-sm-12 fs-5">
-                    <p class="m-0">Numero di stanze: {{ $apartment->rooms }}</p>
-                    <p>Numero di letti: {{ $apartment->beds }}</p>
+                    <p class="m-0">Rooms available: <strong>{{ $apartment->rooms }}</strong></p>
+                    <p>Beds available: <strong>{{ $apartment->beds }}</strong></p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
-                    <p class="m-0">Numero di bagni: {{ $apartment->bathrooms }}</p>
-                    <p>Dimensioni: {{ $apartment->square_meters }} mq</p>
+                    <p class="m-0">Bathrooms available: <strong>{{ $apartment->bathrooms }}</strong></p>
+                    <p>Sizes: <strong>{{ $apartment->square_meters }} m<sup>2</sup> </strong></p>
                 </div>
             </div>
         </div>
         {{-- Servizi --}}
         <div class="container services">
             <div class="row ">
-                <h3 class="my-2">Offered services</h3>
+                <h3 class="my-2">Services offered:</h3>
                 @foreach ($apartment->services as $service)
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
                         {!! $service->icon !!}
@@ -102,8 +102,8 @@
 
     {{-- Payment --}}
 
-    <div class="container mb-5">
-        <h1 class="my-5 text-center">Sponsor Plane</h1>
+    <div class="container mb-5 text-center">
+        <h1 class="my-5">Sponsor Plans</h1>
         <div class="row d-flex">
             @foreach ($sponsors as $sponsor)
                 <div class="col-lg-4 p-5  text-center">
@@ -150,8 +150,9 @@
         </div>
     </div>
 
-    <div class="container">
-        <div id="braintree-box" class="d-none">
+    
+    <div class="container d-flex justify-content-center mb-4">
+        <div id="braintree-box" class="d-none col-6 braintree-box">
             <p id="cancel-payment" class="text-end m-0 text-danger fw-bold">X</p>
             <div id="dropin-container"></div>
             <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">

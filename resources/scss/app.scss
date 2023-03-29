@@ -21,6 +21,7 @@ body {
     width: 4.5rem;
 }
 
+
 //Details button
 .details-button {
     border: 2px solid #005555;
@@ -121,7 +122,22 @@ i.icon-dash:hover {
     background-color: #3bceac;
 }
 
+//Braintree container
+.braintree-box {
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    animation-duration: .6s;
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 // Set edit.blade height
 #set-height {
