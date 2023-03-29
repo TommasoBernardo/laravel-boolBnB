@@ -140,9 +140,9 @@
     </div>
     {{-- banner propreties --}}
     <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
+        <div class="wave wave-color-top"></div>
+        <div class="wave wave-color-top"></div>
+        <div class="wave wave-color-top"></div>
     </div>
     <div class="bg-color p-4 ">
         <div class="container mt-5 mb-5">
@@ -231,6 +231,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="ocean-rotate ocean">
+        <div class="wave wave-color-bottom"></div>
+        <div class="wave wave-color-bottom "></div>
+        <div class="wave wave-color-bottom "></div>
     </div>
 
     {{-- section cards Our agents --}}
