@@ -149,7 +149,6 @@
             @endforeach
         </div>
     </div>
-    </div>
 
 
 
@@ -169,10 +168,6 @@
                 <button id="submit-button" class="button button--small button--green">Purchase</button>
             </form>
         </div>
-    </div>
-
-
-    </div>
     </div>
 @endsection
 @section('script')
