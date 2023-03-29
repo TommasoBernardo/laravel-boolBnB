@@ -91,10 +91,10 @@
             </div>
             <div class="row px-3 py-4">
                 @foreach ($apartment->services as $service)
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-3>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-3">
                         <span class="icon m-1
                         fs-5">
-                        {!! $service->icon !!} &nbsp {{ $service->type }}
+                            {!! $service->icon !!} &nbsp {{ $service->type }}
                         </span>
                     </div>
                 @endforeach
