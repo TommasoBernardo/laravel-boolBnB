@@ -180,7 +180,7 @@ class ApartmentsController extends Controller
        
 
         $data = $request->validate([
-            'name' => 'nullable|string|max:150|min:5',
+            'name' => 'nullable|string|max:150|min:3',
             'email' => 'required|email|max:255',
             'message' => 'required|string|min:5',
             'phone_number' => 'nullable|numeric|integer|max:9999999999|min:0111111111',
