@@ -68,11 +68,6 @@ div.swiper-thumb {
 
 // Payment Card
 
-.bg-gradient {
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
-}
 
 ul li {
     margin-bottom: 1.4rem;
@@ -85,19 +80,6 @@ ul li {
     position: relative;
 }
 
-.silver {
-    background: #727678;
-}
-
-.gold {
-    background: #c7b420;
-}
-
-.diamond {
-    color: #784eed
-}
-
-
 .pricing-divider-img {
     position: absolute;
     bottom: -2px;
@@ -108,7 +90,7 @@ ul li {
 
 .deco-layer {
     -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 
 .btn-custom {
