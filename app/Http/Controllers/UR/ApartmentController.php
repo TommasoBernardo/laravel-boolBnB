@@ -126,7 +126,7 @@ class ApartmentController extends Controller
             }
         }
 
-        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "l'elemento è stato creato correttamente")->with('alert-type', 'success');
+        return redirect()->route('apartment.show', $newApartment->slug)->with('message', "the item was created successfully")->with('alert-type', 'success');
     }
 
 
@@ -203,7 +203,7 @@ class ApartmentController extends Controller
         $apartment->update($data);
         $apartment->services()->sync($data['services'] ?? []);
 
-        return redirect()->route('apartment.show', $apartment->slug)->with('message', 'Elemento modificato con successo')->with('alert-type', 'success');
+        return redirect()->route('apartment.show', $apartment->slug)->with('message', 'Item edited successfully')->with('alert-type', 'success');
     }
 
     /**
@@ -226,6 +226,6 @@ class ApartmentController extends Controller
         // Elimina l'appartamento
         $apartment->delete();
 
-        return redirect()->route('apartment.index')->with('message', "L'appartamento è stato eliminato correttamente")->with('alert-type', 'warning');
+        return redirect()->route('apartment.index')->with('message', "The apartment has been successfully deleted")->with('alert-type', 'warning');
     }
 }
