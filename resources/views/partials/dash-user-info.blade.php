@@ -18,12 +18,13 @@
 </div>
 
 
-<div class="row d-flex justify-content-between">
-    <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-end align-items-stretch">
-        <div class="card shadow-sm" style="width: 18rem;">
+{{-- <div class="row d-flex justify-content-between">
+    <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-end align-items-stretch ">
+        <div class="card results-card shadow-lg" style="width: 18rem;">
+            <i class="fa fa-house text-center text-white card-icon pt-4"></i>
             <div class="card-title text-center ">
-                <h5 class="p-4">Registered apartments</h5>
-                <p class="display-3 text-primary"><span class="count" total="{{ count($apartments) }}">0</span></p>
+                <h5 class="p-4 text-white">Registered apartments:</h5>
+                <p class="display-3 text-primary"><span class="count text-white" total="{{ count($apartments) }}">0</span></p>
             </div>
         </div>
     </div>
@@ -43,6 +44,37 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div class="row d-flex justify-content-evenly mt-5">
+    <div class="col-lg-4 col-md-6 mb-4 ">
+        <div class="card results-card apartment-data shadow-md" ">
+            <i class="fa fa-house text-center text-white card-icon pt-4 text-shadow"></i>
+            <div class="card-title text-center ">
+                <h5 class="p-4 text-white text-shadow">Registered apartments:</h5>
+                <p class="display-3 text-primary"><span class="count text-shadow text-white" total="{{ count($apartments) }}">0</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4  ">
+        <div class="card results-card views-data shadow-md" >
+            <i class="fa fa-eye text-center text-white card-icon pt-4 text-shadow"></i>
+            <div class="card-title text-center ">
+                <h5 class="p-4 text-white text-shadow">Total views</h5>
+                <p class="display-3 text-primary"><span class="count text-shadow text-white" total="{{ count($apartments) }}">0</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12 mb-4 ">
+        <div class="card results-card messages-data shadow-md" ">
+            <i class="fa fa-envelope text-center text-white card-icon pt-4 text-shadow"></i>
+            <div class="card-title text-center ">
+                <h5 class="p-4 text-white text-shadow">Unread messages</h5>
+                <p class="display-3 text-primary"><span class="count text-shadow text-white" total="{{ count($apartments) }}">0</span></p>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 @section('script')
