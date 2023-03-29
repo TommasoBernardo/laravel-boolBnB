@@ -58,9 +58,12 @@
     <div class="container mb-5">
         <div class="row mb-5 align-items-center">
             <div class="col-lg-9 col-sm-3 ">
-                <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) ">
-                    Popular Properties
-                </h2>
+                <div data-aos="fade-right">
+                    <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) ">
+                        Popular Properties
+                    </h2>
+                </div>
+
             </div>
             <div class="col-lg-3 col-sm-3 div-wrap-button-properties">
 
@@ -76,8 +79,6 @@
                 <div class="swiper mySwiper position-relative">
                     <div class="swiper-wrapper">
                         {{-- single-card --}}
-
-
 
                         @foreach ($apartments as $apartment)
                             <div class=" swiper-slide my-slider">
