@@ -17,21 +17,21 @@ class SponsorSeeder extends Seeder
     {
         $sponsors = [
             [
-                'name' => 'silver',
+                'name' => 'Silver subscription',
                 'duration' => '24:00:00',
                 'price' => 2.99,
             ],
             [
-                'name' => 'gold',
+                'name' => 'Gold subscription',
                 'duration' => '72:00:00',
                 'price' => 5.99,
             ],
             [
-                'name' => 'diamond',
+                'name' => 'Diamond subscription',
                 'duration' => '144:00:00',
                 'price' => 9.99,
             ],
-           
+
         ];
 
         foreach ($sponsors as $sponsor) {
