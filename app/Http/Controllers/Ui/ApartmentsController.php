@@ -139,7 +139,7 @@ class ApartmentsController extends Controller
 
         // Mail::to('example@mail.com')->send(new SendMessage($newLead));
 
-        return redirect()->route('apartments.show', $apartment->slug)->with('message','Messaggio inviato con successo')->with('alert-type', 'success');
+        return redirect()->route('apartments.show', $apartment->slug)->with('message','Messagge sent successfully')->with('alert-type', 'success');
     }
 
     public function update(Lead $lead)
@@ -149,6 +149,6 @@ class ApartmentsController extends Controller
         $lead->update(['show' => false]);
        
 
-        return redirect()->route('dashboard.messageIndex')->with('message', 'Messaggio eliminato dalla vista')->with('alert-type', 'warning');
+        return redirect()->route('dashboard.messageIndex')->with('message', 'Message removed from view')->with('alert-type', 'warning');
     }
 }
