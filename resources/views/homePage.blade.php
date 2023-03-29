@@ -103,7 +103,7 @@
                                                     <h6 class="d-block mb-2 fw-bold">{{ $apartment->title }}</h6>
                                                     <p class="city d-block fw-light mb-1"> {{ $apartment->address }}</p>
                                                 </div>
-                                                <div class="d-flex mt-2">
+                                                <div class="d-flex apartment-icons">
                                                     <p class="me-3" style=""><i class="fa-solid fa-house"></i>
                                                         {{ $apartment->rooms }}</span>
                                                     <p class=""><i class="fa-solid fa-bed"></i>
