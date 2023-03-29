@@ -25,3 +25,10 @@ payButtons.forEach((payButton, index) => {
         braintreeBox.classList.remove('d-none');
     })
 });
+
+
+document.getElementById('sponsor_id').addEventListener('click',function () {
+    
+    document.getElementById('sponsor_id').setAttribute('readonly', true);
+
+})
