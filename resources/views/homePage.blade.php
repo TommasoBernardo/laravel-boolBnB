@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('scss')
-    @vite(['resources/js/home.js'])
+    @vite(['resources/js/home.js']),,
+    @vite(['resources/js/animation.js']),
 @endsection
 @section('content')
     {{-- Slider-carousel --}}
@@ -58,9 +59,12 @@
     <div class="container mb-5">
         <div class="row mb-5 align-items-center">
             <div class="col-lg-9 col-sm-3 ">
-                <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) ">
-                    Popular Properties
-                </h2>
+                <div data-aos="fade-right ">
+                    <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) ">
+                        Popular Properties
+                    </h2>
+                </div>
+
             </div>
             <div class="col-lg-3 col-sm-3 div-wrap-button-properties">
 
@@ -77,7 +81,8 @@
                     <div class="swiper-wrapper">
                         {{-- single-card --}}
 
-                        @php $count = 0; @endphp
+
+
 
                         @foreach ($apartments as $apartment)
                             @php $lastActiveSponsor = null; @endphp
@@ -89,7 +94,7 @@
 
                             @if (!is_null($lastActiveSponsor) && $apartment->visible != 0)
                                 @php $count++; @endphp
-                                <div class="swiper-slide">
+                                <div class="swiper-slide my-slider">
                                     <div class="flex-column" id="myCarousel">
                                         <div href="property-single.html" class="img img-box">
                                             <img src="{{ asset('storage/' . $apartment->cover_image) }}"
@@ -135,67 +140,93 @@
         </div>
     </div>
     {{-- banner propreties --}}
-    <div class="bg-color p-4">
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="bg-color p-4 ">
         <div class="container mt-5 mb-5">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h1 class="mb-3 fw-bold text-white text-center">
                         Why people choose us
                     </h1>
                 </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team px-2">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3 text-dark">Michele Miller</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class="fa-brands fa-facebook"></i>
+                                    </li>
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                    <li><i class="fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team px-2">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3 text-dark">Patricia Knott</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team  px-2">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3 text-dark">Justin Ramos</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team px-2">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3 text-dark">Mary Huntley</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 4</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -337,7 +368,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 @endsection
 @section('script')

@@ -5,11 +5,35 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    animation: myAnim 1s linear 0s 1 normal forwards;
 }
+
+
+
+
+
+
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 #wrapper {
     overflow: hidden;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 // Header section
 .nav-link:hover {
