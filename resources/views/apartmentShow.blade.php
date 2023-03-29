@@ -124,7 +124,7 @@
                                     class="form-label {{ $errors->has('name') ? 'is-invalid' : '' }}">Enter your name there
                                 </label>
                                 <input type="text" name="name" class="form-control input-email-user" maxlength="150"
-                                    minlength="5"
+                                    minlength="3"
                                     value="@if (Auth::check() and Auth::user()->name) {{ Auth::user()->name }} @endif"
                                     id="name" placeholder="">
                                 @if ($errors->has('name'))
@@ -182,7 +182,7 @@
                             </div>
                             <div class="wrap-button-send-email text-center  mt-2">
                                 <button type="submit" class="btn btn-warning fw-bold text-light"
-                                    style="padding: .8rem 2rem; font-size: 1.1rem"> Send email </button>
+                                    style="padding: .8rem 2rem; font-size: 1.1rem"> Send message </button>
                             </div>
                         </div>
                     </form>
