@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('scss')
-    @vite(['resources/js/home.js'])
+    @vite(['resources/js/home.js']),,
+    @vite(['resources/js/animation.js']),
 @endsection
 @section('content')
     {{-- Slider-carousel --}}
@@ -58,7 +59,7 @@
     <div class="container mb-5">
         <div class="row mb-5 align-items-center">
             <div class="col-lg-9 col-sm-3 ">
-                <div data-aos="fade-right">
+                <div data-aos="fade-right ">
                     <h2 class="font-weight-bold heading fw-bold" style="color:rgb(0, 85, 85) ">
                         Popular Properties
                     </h2>
@@ -122,7 +123,12 @@
         </div>
     </div>
     {{-- banner propreties --}}
-    <div class="bg-color p-4 vc_row">
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="bg-color p-4 ">
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-12 mb-5">
@@ -138,7 +144,7 @@
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3">Michele Miller</h3>
+                                    <h3 class="name mt-3 text-dark">Michele Miller</h3>
                                     <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
                                         blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
                                 </div>
@@ -157,7 +163,7 @@
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3">Patricia Knott</h3>
+                                    <h3 class="name mt-3 text-dark">Patricia Knott</h3>
                                     <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
                                         blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
                                 </div>
@@ -175,7 +181,7 @@
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3">Justin Ramos</h3>
+                                    <h3 class="name mt-3 text-dark">Justin Ramos</h3>
                                     <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
                                         blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
                                 </div>
@@ -193,7 +199,7 @@
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3">Mary Huntley</h3>
+                                    <h3 class="name mt-3 text-dark">Mary Huntley</h3>
                                     <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
                                         blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
                                 </div>
@@ -345,7 +351,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 @endsection
 @section('script')
