@@ -11,7 +11,7 @@ braintree.dropin.create({
     })
 });
 
-let payButtons = document.querySelectorAll('a#pay-btn');
+let payButtons = document.querySelectorAll('button#pay-btn');
 let braintreeBox = document.getElementById('braintree-box');
 let cancelPaymentBtn = document.getElementById('cancel-payment');
 
