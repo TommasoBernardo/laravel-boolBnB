@@ -3,6 +3,10 @@
 @import "../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css";
 
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 #wrapper {
     overflow: hidden;
 }
