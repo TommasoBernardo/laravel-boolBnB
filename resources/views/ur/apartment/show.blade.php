@@ -103,16 +103,16 @@
     {{-- Payment --}}
 
     <div class="container mb-5">
-        <h1 class="my-5">Sponsor Plane</h1>
+        <h1 class="my-5 text-center">Sponsor Plane</h1>
         <div class="row d-flex">
             @foreach ($sponsors as $sponsor)
-                <div class="col-lg-4  text-center">
+                <div class="col-lg-4 p-5  text-center">
                     <div class="princing-item">
                         <div class="pricing-divider">
-                            <h2 class="text-light">{{ $sponsor->name }}</h2>
-                            <h3 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">$</span>
+                            <h3 class="text-light">{{ $sponsor->name }}</h3>
+                            <h5 class="my-0 display-4 text-light font-weight-normal mb-3"><span class="h1">$</span>
                                 {{ $sponsor->price }}
-                            </h3>
+                            </h5>
                             <svg class='pricing-divider-img blue' enable-background='new 0 0 300 100' height='100px'
                                 id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100'
                                 width='300px' x='0px' xml:space='preserve'
@@ -135,28 +135,20 @@
                         <div class="card-body bg-white mt-0 shadow p-4">
                             <ul class="list-unstyled mb-5 position-relative">
                                 @if ($sponsor->duration === '24:00:00')
-                                    <li class="fs-3"><b>24h</b> Sponsorship</li>
+                                    <li class="fs-4"><b>24h</b> Sponsorship</li>
                                 @elseif ($sponsor->duration === '72:00:00')
-                                    <li class="fs-3"><b>72h</b> Sponsorship</li>
+                                    <li class="fs-4"><b>72h</b> Sponsorship</li>
                                 @elseif ($sponsor->duration === '144:00:00')
-                                    <li class="fs-3"><b>144h</b> Sponsorship</li>
+                                    <li class="fs-4"><b>144h</b> Sponsorship</li>
                                 @endif
                             </ul>
-                            <button type="button" id="pay-btn" class="btn btn-lg btn-block  btn-custom ">Pay</button>
+                            <button type="button" id="pay-btn" class="btn btn-lg  btn-custom ">Pay</button>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
-
-
-
-
-
-
-
-
 
     <div class="container">
         <div id="braintree-box" class="d-none">
@@ -165,7 +157,7 @@
             <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">
                 @csrf
                 <input type="text" name="sponsor_id" id="sponsor_id" class="d-none" readonly>
-                <button id="submit-button" class="button button--small button--green">Purchase</button>
+                <button id="submit-button" class="button button--small button--green mb-5">Purchase</button>
             </form>
         </div>
     </div>
