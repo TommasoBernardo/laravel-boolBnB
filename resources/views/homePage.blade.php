@@ -80,7 +80,7 @@
 
 
                         @foreach ($apartments as $apartment)
-                            <div class=" swiper-slide">
+                            <div class=" swiper-slide my-slider">
                                 <div class="flex-column" id="myCarousel">
 
                                     <div href="property-single.html" class="img img-box">
@@ -121,7 +121,7 @@
         </div>
     </div>
     {{-- banner propreties --}}
-    <div class="bg-color p-4">
+    <div class="bg-color p-4 vc_row">
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-12 mb-5">
@@ -132,7 +132,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="our-team">
+                            <div class="our-team px-2">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
                                 </div>
@@ -145,13 +145,13 @@
                                     <li><i class="fa-brands fa-facebook"></i>
                                     </li>
                                     <li><i class="fa-brands fa-twitter"></i></li>
-                                    <li><i class="fa-brands fa-google-plus"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
                                     <li><i class="fa-brands fa-linkedin"></i></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="our-team">
+                            <div class="our-team px-2">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
                                 </div>
@@ -163,13 +163,13 @@
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
                                     <li><i class=" my-i fa-brands fa-twitter"></i></li>
-                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
                                     <li><i class=" my-i fa-brands fa-linkedin"></i></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="our-team">
+                            <div class="our-team  px-2">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
                                 </div>
@@ -181,13 +181,13 @@
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
                                     <li><i class=" my-i fa-brands fa-twitter"></i></li>
-                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
                                     <li><i class=" my-i fa-brands fa-linkedin"></i></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="our-team">
+                            <div class="our-team px-2">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
                                 </div>
@@ -199,7 +199,7 @@
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
                                     <li><i class=" my-i fa-brands fa-twitter"></i></li>
-                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-instagram"></i></li>
                                     <li><i class=" my-i fa-brands fa-linkedin"></i></li>
                                 </ul>
                             </div>
@@ -280,8 +280,7 @@
                                 <p class="mt-2">
                                     I had a wonderful experience staying at this BoolBnB. The apartment was clean and
                                     spacious, and the host was incredibly responsive and helpful with any questions I had.
-                                    Everything was exactly as described and check-in/check-out were super smooth. Highly
-                                    recommend!
+                                    Everything was exactly as described and check-in/check-out were super smooth.
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">

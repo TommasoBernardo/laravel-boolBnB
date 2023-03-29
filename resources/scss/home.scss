@@ -1,3 +1,21 @@
+.my-slider {
+    animation: myPopular 1s linear 3s 1 normal forwards;
+}
+
+@keyframes myPopular {
+    0% {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 div.hero-parent {
     position: relative;
 
@@ -91,7 +109,6 @@ ul.icon {
 
     }
 }
-
 
 .our-team {
     padding: 30px 0 40px;
@@ -196,6 +213,7 @@ ul.icon {
     ;
     background-color: #f7f5ec;
 }
+
 
 
 
