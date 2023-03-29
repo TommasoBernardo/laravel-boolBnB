@@ -235,7 +235,7 @@
 
     {{-- section cards Our agents --}}
     <section>
-        <div class="container">
+        <div class="container mb-5">
             <div class="row mt-5">
                 <div class="col text-center">
                     <h1 class="mb-3 fw-bold" style="color:rgb(0, 85, 85) ;">
