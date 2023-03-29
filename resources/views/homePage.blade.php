@@ -27,7 +27,8 @@
                             </div>
                             <button type="submit" class="btn btn-success ms-2">Search</button>
                         </form>
-                        <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Write an address into the searchbar</p>
+                        <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Write an address into the
+                            searchbar</p>
                     </div>
                 </div>
             </div>
@@ -123,64 +124,85 @@
     <div class="bg-color p-4">
         <div class="container mt-5 mb-5">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h1 class="mb-3 fw-bold text-white text-center">
                         Why people choose us
                     </h1>
                 </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3">Michele Miller</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class="fa-brands fa-facebook"></i>
+                                    </li>
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-google-plus"></i></li>
+                                    <li><i class="fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3">Patricia Knott</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3">Justin Ramos</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-3 col-sm-12 wrap-cards-propreties ">
-                    <div class="card border-0  " style="width: 18rem;">
-                        <div class="card-body text-center">
-                            <div class="icon mb-4">
-                                <i class="fa-solid fa-user"></i></i>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name mt-3">Mary Huntley</h3>
+                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                </div>
+                                <ul class="social">
+                                    <li><i class=" my-i fa-brands fa-facebook"></i></li>
+                                    <li><i class=" my-i fa-brands fa-twitter"></i></li>
+                                    <li><i class=" my-i fa-brands fa-google-plus"></i></li>
+                                    <li><i class=" my-i fa-brands fa-linkedin"></i></li>
+                                </ul>
                             </div>
-                            <h5 class="card-subtitle mb-2">Quality 4</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum iste
-                                quidem aperiam dolor explicabo ab officia dolore ipsa rem unde fugit autem cum, nobis alias
-                                corporis voluptate quasi? Rerum!</p>
-                            <a href="#" class="link-about-us ">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +219,8 @@
                         What people say about us
                     </h1>
                     <p class="">
-                        Our mission is to create a world where people can belong through healthy travel that is local, authentic, diverse, inclusive and sustainable.
+                        Our mission is to create a world where people can belong through healthy travel that is local,
+                        authentic, diverse, inclusive and sustainable.
                     </p>
                 </div>
             </div>
@@ -216,7 +239,9 @@
                                     Wonderful experience
                                 </span>
                                 <p class="mt-2">
-                                    I absolutely loved my stay at this fabulous BoolBnB property. The hosts were so kind and accommodating, they truly made me feel welcome. The house was sparkling clean and provided all the amenities I could need. Would definitely recommend staying here!
+                                    I absolutely loved my stay at this fabulous BoolBnB property. The hosts were so kind and
+                                    accommodating, they truly made me feel welcome. The house was sparkling clean and
+                                    provided all the amenities I could need. Would definitely recommend staying here!
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -253,7 +278,10 @@
                                     Great customer service, understanding hosts.
                                 </span>
                                 <p class="mt-2">
-                                    I had a wonderful experience staying at this BoolBnB. The apartment was clean and spacious, and the host was incredibly responsive and helpful with any questions I had. Everything was exactly as described and check-in/check-out were super smooth. Highly recommend!
+                                    I had a wonderful experience staying at this BoolBnB. The apartment was clean and
+                                    spacious, and the host was incredibly responsive and helpful with any questions I had.
+                                    Everything was exactly as described and check-in/check-out were super smooth. Highly
+                                    recommend!
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
@@ -290,7 +318,9 @@
                                     Airbnb has made traveling a dream
                                 </span>
                                 <p class="mt-2">
-                                    We've been using Airbnb for 10 years now, and this company is supreme. Compared to the competition, they are in a different category. When you host, you know to the penny what you're going to pay. When you rent, the same is true. Definitely the best service
+                                    We've been using Airbnb for 10 years now, and this company is supreme. Compared to the
+                                    competition, they are in a different category. When you host, you know to the penny what
+                                    you're going to pay. When you rent, the same is true. Definitely the best service
                                 </p>
                             </div>
                             <div class="mb-5 d-flex justify-content-center">
