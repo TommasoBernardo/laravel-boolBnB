@@ -91,6 +91,34 @@ i.icon-dash:hover {
 
 }
 
+// Dashboard User info section
+
+.results-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .card-icon {
+        font-size: 3rem;
+    }
+
+    .text-shadow {
+        text-shadow: 4px 1px 6px rgba(0, 0, 0, 0.78);
+    }
+}
+
+.apartment-data {
+    background-color: #ee4266;
+}
+
+.views-data {
+    background-color: #ffd23f;
+}
+
+.messages-data {
+    background-color: #3bceac;
+}
+
+
+
 // Set edit.blade height
 #set-height {
     height: 64.8vh;
