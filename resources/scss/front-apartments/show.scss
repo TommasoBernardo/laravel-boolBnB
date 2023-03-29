@@ -73,6 +73,15 @@ div.swiper-thumb {
 //     margin-bottom: 1.4rem;
 // }
 
+div.princing-item {
+    /* definire le proprietà di default */
+    transition: transform 0.2s ease-in-out;
+}
+
+div.princing-item:hover {
+    transform: scale(1.1);
+}
+
 .pricing-divider {
     border-radius: 20px;
     background: #125655;
