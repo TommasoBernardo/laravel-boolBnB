@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('ip_address',20);
             $table->dateTime('date');
             $table->timestamps();
-            $table->foreign('apartment_id')->references('id')->on('apartments');
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
