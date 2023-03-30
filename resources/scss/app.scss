@@ -3,9 +3,10 @@
 @import "../../node_modules/@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css";
 
 
-body {
-    font-family: 'Poppins', sans-serif;
+*{
+    // font-family: 'Poppins', sans-serif;
     animation: myAnim 1s linear 0s 1 normal forwards;
+    font-family: 'Source Serif Pro', serif;
 }
 
 
