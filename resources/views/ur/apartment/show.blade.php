@@ -89,21 +89,21 @@
         </div>
     </div>
 
-    <div class="container location mt-3 mb-5">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="d-inline-block my-2 me-2 ">Is located in</h3>
-                <span class="fs-3 fw-bold"> {{ $apartment->address }}</span>
-                <div class="map my-2" id="map">
-                </div>
+<div class="container location mt-3 mb-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="d-inline-block my-2 me-2 fw-bold">Is located in:</h3>
+            <span class="fs-3 fw-bold"> <strong> {{ $apartment->address }}</strong></span>
+            <div class="map my-2" id="map">
             </div>
         </div>
     </div>
+</div>
 
     {{-- Payment --}}
 
 <div class="container mb-5 text-center">
-    <h1 class="my-5">Sponsor Plans</h1>
+    <h1 class="my-5 fw-bold">Sponsor Plans</h1>
     <div class="row d-flex justify-content-center">
         @foreach ($sponsors as $sponsor)
         <div class="col-lg-4 p-5  text-center">
@@ -161,29 +161,35 @@
     </div>
 </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <canvas id="viewsChart" class="mb-5"></canvas>
-                <script>
-                    var chartData = <?php echo $chartData; ?>;
-                    var ctx = document.getElementById('viewsChart').getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: chartData,
-                        options: {
-                            scales: {
-                                y: {
-                                    beginAtZero: true,
-                                    precision: 0,
-                                }
-                            },
-                        }
-                    });
-                </script>
-            </div>
+<div class="container">
+    <h1 class="fw-bold text-center mb-3">Views annual stats</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <canvas id="viewsChart" class="mb-5"></canvas>
+    <script>
+        var chartData = <?php echo $chartData; ?>;
+        var ctx = document.getElementById('viewsChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        precision: 0,
+                    }
+                }
+            }
+        });
+    </script>
         </div>
     </div>
+    
+</div>
+
+
+
+
 @endsection
 @section('script')
     @vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js', 'resources/js/payment.js', 'resources/js/show-slider.js'])
