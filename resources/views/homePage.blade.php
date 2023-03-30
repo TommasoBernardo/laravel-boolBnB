@@ -143,7 +143,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2">
+                            <div class="our-team px-2" style="height: 450px">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
                                 </div>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team  px-2">
+                            <div class="our-team  px-2" style="height: 450px" >
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
                                 </div>
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2">
+                            <div class="our-team px-2" style="height: 450px" >
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
                                 </div>
@@ -195,7 +195,7 @@
                             </div>
                         </div>
                         <div class=" col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2">
+                            <div class="our-team px-2" style="height: 450px" >
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
                                 </div>
