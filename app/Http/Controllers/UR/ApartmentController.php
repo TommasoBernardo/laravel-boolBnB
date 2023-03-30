@@ -12,6 +12,9 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use App\Models\Image;
 use App\Models\Sponsor;
+use App\Models\Statistic;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class ApartmentController extends Controller
 {
@@ -81,7 +84,9 @@ class ApartmentController extends Controller
     {
         $apartments = Apartment::where('user_id', Auth::user()->id)->get();
 
-        return view('list-apartment', compact('apartments'));
+        $end_date = Carbon::now();
+
+        return view('list-apartment', compact('apartments','end_date'));
     }
 
     /**
@@ -138,8 +143,54 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
+
+
+        $clicks = DB::table('statistics')
+        ->select(DB::raw('DATE_FORMAT(date, "%Y-%m") as `year_month`, COUNT(DISTINCT ip_address) as clicks'))
+        ->where('apartment_id', $apartment->id)
+            ->groupBy('year_month')
+            ->get();
+
+        $clicks_by_month = [];
+
+        $current_date = Carbon::now();
+
+        $start_date = $current_date->subMonths(11);
+
+        for ($i = 0; $i < 12; $i++) {
+            $start_month = $start_date->format('Y-m');
+
+            $clicks_by_month[$start_month] = 0;
+
+            foreach ($clicks as $click) {
+                if ($click->year_month == $start_month) {
+                    $clicks_by_month[$start_month] = $click->clicks;
+                    break;
+                }
+            }
+
+            $start_date->addMonth();
+        }
+
         $sponsors = Sponsor::all();
-        return view('ur.apartment.show', compact('apartment', 'sponsors'));
+
+       
+
+        $chartData = json_encode([
+            'labels' => array_keys($clicks_by_month),
+            'datasets' => [
+                [
+                    'label' => 'Views',
+                    'data' => array_values($clicks_by_month),
+                    'backgroundColor' => 'rgba(128, 0, 128, 0.2)',
+                    'borderColor' => 'rgba(128, 0, 128, 1)',
+                    'borderWidth' => 1
+                ]
+            ]
+        ]);
+
+        return view('ur.apartment.show', compact('apartment', 'sponsors', 'chartData'));
+
     }
 
     /**
