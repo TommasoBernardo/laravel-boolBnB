@@ -145,12 +145,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="our-team px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3 text-dark">Michele Miller</h3>
-                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                    <h3 class="name mt-3 text-dark">Michelle Miller</h3>
+                                    <p class="title">Michelle is a guides writer from Northern Ireland who likes screaming at her TV. Often at horror movies, occasionally at a Fortnite win.</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class="fa-brands fa-facebook"></i>
@@ -162,14 +161,13 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2">
+                            <div class="our-team  px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3 text-dark">Patricia Knott</h3>
-                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                    <h3 class="name mt-3 text-dark">Justin Ramos</h3>
+                                    <p class="title">I am a nature travel lover: whether it's a jungle, a volcano crater, a coral reef, a mountain ridge or a desert dune</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -180,14 +178,13 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team  px-2">
+                            <div class="our-team px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3 text-dark">Justin Ramos</h3>
-                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                    <h3 class="name mt-3 text-dark">Patricia Knott</h3>
+                                    <p class="title">For years I have been using every free moment to travel/run away and immerse myself as much as possible in local cultures.</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -200,12 +197,11 @@
                         <div class=" col-sm-6 col-md-6 col-lg-3">
                             <div class="our-team px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-3 text-dark">Mary Huntley</h3>
-                                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-                                        blanditiis nesciunt provident explicabo, assumenda voluptates?</p>
+                                    <h3 class="name mt-3 text-dark">Josh Huntley</h3>
+                                    <p class="title">I've been wandering around Sub-Saharan Africa and Vietnam for years and now I can't wait to explore the world with you!</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
