@@ -25,7 +25,7 @@
 </div>
 {{-- Slider --}}
 <div class="container img-container">
-    <h1 class="m-4 text-md-center text-sm-center">{{ $apartment->title }}</h1>
+    <h1 class="m-4 text-center text-sm-center fw-bold">{{ $apartment->title }}</h1>
     <div style="--swiper-navigation-color: #ffffff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -57,13 +57,13 @@
 <div class="container info-wrapper d-flex mt-5">
     <div class=" container info">
         <div class="row  mt-md-0">
-            <h3 class="my-2">Apartment information</h3>
+            <h3 class="my-2 fw-bold">Apartment information</h3>
             <div class="col-lg-6 col-md-12 col-sm-12 fs-5">
-                <p class="m-0">Rooms available: <strong>{{ $apartment->rooms }}</strong></p>
-                <p>Beds available: <strong>{{ $apartment->beds }}</strong></p>
+                <p class="m-0">Rooms: <strong>{{ $apartment->rooms }}</strong></p>
+                <p>Beds: <strong>{{ $apartment->beds }}</strong></p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
-                <p class="m-0">Bathrooms available: <strong>{{ $apartment->bathrooms }}</strong></p>
+                <p class="m-0">Bathrooms: <strong>{{ $apartment->bathrooms }}</strong></p>
                 <p>Sizes: <strong>{{ $apartment->square_meters }} m<sup>2</sup> </strong></p>
             </div>
         </div>
@@ -71,7 +71,7 @@
     {{-- Servizi --}}
     <div class="container services">
         <div class="row ">
-            <h3 class="my-2">Services offered:</h3>
+            <h3 class="my-2 fw-bold">Services offered:</h3>
             @foreach ($apartment->services as $service)
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
                 {!! $service->icon !!}
@@ -87,8 +87,8 @@
 <div class="container location mt-3 mb-5">
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="d-inline-block my-2 me-2 ">Is located in</h3>
-            <span class="fs-3 fw-bold"> {{ $apartment->address }}</span>
+            <h3 class="d-inline-block my-2 me-2 fw-bold">Is located in:</h3>
+            <span class="fs-3 fw-bold"> <strong> {{ $apartment->address }}</strong></span>
             <div class="map my-2" id="map">
             </div>
         </div>
@@ -98,7 +98,7 @@
 {{-- Payment --}}
 
 <div class="container mb-5 text-center">
-    <h1 class="my-5">Sponsor Plans</h1>
+    <h1 class="my-5 fw-bold">Sponsor Plans</h1>
     <div class="row d-flex">
         @foreach ($sponsors as $sponsor)
         <div class="col-lg-4 p-5  text-center">
@@ -148,24 +148,32 @@
     </div>
 </div>
 
-
-<canvas id="viewsChart" class="mb-5"></canvas>
-<script>
-    var chartData = <?php echo $chartData; ?>;
-    var ctx = document.getElementById('viewsChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: chartData,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    precision: 0,
+<div class="container">
+    <h1 class="fw-bold text-center mb-3">Views annual stats</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <canvas id="viewsChart" class="mb-5"></canvas>
+    <script>
+        var chartData = <?php echo $chartData; ?>;
+        var ctx = document.getElementById('viewsChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        precision: 0,
+                    }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
+        </div>
+    </div>
+    
+</div>
+
 
 
 

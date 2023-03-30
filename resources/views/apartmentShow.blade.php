@@ -15,10 +15,10 @@
     <div class="container-fluid return-arrow sticky-lg-top sticky-md-top sticky-sm-top mt-3 ">
         <div class="row">
             <div class="col-2">
-                <div class="wrapper-return-arrow position-absolute">
+                <div class="wrapper-return-arrow position-fixed" style="top: 3.5rem;">
                     <a href="{{ route('apartments.index') }}" class="btn fw-bold my-4 ms-2"
                         style="padding: .6rem 1.2rem; font-size: 1.1rem ">
-                        <i class="fa-solid fa-arrow-left fs-1" style="color: #125655;"></i> </a>
+                        <i class="fa-solid fa-arrow-left fs-1" style="color: #125655; text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 2px 0 #ffffff, 0 -1px #ffffff;"></i> </a>
                 </div>
             </div>
         </div>
