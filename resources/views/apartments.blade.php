@@ -78,8 +78,8 @@
         </form>
         <div class="row">
             <div class="col-12">
-                <h1 class="fw-bolder title-apartments" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
-                    All apartments : 
+                <h1 class="fw-bolder title-apartments text-center" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
+                    All apartments 
                 </h1>
             </div>
         </div>
@@ -104,11 +104,12 @@
                                     </figure>
     
                                     <ul class="card-ul fw-bolder">
-                                        <li class="card-li">{{ $apartment->title }} </li>
+                                        {{-- <li class="card-li">{{ $apartment->title }} </li> --}}
                                         <li class="card-li">{{ $apartment->address }}</li>
                                         @if (isset($apartment->distance))<li class="card-li"> Distance: {{$apartment->distance}} Km</li> @endif
                                         <li class="card-li">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color:white; margin-right: .7rem ">
                                         </i> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: white"></i> </li>
+                                        <li class="card-li"><a href="{{ route('apartments.show', $apartment->slug) }}" class="btn placeholder-glow  btn-green button-card " id="hidden-button" style="padding: .5rem 1.5rem">Show more details </a>  </li>
                                     </ul>
                                 </div>
     
