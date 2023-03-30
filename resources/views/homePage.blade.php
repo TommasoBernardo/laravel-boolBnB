@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name mt-1 text-dark fw-bold">Justin Ramos</h3>
-                                    <p class="title text-justified">I am a nature travel lover: whether it's a jungle, a volcano crater, a coral reef, a mountain ridge or a desert dune</p>
+                                    <p class="title text-justified">I am a nature travel lover: whether it's a jungle, a volcano crater, a coral reef, a mountain ridge or a desert</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -180,10 +180,10 @@
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="our-team px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
+                                    <img class="img-fluid" src="https://i.pravatar.cc/300">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-1 text-dark fw-bold">Patricia Knott</h3>
+                                    <h3 class="name mt-1 text-dark fw-bold">Sam Knott</h3>
                                     <p class="title text-justified">For years I have been using every free moment to travel/run away and immerse myself as much as possible in local cultures.</p>
                                 </div>
                                 <ul class="social">
@@ -197,10 +197,10 @@
                         <div class=" col-sm-6 col-md-6 col-lg-3">
                             <div class="our-team px-2">
                                 <div class="picture">
-                                    <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
+                                    <img class="img-fluid" src="https://i.pravatar.cc/150?img=60">
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name mt-1 text-dark fw-bold">Josh Huntley</h3>
+                                    <h3 class="name mt-1 text-dark fw-bold">Taylor Huntley</h3>
                                     <p class="title text-justified">I've been wandering around Sub-Saharan Africa and Vietnam for years and now I can't wait to explore the world with you!</p>
                                 </div>
                                 <ul class="social">
@@ -240,17 +240,17 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 card-agent mb-4">
                     <div class="card border-0 text-center p-3 ">
                         <div class="img-profile mb-3">
-                            <img src="https://i.pravatar.cc/100" alt="" srcset="">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
                             <div class="content mb-5">
-                                <h4>
+                                <h4 class="fw-bold">
                                     James Doe
                                 </h4>
                                 <span style="color: gray">
                                     Wonderful experience
                                 </span>
-                                <p class="mt-2">
+                                <p class="mt-4 text-justified">
                                     I absolutely loved my stay at this fabulous BoolBnB property. The hosts were so kind
                                     and
                                     accommodating, they truly made me feel welcome. The house was sparkling clean and
@@ -283,13 +283,13 @@
                         </div>
                         <div class="wrap-content">
                             <div class="content mb-5">
-                                <h4>
-                                    Jean Smith
+                                <h4 class="fw-bold">
+                                    Andrea Smith
                                 </h4>
                                 <span style="color: gray">
                                     Great customer service, understanding hosts.
                                 </span>
-                                <p class="mt-2">
+                                <p class="mt-4 text-justified">
                                     I had a wonderful experience staying at this BoolBnB. The apartment was clean and
                                     spacious, and the host was incredibly responsive and helpful with any questions I
                                     had.
@@ -319,17 +319,17 @@
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
-                            <img src="https://i.pravatar.cc/100" alt="" srcset="">
+                            <img src="https://i.pravatar.cc/150?img=31" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
                             <div class="content mb-5">
-                                <h4>
+                                <h4 class="fw-bold">
                                     Alicia Huston
                                 </h4>
                                 <span style="color: gray">
                                     BoolBnB has made traveling a dream
                                 </span>
-                                <p class="mt-2">
+                                <p class="mt-4 text-justified">
                                     We've been using BoolBnB for 10 years now, and this company is supreme. Compared to
                                     the
                                     competition, they are in a different category. When you host, you know to the penny
