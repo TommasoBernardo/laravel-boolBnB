@@ -79,18 +79,19 @@
                 </div>
             </div>
         </form>
-        <div class="row mt-4 mb-2">
-            <div class="col-12">
-                <h1 class="fw-bold title-apartments text-center"
+        @if ($apartments->isEmpty())
+            <div class="mt-3 text-center" style="height: 360px;">
+                <h1 class="fw-bold">There are no results for your search</h1>
+            </div>
+        @else
+            <div class="row mt-4 mb-2">
+                <div class="col-12">
+                    <h1 class="fw-bold title-apartments text-center"
                     style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
                     All apartments
                 </h1>
             </div>
         </div>
-        @if ($apartments->isEmpty())
-            <div class="mt-3 text-center" style="height: 360px;">
-                <h1 class="fw-bold">There are no results for your search</h1>
-            </div>
         @endif
         <div class="row">
             <div class="">
