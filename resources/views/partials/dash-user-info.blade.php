@@ -1,12 +1,5 @@
+@php $countMessage = 0; @endphp
 
-
-@php $countMessage = 0; $countTotalStatist = 0; @endphp
-
-@foreach ($apartments as $apartment)
-@if($apartment->statistic != null)
-@php $countTotalStatist++; @endphp
-@endif
-@endforeach
 
 @foreach ($apartments as $apartment)
 @foreach ($apartment->leads as $lead)
@@ -53,7 +46,7 @@
             <i class="fa fa-eye text-center text-white card-icon pt-4 text-shadow"></i>
             <div class="card-title text-center ">
                 <h5 class="p-4 text-white text-shadow">Total views</h5>
-                <p class="display-3 text-primary"><span class="count text-shadow text-white" total="{{$countTotalStatist}}">0</span></p>
+                <p class="display-3 text-primary"><span class="count text-shadow text-white" total="{{$total_clicks}}">0</span></p>
             </div>
         </div>
     </div>
