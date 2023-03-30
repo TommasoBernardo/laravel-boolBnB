@@ -503,3 +503,9 @@ button.button-card:focus+.design-container {
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .my-size {
+    padding-right: 2.2rem;
+  }
+}
