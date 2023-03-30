@@ -65,7 +65,7 @@
             <div class="col-lg-6 col-md-9 col-sm-11">
                 <h2 class="fw-bold mt-5">The apartment is located : {{ $apartment->address }}</h2>
             </div>
-            <div class="col-lg-6 col-md-3 col-sm-1 d-flex justify-content-end">
+            <div class="col-lg-6 col-md-3 col-sm-1 d-flex justify-content-end my-none">
                 <div class="circle">
                     <img src="https://i.pravatar.cc/100" class="img-fluid my-users d-md-none d-sm-none d-lg-block"
                         alt="">

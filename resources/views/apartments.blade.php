@@ -76,10 +76,11 @@
                 </div>
             </div>
         </form>
-        <div class="row">
+        <div class="row mt-4 mb-2">
             <div class="col-12">
-                <h1 class="fw-bolder title-apartments" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
-                    All apartments : 
+                <h1 class="fw-bold title-apartments text-center"
+                    style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
+                    All apartments
                 </h1>
             </div>
         </div>
@@ -90,37 +91,44 @@
         @endif
         <div class="row">
             <div class="">
-                <div class=" d-flex card-wrap flex-wrap">
+                <div class=" my-size d-flex card-wrap flex-wrap">
                     @foreach ($apartments as $apartment)
                         <div class="flip-card-container">
                             <div class="flip-card">
                                 <div class="card-front d-flex justify-content-center">
                                     <figure>
                                         <div class="img-bg"></div>
-                                        <img class="card-img"
-                                            src="{{ asset('storage/' . $apartment->cover_image) }}"
+                                        <img class="card-img" src="{{ asset('storage/' . $apartment->cover_image) }}"
                                             alt="Brohm Lake">
                                         <figcaption>{{ $apartment->title }} </figcaption>
                                     </figure>
-    
+
                                     <ul class="card-ul fw-bolder">
-                                        <li class="card-li">{{ $apartment->title }} </li>
+                                        {{-- <li class="card-li">{{ $apartment->title }} </li> --}}
                                         <li class="card-li">{{ $apartment->address }}</li>
-                                        @if (isset($apartment->distance))<li class="card-li"> Distance: {{$apartment->distance}} Km</li> @endif
-                                        <li class="card-li">{{ $apartment->rooms }} <i class="fa-solid fa-house" style="color:white; margin-right: .7rem ">
-                                        </i> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: white"></i> </li>
+                                        @if (isset($apartment->distance))
+                                            <li class="card-li"> Distance: {{ $apartment->distance }} Km</li>
+                                        @endif
+                                        <li class="card-li">{{ $apartment->rooms }} <i class="fa-solid fa-house"
+                                                style="color:white; margin-right: .7rem ">
+                                            </i> {{ $apartment->beds }} <i class="fa-solid fa-bed" style="color: white"></i>
+                                        </li>
+                                        <li class="card-li"><a href="{{ route('apartments.show', $apartment->slug) }}"
+                                                class="btn placeholder-glow  btn-green button-card " id="hidden-button"
+                                                style="padding: .5rem 1.5rem">Show more details </a> </li>
                                     </ul>
                                 </div>
-    
+
                                 <div class="card-back">
                                     <figure>
                                         <div class="img-bg"></div>
-                                        <img class="card-img"
-                                            src="{{ asset('storage/' . $apartment->cover_image) }}"
+                                        <img class="card-img" src="{{ asset('storage/' . $apartment->cover_image) }}"
                                             alt="Brohm Lake">
                                     </figure>
-                                    <a href="{{ route('apartments.show', $apartment->slug) }}" class="btn placeholder-glow  btn-green button-card " id="border" style="padding: .5rem 1.5rem">Show more details </a>
-    
+                                    <a href="{{ route('apartments.show', $apartment->slug) }}"
+                                        class="btn placeholder-glow  btn-green button-card " id="border"
+                                        style="padding: .5rem 1.5rem">Show more details </a>
+
                                     <div class="design-container">
                                         <span class="design design--1"></span>
                                         <span class="design design--2"></span>
@@ -132,7 +140,7 @@
                                         <span class="design design--8"></span>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
                     @endforeach
@@ -143,8 +151,9 @@
 
     {{-- new cards --}}
 
-    
+
     <div class="prev-next d-flex justify-content-center">
+
         {{ $apartments->links() }}
     </div>
 @endsection
