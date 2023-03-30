@@ -175,11 +175,11 @@ class ApartmentsController extends Controller
     {
 
 
-        $newStatistic = new Statistic();
-        $newStatistic->apartment_id = $apartment->id;
-        $newStatistic->ip_address = $request->ip();
-        $newStatistic->date = Carbon::now();
-        $newStatistic->save();
+        // $newStatistic = new Statistic();
+        // $newStatistic->apartment_id = $apartment->id;
+        // $newStatistic->ip_address = $request->ip();
+        // $newStatistic->date = Carbon::now();
+        // $newStatistic->save();
 
 
 
