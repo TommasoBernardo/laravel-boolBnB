@@ -19,12 +19,14 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-sala-1.jpg',
                     'apartment_id' => 1,
-                ],
-                [
+                ],        [
                     'path' => 'img/apartment_images/apartment-cucina-1.jpg',
                     'apartment_id' => 1,
                 ],        [
                     'path' => 'img/apartment_images/apartment-letto-1.jpg',
+                    'apartment_id' => 1,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-1.jpg',
                     'apartment_id' => 1,
                 ],
 
@@ -37,6 +39,9 @@ class ImageSeeder extends Seeder
                     'apartment_id' => 2,
                 ],        [
                     'path' => 'img/apartment_images/apartment-letto-2.jpg',
+                    'apartment_id' => 2,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-2.jpg',
                     'apartment_id' => 2,
                 ],
 
@@ -51,6 +56,9 @@ class ImageSeeder extends Seeder
                 ],        [
                     'path' => 'img/apartment_images/apartment-letto-3.jpg',
                     'apartment_id' => 3,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-3.jpg',
+                    'apartment_id' => 3,
                 ],
 
 
@@ -62,6 +70,9 @@ class ImageSeeder extends Seeder
                     'apartment_id' => 4,
                 ],        [
                     'path' => 'img/apartment_images/apartment-letto-4.jpg',
+                    'apartment_id' => 4,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-4.jpg',
                     'apartment_id' => 4,
                 ],
 
@@ -78,6 +89,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-5.jpg',
                     'apartment_id' => 5,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-5.jpg',
+                    'apartment_id' => 5,
                 ],
 
 
@@ -91,6 +105,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-6.jpg',
+                    'apartment_id' => 6,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-6.jpg',
                     'apartment_id' => 6,
                 ],
 
@@ -108,6 +125,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-7.jpg',
                     'apartment_id' => 7,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-7.jpg',
+                    'apartment_id' => 7,
                 ],
 
 
@@ -122,6 +142,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-8.jpg',
+                    'apartment_id' => 8,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-8.jpg',
                     'apartment_id' => 8,
                 ],
 
@@ -138,6 +161,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-9.jpg',
                     'apartment_id' => 9,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-9.jpg',
+                    'apartment_id' => 9,
                 ],
 
 
@@ -152,6 +178,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-10.jpg',
+                    'apartment_id' => 10,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-10.jpg',
                     'apartment_id' => 10,
                 ],
 
@@ -168,6 +197,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-11.jpg',
                     'apartment_id' => 11,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-11.jpg',
+                    'apartment_id' => 11,
                 ],
 
 
@@ -182,6 +214,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-12.jpg',
+                    'apartment_id' => 12,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-12.jpg',
                     'apartment_id' => 12,
                 ],
 
@@ -198,6 +233,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-13.jpg',
                     'apartment_id' => 13,
+                ],        [
+                    'path' => 'img/apar3tment_images/apartment-bagno-13.jpg',
+                    'apartment_id' => 13,
                 ],
 
 
@@ -213,6 +251,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-14.jpg',
                     'apartment_id' => 14,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-14.jpg',
+                    'apartment_id' => 14,
                 ],
 
 
@@ -227,6 +268,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-15.jpg',
                     'apartment_id' => 15,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-15.jpg',
+                    'apartment_id' => 15,
                 ],
 
 
@@ -240,6 +284,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-16.jpg',
+                    'apartment_id' => 16,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-16.jpg',
                     'apartment_id' => 16,
                 ],
 
@@ -256,6 +303,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-17.jpg',
                     'apartment_id' => 17,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-17.jpg',
+                    'apartment_id' => 17,
                 ],
 
 
@@ -270,6 +320,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-18.jpg',
+                    'apartment_id' => 18,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-18.jpg',
                     'apartment_id' => 18,
                 ],
 
@@ -286,6 +339,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-19.jpg',
                     'apartment_id' => 19,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-19.jpg',
+                    'apartment_id' => 19,
                 ],
 
 
@@ -299,6 +355,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-20.jpg',
+                    'apartment_id' => 20,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-20.jpg',
                     'apartment_id' => 20,
                 ],
 
@@ -315,6 +374,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-21.jpg',
                     'apartment_id' => 21,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-21.jpg',
+                    'apartment_id' => 21,
                 ],
 
 
@@ -328,6 +390,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-22.jpg',
+                    'apartment_id' => 22,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-22.jpg',
                     'apartment_id' => 22,
                 ],
 
@@ -344,6 +409,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-23.jpg',
                     'apartment_id' => 23,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-23.jpg',
+                    'apartment_id' => 23,
                 ],
 
 
@@ -358,6 +426,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-24.jpg',
+                    'apartment_id' => 24,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-24.jpg',
                     'apartment_id' => 24,
                 ],
 
@@ -374,6 +445,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-25.jpg',
                     'apartment_id' => 25,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-25.jpg',
+                    'apartment_id' => 25,
                 ],
 
 
@@ -388,6 +462,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-26.jpg',
+                    'apartment_id' => 26,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-26.jpg',
                     'apartment_id' => 26,
                 ],
 
@@ -404,6 +481,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-27.jpg',
                     'apartment_id' => 27,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-27.jpg',
+                    'apartment_id' => 27,
                 ],
 
 
@@ -418,6 +498,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-28.jpg',
+                    'apartment_id' => 28,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-28.jpg',
                     'apartment_id' => 28,
                 ],
 
@@ -434,6 +517,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-29.jpg',
                     'apartment_id' => 29,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-29.jpg',
+                    'apartment_id' => 29,
                 ],
 
 
@@ -448,6 +534,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-30.jpg',
+                    'apartment_id' => 30,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-30.jpg',
                     'apartment_id' => 30,
                 ],
 
@@ -464,6 +553,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-31.jpg',
                     'apartment_id' => 31,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-31.jpg',
+                    'apartment_id' => 31,
                 ],
 
 
@@ -478,6 +570,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-32.jpg',
+                    'apartment_id' => 32,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-32.jpg',
                     'apartment_id' => 32,
                 ],
 
@@ -494,6 +589,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-33.jpg',
                     'apartment_id' => 33,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-33.jpg',
+                    'apartment_id' => 33,
                 ],
 
 
@@ -508,6 +606,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-34.jpg',
+                    'apartment_id' => 34,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-34.jpg',
                     'apartment_id' => 34,
                 ],
 
@@ -524,6 +625,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-35.jpg',
                     'apartment_id' => 35,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-35.jpg',
+                    'apartment_id' => 35,
                 ],
 
 
@@ -538,6 +642,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-36.jpg',
+                    'apartment_id' => 36,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-36.jpg',
                     'apartment_id' => 36,
                 ],
 
@@ -554,6 +661,9 @@ class ImageSeeder extends Seeder
                 [
                     'path' => 'img/apartment_images/apartment-letto-37.jpg',
                     'apartment_id' => 37,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-37.jpg',
+                    'apartment_id' => 37,
                 ],
 
 
@@ -568,6 +678,9 @@ class ImageSeeder extends Seeder
                 ],
                 [
                     'path' => 'img/apartment_images/apartment-letto-38.jpg',
+                    'apartment_id' => 38,
+                ],        [
+                    'path' => 'img/apartment_images/apartment-bagno-38.jpg',
                     'apartment_id' => 38,
                 ],
             ];
