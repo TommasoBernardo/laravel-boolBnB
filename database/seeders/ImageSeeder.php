@@ -234,7 +234,7 @@ class ImageSeeder extends Seeder
                     'path' => 'img/apartment_images/apartment-letto-13.jpg',
                     'apartment_id' => 13,
                 ],        [
-                    'path' => 'img/apar3tment_images/apartment-bagno-13.jpg',
+                    'path' => 'img/apartment_images/apartment-bagno-13.jpg',
                     'apartment_id' => 13,
                 ],
 
