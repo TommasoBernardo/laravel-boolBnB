@@ -149,7 +149,8 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name mt-1 text-dark fw-bold">Michelle Miller</h3>
-                                    <p class="title text-justified">Michelle is a guides writer from Northern Ireland who likes screaming at her TV. Often at horror movies.</p>
+                                    <p class="title text-justified">Michelle is a guides writer from Northern Ireland who
+                                        likes screaming at her TV. Often at horror movies.</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class="fa-brands fa-facebook"></i>
@@ -167,7 +168,8 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name mt-1 text-dark fw-bold">Justin Ramos</h3>
-                                    <p class="title text-justified">I am a nature travel lover: whether it's a jungle, a volcano crater, a coral reef, a mountain ridge or a desert</p>
+                                    <p class="title text-justified">I am a nature travel lover: whether it's a jungle, a
+                                        volcano crater, a coral reef, a mountain ridge or a desert</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -184,7 +186,8 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name mt-1 text-dark fw-bold">Sam Knott</h3>
-                                    <p class="title text-justified">For years I have been using every free moment to travel/run away and immerse myself as much as possible in local cultures.</p>
+                                    <p class="title text-justified">For years I have been using every free moment to
+                                        travel/run away and immerse myself as much as possible in local cultures.</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -201,7 +204,8 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name mt-1 text-dark fw-bold">Taylor Huntley</h3>
-                                    <p class="title text-justified">I've been wandering around Sub-Saharan Africa and Vietnam for years and now I can't wait to explore the world with you!</p>
+                                    <p class="title text-justified">I've been wandering around Sub-Saharan Africa and
+                                        Vietnam for years and now I can't wait to explore the world with you!</p>
                                 </div>
                                 <ul class="social">
                                     <li><i class=" my-i fa-brands fa-facebook"></i></li>
@@ -238,7 +242,7 @@
             </div>
             <div class="row mt-5 p-1">
                 <div class="col-lg-4 col-md-12 col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3 card-container">
+                    <div class="card border-0 text-center p-3 card-container about-card">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/150?img=33" alt="" srcset="">
                         </div>
@@ -277,12 +281,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3 card-container ">
+                    <div class="card border-0 text-center p-3 card-container about-card">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content " style="450px" >
+                            <div class="content " style="450px">
                                 <h4 class="fw-bold">
                                     Andrea Smith
                                 </h4>
@@ -316,12 +320,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3 card-container ">
+                    <div class="card border-0 text-center p-3 card-container about-card">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/150?img=31" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content"  style="450px" >
+                            <div class="content" style="450px">
                                 <h4 class="fw-bold">
                                     Alicia Huston
                                 </h4>
@@ -329,7 +333,9 @@
                                     BoolBnB has made traveling
                                 </span>
                                 <p class="mt-4 text-justified">
-                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the competition,they are in a different category.When you host, you know to the penny what you're going to pay.When you rent, the same is true. Definitely the best service
+                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
+                                    competition,they are in a different category.When you host, you know to the penny what
+                                    you're going to pay.When you rent, the same is true. Definitely the best service
                                 </p>
                             </div>
                             <div class="mt-5 d-flex justify-content-center">

@@ -1,105 +1,110 @@
 @extends('layouts.app')
 @section('scss')
-@vite(['resources/js/show.js'])
+    @vite(['resources/js/show.js'])
 @endsection
 
 @section('content')
-@if (session('message'))
-<div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('message') }}">
-</div>
-@endif
-<div class="d-none">
-    <input type="text" id="latitude" value="{{ $apartment->latitude }}">
-    <input type="text" id="longitude" value="{{ $apartment->longitude }}">
-</div>
-{{-- Return Arrow --}}
-<div class="container-fluid return-arrow sticky-lg-top sticky-md-top sticky-sm-top mt-3 ">
-    <div class="row">
-        <div class="col-2">
-            <div class="wrapper-return-arrow position-absolute">
-                <a href="{{ route('apartment.index') }}" class="btn fw-bold  ms-2" style="padding: .6rem 1.2rem; font-size: 1.1rem ">
-                    <i class="fa-solid fa-arrow-left fs-1 mt-2" style="color: #125655;"></i> </a>
+    @if (session('message'))
+        <div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('message') }}">
+        </div>
+    @endif
+    <div class="d-none">
+        <input type="text" id="latitude" value="{{ $apartment->latitude }}">
+        <input type="text" id="longitude" value="{{ $apartment->longitude }}">
+    </div>
+    {{-- Return Arrow --}}
+    <div class="container-fluid return-arrow sticky-lg-top sticky-md-top sticky-sm-top mt-3 ">
+        <div class="row">
+            <div class="col-2">
+                <div class="wrapper-return-arrow position-absolute">
+                    <a href="{{ route('apartment.index') }}" class="btn fw-bold  ms-2"
+                        style="padding: .6rem 1.2rem; font-size: 1.1rem ">
+                        <i class="fa-solid fa-arrow-left fs-1 mt-2" style="color: #125655;"></i> </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{{-- Slider --}}
-<div class="container img-container">
-    <h1 class="m-4 text-md-center text-sm-center">{{ $apartment->title }}</h1>
-    <div style="--swiper-navigation-color: #ffffff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
+    {{-- Slider --}}
+    <div class="container img-container">
+        <h1 class="m-4 text-md-center text-sm-center">{{ $apartment->title }}</h1>
+        <div style="--swiper-navigation-color: #ffffff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
+                        alt="{{ $apartment->title }}">
+                </div>
+                @foreach ($apartment->images as $image)
+                    <div class="swiper-slide">
+                        <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid"
+                            alt="{{ $apartment->title }}">
+                    </div>
+                @endforeach
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            @foreach ($apartment->images as $image)
-            <div class="swiper-slide">
-                <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-            </div>
-            @endforeach
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
-    </div>
-    <div class="swiper-thumb mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-            </div>
-            @foreach ($apartment->images as $image)
-            <div class="swiper-slide">
-                <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid" alt="{{ $apartment->title }}">
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>
-<div class="container info-wrapper d-flex mt-5">
-    <div class=" container info">
-        <div class="row  mt-md-0">
-            <h3 class="my-2">Apartment information</h3>
-            <div class="col-lg-6 col-md-12 col-sm-12 fs-5">
-                <p class="m-0">Rooms available: <strong>{{ $apartment->rooms }}</strong></p>
-                <p>Beds available: <strong>{{ $apartment->beds }}</strong></p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
-                <p class="m-0">Bathrooms available: <strong>{{ $apartment->bathrooms }}</strong></p>
-                <p>Sizes: <strong>{{ $apartment->square_meters }} m<sup>2</sup> </strong></p>
+        <div class="swiper-thumb mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top img-fluid"
+                        alt="{{ $apartment->title }}">
+                </div>
+                @foreach ($apartment->images as $image)
+                    <div class="swiper-slide">
+                        <img src="{{ asset('storage/' . $image->path) }}" class="card-img-top img-fluid"
+                            alt="{{ $apartment->title }}">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-    {{-- Servizi --}}
-    <div class="container services">
-        <div class="row ">
-            <h3 class="my-2">Services offered:</h3>
-            @foreach ($apartment->services as $service)
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
-                {!! $service->icon !!}
-                <p class="services d-inline">
-                    &nbsp {{ $service->type }}
-                </p>
+    <div class="container info-wrapper d-flex mt-5">
+        <div class=" container info">
+            <div class="row  mt-md-0">
+                <h3 class="my-2">Apartment information</h3>
+                <div class="col-lg-6 col-md-12 col-sm-12 fs-5">
+                    <p class="m-0">Rooms available: <strong>{{ $apartment->rooms }}</strong></p>
+                    <p>Beds available: <strong>{{ $apartment->beds }}</strong></p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
+                    <p class="m-0">Bathrooms available: <strong>{{ $apartment->bathrooms }}</strong></p>
+                    <p>Sizes: <strong>{{ $apartment->square_meters }} m<sup>2</sup> </strong></p>
+                </div>
             </div>
-            @endforeach
+        </div>
+        {{-- Servizi --}}
+        <div class="container services">
+            <div class="row ">
+                <h3 class="my-2">Services offered:</h3>
+                @foreach ($apartment->services as $service)
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fs-5">
+                        {!! $service->icon !!}
+                        <p class="services d-inline">
+                            &nbsp {{ $service->type }}
+                        </p>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
-</div>
 
 <div class="container location mt-3 mb-5">
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="d-inline-block my-2 me-2 ">Is located in</h3>
-            <span class="fs-3 fw-bold"> {{ $apartment->address }}</span>
+            <h3 class="d-inline-block my-2 me-2 fw-bold">Is located in:</h3>
+            <span class="fs-3 fw-bold"> <strong> {{ $apartment->address }}</strong></span>
             <div class="map my-2" id="map">
             </div>
         </div>
     </div>
 </div>
 
-{{-- Payment --}}
+    {{-- Payment --}}
 
 <div class="container mb-5 text-center">
-    <h1 class="my-5">Sponsor Plans</h1>
-    <div class="row d-flex">
+    <h1 class="my-5 fw-bold">Sponsor Plans</h1>
+    <div class="row d-flex justify-content-center">
         @foreach ($sponsors as $sponsor)
         <div class="col-lg-4 p-5  text-center">
             <div class="princing-item">
@@ -127,7 +132,7 @@
                         <li class="fs-4"><b>144h</b> Sponsorship</li>
                         @endif
                     </ul>
-                    <button type="button" id="pay-btn" class="btn btn-lg  btn-custom ">Pay</button>
+                    <button type="button" id="pay-btn" class="btn btn-lg  btn-custom " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pay</button>
                 </div>
             </div>
         </div>
@@ -135,43 +140,57 @@
     </div>
 </div>
 
-
-<div class="container d-flex justify-content-center mb-4">
-    <div id="braintree-box" class="d-none col-6 braintree-box">
-        <p id="cancel-payment" class="text-end m-0 text-danger fw-bold">X</p>
-        <div id="dropin-container"></div>
-        <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">
-            @csrf
-            <input type="text" name="sponsor_id" id="sponsor_id" class="d-none" readonly>
-            <button id="submit-button" class="button button--small button--green mb-5">Purchase</button>
-        </form>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Payment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="braintree-box" class="braintree-box">
+                    <div id="dropin-container"></div>
+                    <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post" class="text-center">
+                        @csrf
+                        <input type="text" name="sponsor_id" id="sponsor_id" class="d-none" readonly>
+                        <button id="submit-button" class="button button--small button--green mb-5">Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-
-<canvas id="viewsChart" class="mb-5"></canvas>
-<script>
-    var chartData = <?php echo $chartData; ?>;
-    var ctx = document.getElementById('viewsChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: chartData,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    precision: 0,
+<div class="container">
+    <h1 class="fw-bold text-center mb-3">Views annual stats</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <canvas id="viewsChart" class="mb-5"></canvas>
+    <script>
+        var chartData = <?php echo $chartData; ?>;
+        var ctx = document.getElementById('viewsChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        precision: 0,
+                    }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
+        </div>
+    </div>
+    
+</div>
+
 
 
 
 @endsection
 @section('script')
-
-
-@vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js', 'resources/js/payment.js', 'resources/js/show-slider.js'])
+    @vite(['resources/js/mapShow.js', 'resources/js/popupDelete.js', 'resources/js/payment.js', 'resources/js/show-slider.js'])
 @endsection
