@@ -12,7 +12,7 @@
             <th scope="col">Title</th>
             <th scope="col">Address</th>
             <th scope="col">Visibility</th>
-            <th scope="col">Sponsor end</th>
+            <th scope="col">Sponsor Plan ends</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -39,7 +39,7 @@
                 @if($lastSponsor != '')
                 {{$lastSponsor}}
                 @else
-                <span class="text-danger">Non ci sono sponsor attive</span>
+                <span class="text-danger">No sponsor plan active</span>
                 @endif
 
 
