@@ -76,9 +76,9 @@
                 </div>
             </div>
         </form>
-        <div class="row">
+        <div class="row mt-4 mb-2">
             <div class="col-12">
-                <h1 class="fw-bolder title-apartments text-center" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
+                <h1 class="fw-bold title-apartments text-center" style="color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12) ">
                     All apartments 
                 </h1>
             </div>
@@ -145,7 +145,7 @@
     {{-- new cards --}}
 
     
-    <div class="prev-next d-flex justify-content-center">
+    <div class="prev-next d-flex justify-content-center mb-5 mt-3">
         {{ $apartments->links() }}
     </div>
 @endsection
