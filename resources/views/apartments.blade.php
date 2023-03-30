@@ -8,9 +8,12 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6 mt-3 ">
                     <div id="searchBox"></div>
-                    <p id="mexErrore" class="text-center text-danger fs-5 m-0 d-none">Please select a street from the drop
+                    <div class="mt-3">
+                        <p id="mexErrore" class="text-center alert alert-warning mt-2 fs-5 m-0 d-none">Please select a street from the drop
                         down menu
                     </p>
+                    </div>
+                    
                     <div class="d-none">
                         <input type="text" id="latitude" name="latitude">
                         <input type="text" id="longitude" name="longitude">
