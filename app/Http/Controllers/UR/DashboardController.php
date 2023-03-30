@@ -16,19 +16,19 @@ class DashboardController extends Controller
 
         $apartments = Apartment::where('user_id', Auth::user()->id)->get();
 
-        
 
-        $clicks = DB::table('statistics')
-        ->select(DB::raw('DATE_FORMAT(date, "%Y-%m") as `year_month`, COUNT(DISTINCT ip_address) as clicks'))
-        ->whereBetween('date', [Carbon::now()->subMonths(11), Carbon::now()])
-        ->groupBy('year_month')
-        ->get();
-
-        // Sommiamo i click di tutti i mesi per ottenere il numero totale di click
         $total_clicks = 0;
-        foreach ($clicks as $click) {
-            $total_clicks += $click->clicks;
+
+        foreach ($apartments as $apartment) {
+            $clicks = DB::table('statistics')
+            ->select(DB::raw('COUNT(DISTINCT ip_address) as clicks'))
+            ->where('apartment_id', $apartment->id)
+            ->whereBetween('date', [Carbon::now()->subMonths(11)->startOfMonth(), Carbon::now()->endOfMonth()])
+            ->first();
+            $total_clicks += $clicks->clicks;
         }
+
+       
 
 
         return view('dashboard',compact('apartments', 'total_clicks'));
