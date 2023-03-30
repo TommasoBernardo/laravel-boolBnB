@@ -99,7 +99,7 @@
 
 <div class="container mb-5 text-center">
     <h1 class="my-5">Sponsor Plans</h1>
-    <div class="row d-flex">
+    <div class="row d-flex justify-content-center">
         @foreach ($sponsors as $sponsor)
         <div class="col-lg-4 p-5  text-center">
             <div class="princing-item">
@@ -127,7 +127,7 @@
                         <li class="fs-4"><b>144h</b> Sponsorship</li>
                         @endif
                     </ul>
-                    <button type="button" id="pay-btn" class="btn btn-lg  btn-custom ">Pay</button>
+                    <button type="button" id="pay-btn" class="btn btn-lg  btn-custom " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pay</button>
                 </div>
             </div>
         </div>
@@ -135,16 +135,24 @@
     </div>
 </div>
 
-
-<div class="container d-flex justify-content-center mb-4">
-    <div id="braintree-box" class="d-none col-6 braintree-box">
-        <p id="cancel-payment" class="text-end m-0 text-danger fw-bold">X</p>
-        <div id="dropin-container"></div>
-        <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post">
-            @csrf
-            <input type="text" name="sponsor_id" id="sponsor_id" class="d-none" readonly>
-            <button id="submit-button" class="button button--small button--green mb-5">Purchase</button>
-        </form>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Payment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="braintree-box" class="braintree-box">
+                    <div id="dropin-container"></div>
+                    <form action="{{ route('pay.sponsor', $apartment->slug) }}" method="post" class="text-center">
+                        @csrf
+                        <input type="text" name="sponsor_id" id="sponsor_id" class="d-none" readonly>
+                        <button id="submit-button" class="button button--small button--green mb-5">Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
