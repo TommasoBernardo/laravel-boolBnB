@@ -195,10 +195,7 @@
                                 <a href="#"><img src="{{ asset('storage/img/BoolBnB-logo.png') }}"
                                         style="width: 120px;" alt="logo"></a>
                                 <p class="mt-3">We improve your journey experience with a vast selection of comfy and
-                                    welcoming apartments all over the world. Whether you're looking for a refuge in the
-                                    mountains or beach house, we are here to help you finding the perfect place to relax
-                                    and
-                                    enjoy unbelievable adventures. <br>
+                                    welcoming apartments all over the world. <br>
                                     <strong>Your journey begins with us!</strong>
                                 </p>
                             </div>
