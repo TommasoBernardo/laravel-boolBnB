@@ -2,13 +2,13 @@
 
 
 @section('content')
-
-@include('ur.apartment.shared.formCreateEdit', ["route" => 'apartment.update', 'methodRoute' => 'PATCH', "bottone" => 'modifica'])
-
+    @include('ur.apartment.shared.formCreateEdit', [
+        'route' => 'apartment.update',
+        'methodRoute' => 'PATCH',
+        'bottone' => 'Edit',
+    ])
 @endsection
 
 @section('script')
-
-@vite(['resources/js/searchBox.js'])
-
+    @vite(['resources/js/searchBox.js'])
 @endsection

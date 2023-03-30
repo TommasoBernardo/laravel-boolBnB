@@ -68,6 +68,11 @@ div.content {
     }
 }
 
+
+.card-container {
+    height: 650px;
+}
+
 ul.icon {
     list-style-type: none;
     margin-right: 2rem;
@@ -213,6 +218,10 @@ div.apartment-icons {
     background-color: #f7f5ec;
 }
 
+.about-card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 
 /* for the pen */
 html,
@@ -303,6 +312,7 @@ body {
 
 
 @media screen and (max-width: 1021px) {
+
     ul.icon {
         list-style-type: none;
         margin-right: 2rem;
@@ -327,7 +337,17 @@ body {
     }
 }
 
+@media screen and (max-width: 990px) {
+    .card-container {
+        height: 480px;
+    }
+
+
+}
+
 @media screen and (max-width: 780px) {
+
+
     div.wrap-cards-propreties {
         display: flex;
         justify-content: center;
