@@ -220,3 +220,10 @@ i.icon-dash:hover {
 .goals-bg {
     background-color: #e7e7e7;
 }
+
+
+@media screen and (max-width: 576px) {
+    p.footer-slogan {
+        display: none;
+    }
+}
