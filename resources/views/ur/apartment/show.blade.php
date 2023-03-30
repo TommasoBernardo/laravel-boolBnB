@@ -179,7 +179,7 @@
                                     beginAtZero: true,
                                     precision: 0,
                                 }
-                            }
+                            },
                         }
                     });
                 </script>
