@@ -16,7 +16,7 @@
     <div class="container-fluid return-arrow sticky-lg-top sticky-md-top sticky-sm-top mt-3 ">
         <div class="row">
             <div class="col-2">
-                <div class="wrapper-return-arrow position-fixed" style="top: 5rem;>
+                <div class="wrapper-return-arrow position-fixed" style="top: 5rem";>
                     <a href="{{ route('apartment.index') }}" class="btn fw-bold  ms-2"
                         style="padding: .6rem 1.2rem; font-size: 1.1rem ">
                         <i class="fa-solid fa-arrow-left fs-1 mt-2" style="color: #125655;"></i> </a>
