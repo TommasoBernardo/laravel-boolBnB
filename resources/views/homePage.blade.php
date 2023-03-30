@@ -238,12 +238,12 @@
             </div>
             <div class="row mt-5 p-1">
                 <div class="col-lg-4 col-md-12 col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3 ">
+                    <div class="card border-0 text-center p-3 card-container">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/150?img=33" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content mb-5">
+                            <div class="content " style="450px">
                                 <h4 class="fw-bold">
                                     James Doe
                                 </h4>
@@ -257,7 +257,7 @@
                                     provided all the amenities I could need. Would definitely recommend staying here!
                                 </p>
                             </div>
-                            <div class="mb-5 d-flex justify-content-center">
+                            <div class="mt-5 d-flex justify-content-center">
                                 <ul class="icon d-flex">
                                     <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
@@ -277,26 +277,25 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3">
+                    <div class="card border-0 text-center p-3 card-container ">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content mb-5">
+                            <div class="content " style="450px" >
                                 <h4 class="fw-bold">
                                     Andrea Smith
                                 </h4>
                                 <span style="color: gray">
-                                    Great customer service, understanding hosts.
+                                    Great customer service
                                 </span>
                                 <p class="mt-4 text-justified">
                                     I had a wonderful experience staying at this BoolBnB. The apartment was clean and
                                     spacious, and the host was incredibly responsive and helpful with any questions I
-                                    had.
-                                    Everything was exactly as described and check-in/check-out were super smooth.
+                                    had. Everything was exactly as described and check-in/check-out were super smooth.
                                 </p>
                             </div>
-                            <div class="mb-5 d-flex justify-content-center">
+                            <div class="mt-5 d-flex justify-content-center">
                                 <ul class="icon d-flex">
                                     <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
@@ -317,27 +316,23 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
-                    <div class="card border-0 text-center p-3">
+                    <div class="card border-0 text-center p-3 card-container ">
                         <div class="img-profile mb-3">
                             <img src="https://i.pravatar.cc/150?img=31" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content mb-5">
+                            <div class="content"  style="450px" >
                                 <h4 class="fw-bold">
                                     Alicia Huston
                                 </h4>
                                 <span style="color: gray">
-                                    BoolBnB has made traveling a dream
+                                    BoolBnB has made traveling
                                 </span>
                                 <p class="mt-4 text-justified">
-                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to
-                                    the
-                                    competition, they are in a different category. When you host, you know to the penny
-                                    what
-                                    you're going to pay. When you rent, the same is true. Definitely the best service
+                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the competition,they are in a different category.When you host, you know to the penny what you're going to pay.When you rent, the same is true. Definitely the best service
                                 </p>
                             </div>
-                            <div class="mb-5 d-flex justify-content-center">
+                            <div class="mt-5 d-flex justify-content-center">
                                 <ul class="icon d-flex">
                                     <li class="icon-circle-wrap m-2">
                                         <i class="fa-brands fa-twitter"></i>
