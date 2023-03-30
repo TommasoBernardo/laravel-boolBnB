@@ -240,7 +240,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 card-agent mb-4">
                     <div class="card border-0 text-center p-3 ">
                         <div class="img-profile mb-3">
-                            <img src="https://xsgames.co/randomusers/avatar.php?g=male" alt="" srcset="">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
                             <div class="content mb-5">
@@ -319,7 +319,7 @@
                 <div class="col-lg-4 col-md-12  col-sm-12 card-agent mb-4">
                     <div class="card border-0 text-center p-3">
                         <div class="img-profile mb-3">
-                            <img src="https://xsgames.co/randomusers/avatar.php?g=female" alt="" srcset="">
+                            <img src="https://i.pravatar.cc/150?img=31" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
                             <div class="content mb-5">
