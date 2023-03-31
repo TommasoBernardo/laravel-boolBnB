@@ -13,13 +13,13 @@
                         </li>
                         <li class="nav-item py-2 py-sm-0">
                             <a href="{{ route('apartment.index') }}" class="nav-link text-white">
-                                <i class="fs-5 fa fa-house"></i><span class="fs-5 ms-3 d-none d-sm-inline">Apartments</span>
+                                <i class="fs-5 fa fa-house"></i><span class="fs-5 ms-3 d-none d-sm-inline">My Apartments</span>
                             </a>
                         </li>
                         <li class="nav-item py-2 py-sm-0">
                             <a href="{{ route('dashboard.messageIndex') }}" class="nav-link text-white">
                                 <i class="fs-5 fa fa-comments"></i><span
-                                    class="fs-4 ms-3 d-none d-sm-inline">Messages</span>
+                                    class="fs-4 ms-3 d-none d-sm-inline">My Messages</span>
                             </a>
                         </li>
                     </ul>
