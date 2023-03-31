@@ -82,11 +82,10 @@
                                 @php $count++; @endphp
                                 <div class="swiper-slide my-slider">
                                     <div class="flex-column" id="myCarousel">
-                                        <div href="property-single.html" class="img img-box">
-                                            <img src="{{ asset('storage/' . $apartment->cover_image) }}"
-                                                class="card-img-top property-img"
-                                                style=" height:250px ; border-radius:2rem; object-fit: cover; object-position: ; "
-                                                alt="{{ $apartment->title }}">
+                                        <div href="property-single.html" class="img img-box position-relative">
+                                            <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top property-img" style=" height:250px ; border-radius:2rem; object-fit: cover;    object-position: ; " alt="{{ $apartment->title }}">
+                                            <span class="position-absolute badge rounded-pill text-bg-warning" style="right: 5%; top:10%; padding: .3rem .8rem"  > Sponsored </span>
+                                                
                                         </div>
                                         <div class="flex-column mt-3">
                                             <div class="mb-3">
@@ -247,7 +246,7 @@
                             <img src="https://i.pravatar.cc/150?img=33" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content " style="450px">
+                            <div class="content ">
                                 <h4 class="fw-bold">
                                     James Doe
                                 </h4>
@@ -286,7 +285,7 @@
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content " style="450px">
+                            <div class="content " >
                                 <h4 class="fw-bold">
                                     Andrea Smith
                                 </h4>
@@ -325,7 +324,7 @@
                             <img src="https://i.pravatar.cc/150?img=31" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content" style="450px">
+                            <div class="content" ">
                                 <h4 class="fw-bold">
                                     Alicia Huston
                                 </h4>
