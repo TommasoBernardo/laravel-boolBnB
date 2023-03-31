@@ -13,8 +13,8 @@
                             Easiest way to find your dream home <i class="fa-regular fa-paper-plane"></i>
                         </h1>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 offset-sm-3">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6  col-md-6  col-sm-6 ">
                             <form action="{{ route('apartments.index') }}" method="GET" id="formFilter"
                                 class="narrow-w form-search d-flex align-items-center mb-3 ps-3  mt-5 justify-content-around"
                                 data-aos="fade-up" data-aos-delay="200">
@@ -26,9 +26,8 @@
                                 <button type="submit" class="btn btn-success ms-2">Search</button>
                             </form>
                         </div>
-                        <p id="mexErrore" class="text-center  alert alert-warning fs-1 m-0 d-none">Write an address into the
-                            searchbar
-                        </p>
+                        <p id="mexErrore" class="text-center  alert alert-warning fs-1 col-7 m-0 d-none">Write an address
+                            into the searchbar</p>
                     </div>
                 </div>
             </div>
@@ -329,40 +328,40 @@
                         </div>
                         <div class="wrap-content">
                             <div class="content" ">
-                                                <h4 class="fw-bold">
-                                                    Alicia Huston
-                                                </h4>
-                                                <span style="color: gray">
-                                                    BoolBnB has made traveling
-                                                </span>
-                                                <p class="mt-4 text-justified">
-                                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
-                                                    competition,they are in a different category.When you host, you know to the penny what
-                                                    you're going to pay.When you rent, the same is true. Definitely the best service
-                                                </p>
-                                            </div>
-                                            <div class="mt-5 d-flex justify-content-center">
-                                                <ul class="icon d-flex">
-                                                    <li class="icon-circle-wrap m-2">
-                                                        <i class="fa-brands fa-twitter"></i>
-                                                    </li>
-                                                    <li class="icon-circle-wrap m-2">
-                                                        <i class="fa-brands fa-facebook-f"></i>
-                                                    </li>
-                                                    <li class="icon-circle-wrap m-2">
-                                                        <i class="fa-brands fa-linkedin-in"></i>
-                                                    </li>
-                                                    <li class="icon-circle-wrap m-2">
-                                                        <i class="fa-brands fa-instagram"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        <h4 class=" fw-bold">
+                                Alicia Huston
+                                </h4>
+                                <span style="color: gray">
+                                    BoolBnB has made traveling
+                                </span>
+                                <p class="mt-4 text-justified">
+                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
+                                    competition,they are in a different category.When you host, you know to the penny what
+                                    you're going to pay.When you rent, the same is true. Definitely the best service
+                                </p>
+                            </div>
+                            <div class="mt-5 d-flex justify-content-center">
+                                <ul class="icon d-flex">
+                                    <li class="icon-circle-wrap m-2">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap m-2">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap m-2">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </li>
+                                    <li class="icon-circle-wrap m-2">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 @section('script')
     @vite(['resources/js/sliderCard.js', 'resources/js/searchFilter.js'])
