@@ -361,5 +361,5 @@
     </section>
 @endsection
 @section('script')
-    @vite(['resources/js/sliderCard.js', 'resources/js/searchFilter'])
+    @vite(['resources/js/sliderCard.js', 'resources/js/searchFilter.js'])
 @endsection

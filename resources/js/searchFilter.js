@@ -109,10 +109,13 @@ document.getElementById('formFilter').addEventListener('submit', (event) => {
     localStorage.setItem('searchboxValue', searchInput.value);
     localStorage.setItem('searchValueLongitude', inputLatidudine.value);
     localStorage.setItem('searchValueLatitude', inputLongitudine.value);
-    localStorage.setItem('searchValueBeds', inputBeds.value);
-    localStorage.setItem('searchValueRooms', inputRooms.value);
-    localStorage.setItem('searchValueDistanceKm', inputDistanzaKm.value);
 
+    if(inputBeds){
+        localStorage.setItem('searchValueBeds', inputBeds.value);
+        localStorage.setItem('searchValueRooms', inputRooms.value);
+        localStorage.setItem('searchValueDistanceKm', inputDistanzaKm.value);   
+    }
+    
     const checkboxes = document.querySelectorAll('.myCheckbox');
     checkboxes.forEach((checkbox) => {
         const checkboxValue = checkbox.value;
