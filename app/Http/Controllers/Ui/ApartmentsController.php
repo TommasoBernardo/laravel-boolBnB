@@ -167,8 +167,10 @@ class ApartmentsController extends Controller
 
         
         $services = Service::all();
+
+        $dateNow = Carbon::now(); 
         
-        return view('apartments', compact('apartments', 'services'));
+        return view('apartments', compact('apartments', 'services','dateNow'));
     }
 
     public function show(Apartment $apartment,Request $request)

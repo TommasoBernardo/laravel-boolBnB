@@ -97,14 +97,23 @@
             <div class="">
                 <div class=" my-size d-flex card-wrap flex-wrap">
                     @foreach ($apartments as $apartment)
+                    @php $lastActiveSponsor = null; @endphp
+                    @foreach ($apartment->sponsors as $sponsor)
+                        @if ($sponsor->pivot->end_date > $dateNow)
+                            @php $lastActiveSponsor = $sponsor; @endphp
+                        @endif
+                    @endforeach
                         <div class="flip-card-container">
                             <div class="flip-card">
                                 <div class="card-front d-flex justify-content-center">
-                                    <figure>
+                                    <figure >
                                         <div class="img-bg"></div>
                                         <img class="card-img" src="{{ asset('storage/' . $apartment->cover_image) }}"
                                             alt="Brohm Lake">
                                         <figcaption>{{ $apartment->title }} </figcaption>
+                                        @if (!is_null($lastActiveSponsor))
+                                        <span class="position-absolute badge rounded-pill text-bg-warning" style="right: 5%; top:2.5%;"  > Sponsored </span>
+                                        @endif
                                     </figure>
 
                                     <ul class="card-ul fw-bolder">
