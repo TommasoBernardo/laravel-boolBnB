@@ -26,8 +26,7 @@
                                 <button type="submit" class="btn btn-success ms-2">Search</button>
                             </form>
                         </div>
-                        <p id="mexErrore" class="text-center text-danger fs-1 m-0 d-none">Write an address into the
-                            searchbar
+                        <p id="mexErrore" class="text-center  alert alert-warning fs-1 m-0 d-none">Write an address into the searchbar
                         </p>
                     </div>
                 </div>
@@ -83,9 +82,13 @@
                                 <div class="swiper-slide my-slider">
                                     <div class="flex-column" id="myCarousel">
                                         <div href="property-single.html" class="img img-box position-relative">
-                                            <img src="{{ asset('storage/' . $apartment->cover_image) }}" class="card-img-top property-img" style=" height:250px ; border-radius:2rem; object-fit: cover;    object-position: ; " alt="{{ $apartment->title }}">
-                                            <span class="position-absolute badge rounded-pill text-bg-warning" style="right: 5%; top:10%; padding: .3rem .8rem"  > Sponsored </span>
-                                                
+                                            <img src="{{ asset('storage/' . $apartment->cover_image) }}"
+                                                class="card-img-top property-img"
+                                                style=" height:250px ; border-radius:2rem; object-fit: cover;    object-position: ; "
+                                                alt="{{ $apartment->title }}">
+                                            <span class="position-absolute badge rounded-pill text-bg-warning"
+                                                style="right: 5%; top:10%; padding: .3rem .8rem"> Sponsored </span>
+
                                         </div>
                                         <div class="flex-column mt-3">
                                             <div class="mb-3">
@@ -142,7 +145,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2" style="height: 460px" >
+                            <div class="our-team px-2" style="height: 460px">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=female">
                                 </div>
@@ -161,7 +164,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team  px-2"  style="height: 460px">
+                            <div class="our-team  px-2" style="height: 460px">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://xsgames.co/randomusers/avatar.php?g=male">
                                 </div>
@@ -179,7 +182,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2" style="height: 460px" >
+                            <div class="our-team px-2" style="height: 500px">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://i.pravatar.cc/300">
                                 </div>
@@ -197,7 +200,7 @@
                             </div>
                         </div>
                         <div class=" col-sm-6 col-md-6 col-lg-3">
-                            <div class="our-team px-2" style="height: 460px" >
+                            <div class="our-team px-2" style="height: 460px">
                                 <div class="picture">
                                     <img class="img-fluid" src="https://i.pravatar.cc/150?img=60">
                                 </div>
@@ -285,7 +288,7 @@
                             <img src="https://i.pravatar.cc/100" alt="" srcset="">
                         </div>
                         <div class="wrap-content">
-                            <div class="content " >
+                            <div class="content ">
                                 <h4 class="fw-bold">
                                     Andrea Smith
                                 </h4>
@@ -325,40 +328,40 @@
                         </div>
                         <div class="wrap-content">
                             <div class="content" ">
-                                <h4 class="fw-bold">
-                                    Alicia Huston
-                                </h4>
-                                <span style="color: gray">
-                                    BoolBnB has made traveling
-                                </span>
-                                <p class="mt-4 text-justified">
-                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
-                                    competition,they are in a different category.When you host, you know to the penny what
-                                    you're going to pay.When you rent, the same is true. Definitely the best service
-                                </p>
-                            </div>
-                            <div class="mt-5 d-flex justify-content-center">
-                                <ul class="icon d-flex">
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </li>
-                                </ul>
+                                    <h4 class="fw-bold">
+                                        Alicia Huston
+                                    </h4>
+                                    <span style="color: gray">
+                                        BoolBnB has made traveling
+                                    </span>
+                                    <p class="mt-4 text-justified">
+                                        We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
+                                        competition,they are in a different category.When you host, you know to the penny what
+                                        you're going to pay.When you rent, the same is true. Definitely the best service
+                                    </p>
+                                </div>
+                                <div class="mt-5 d-flex justify-content-center">
+                                    <ul class="icon d-flex">
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 @endsection
 @section('script')
     @vite(['resources/js/sliderCard.js', 'resources/js/searchFilter.js'])
