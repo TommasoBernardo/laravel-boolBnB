@@ -328,40 +328,40 @@
                         </div>
                         <div class="wrap-content">
                             <div class="content" ">
-                                        <h4 class=" fw-bold">
-                                Alicia Huston
-                                </h4>
-                                <span style="color: gray">
-                                    BoolBnB has made traveling
-                                </span>
-                                <p class="mt-4 text-justified">
-                                    We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
-                                    competition,they are in a different category.When you host, you know to the penny what
-                                    you're going to pay.When you rent, the same is true. Definitely the best service
-                                </p>
-                            </div>
-                            <div class="mt-5 d-flex justify-content-center">
-                                <ul class="icon d-flex">
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </li>
-                                    <li class="icon-circle-wrap m-2">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </li>
-                                </ul>
+                                            <h4 class=" fw-bold">
+                                    Alicia Huston
+                                    </h4>
+                                    <span style="color: gray">
+                                        BoolBnB has made traveling
+                                    </span>
+                                    <p class="mt-4 text-justified">
+                                        We've been using BoolBnB for 10 years now, and this company is supreme. Compared to the
+                                        competition,they are in a different category.When you host, you know to the penny what
+                                        you're going to pay.When you rent, the same is true. Definitely the best service
+                                    </p>
+                                </div>
+                                <div class="mt-5 d-flex justify-content-center">
+                                    <ul class="icon d-flex">
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </li>
+                                        <li class="icon-circle-wrap m-2">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 @endsection
 @section('script')
     @vite(['resources/js/sliderCard.js', 'resources/js/searchFilter.js'])
