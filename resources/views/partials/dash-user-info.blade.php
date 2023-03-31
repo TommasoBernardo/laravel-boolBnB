@@ -14,7 +14,7 @@
     <div class="card border-0 mt-5 ">
         <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
-                <img src="https://i.pravatar.cc/300" alt="Profile picture" class="rounded-circle" width="150">
+                <img src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png" alt="Profile picture" class="rounded-circle" width="150">
                 <div class="mt-3">
                     <h4>Hi, {{ Auth::user()->name }} {{ Auth::user()->surname }} @if (!Auth::user()->name and !Auth::user()->surname)
                             User {{ Auth::user()->id }}
